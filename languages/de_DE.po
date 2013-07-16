@@ -1,0 +1,439 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Techfak 2013 v1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2013-07-16 08:50:31+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/0.1\n"
+"X-Poedit-Language: \n"
+"X-Poedit-Country: \n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: 404.php:17
+#@ techfak-2013
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr "Das ist irgendwie peinlich, oder?"
+
+#: 404.php:21
+#@ techfak-2013
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Es sieht so aus, als ob wir nicht das finden konnten, wonach du gesucht hast. Möglicherweise hilft die Suchfunktion."
+
+#: archive.php:29
+#, php-format
+#@ techfak-2013
+msgid "Daily Archives: %s"
+msgstr "Archiv für den Tag: %s"
+
+#: archive.php:31
+#, php-format
+#@ techfak-2013
+msgid "Monthly Archives: %s"
+msgstr "Archiv für den Monat: %s"
+
+#: archive.php:31
+#@ techfak-2013
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+#: archive.php:33
+#, php-format
+#@ techfak-2013
+msgid "Yearly Archives: %s"
+msgstr "Archiv für das Jahr: %s"
+
+#: archive.php:33
+#@ techfak-2013
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: archive.php:35
+#@ techfak-2013
+msgid "Archives"
+msgstr "Archive"
+
+#: author.php:32
+#, php-format
+#@ techfak-2013
+msgid "Author Archives: %s"
+msgstr "Archiv für den Autor: %s"
+
+#: author.php:53
+#: content.php:53
+#, php-format
+#@ techfak-2013
+msgid "About %s"
+msgstr "Über %s"
+
+#: category.php:21
+#, php-format
+#@ techfak-2013
+msgid "Category Archives: %s"
+msgstr "Kategorie-Archiv: %s"
+
+#: comments.php:31
+#, php-format
+#@ techfak-2013
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Eine Antwort zu &bdquo;%2$s&ldquo;"
+msgstr[1] "%1$s Antworten zu &bdquo;%2$s&ldquo;"
+
+#: comments.php:42
+#@ techfak-2013
+msgid "Comment navigation"
+msgstr "Kommentar-Navigation"
+
+#: comments.php:43
+#@ techfak-2013
+msgid "&larr; Older Comments"
+msgstr "&larr; Ältere Kommentare"
+
+#: comments.php:44
+#@ techfak-2013
+msgid "Newer Comments &rarr;"
+msgstr "Neuere Kommentare &rarr;"
+
+#: comments.php:53
+#@ techfak-2013
+msgid "Comments are closed."
+msgstr "Kommentare sind geschlossen."
+
+#: content-aside.php:13
+#: content-aside.php:20
+#: content-image.php:17
+#: content-link.php:18
+#: content-quote.php:17
+#: content-status.php:15
+#: content.php:23
+#, php-format
+#@ techfak-2013
+msgid "Permalink to %s"
+msgstr "Permanentlink zu %s"
+
+#: content-aside.php:15
+#: content-image.php:13
+#: content-link.php:14
+#: content-quote.php:13
+#: content-status.php:21
+#: content.php:39
+#@ techfak-2013
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Weiterlesen <span class=\"meta-nav\">&rarr;</span>"
+
+#: content-aside.php:23
+#: content-image.php:23
+#: content-link.php:21
+#: content-quote.php:20
+#: content-status.php:27
+#: content.php:28
+#@ techfak-2013
+msgid "Leave a reply"
+msgstr "Hinterlasse eine Antwort"
+
+#: content-aside.php:23
+#: content-image.php:23
+#: content-link.php:21
+#: content-quote.php:20
+#: content-status.php:27
+#: content.php:28
+#@ techfak-2013
+msgid "1 Reply"
+msgstr "1 Antwort"
+
+#: content-aside.php:23
+#: content-image.php:23
+#: content-link.php:21
+#: content-quote.php:20
+#: content-status.php:27
+#: content.php:28
+#@ techfak-2013
+msgid "% Replies"
+msgstr "% Antworten"
+
+#: content-aside.php:26
+#: content-image.php:26
+#: content-link.php:24
+#: content-page.php:21
+#: content-quote.php:23
+#: content-status.php:30
+#: content.php:46
+#: functions.php:319
+#: image.php:37
+#@ techfak-2013
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: content-link.php:12
+#@ techfak-2013
+msgid "Link"
+msgstr "Link"
+
+#: content-none.php:13
+#: index.php:49
+#: search.php:34
+#@ techfak-2013
+msgid "Nothing Found"
+msgstr "Nichts gefunden"
+
+#: content-none.php:17
+#: index.php:53
+#@ techfak-2013
+msgid "Apologies, but no results were found. Perhaps searching will help find a related post."
+msgstr "Bedaure bitte, aber es wurden keine Ergebnisse gefunden. Möglicherweise hilft die Suchfunktion passende Artikel."
+
+#: content-page.php:18
+#: content.php:40
+#: image.php:92
+#@ techfak-2013
+msgid "Pages:"
+msgstr "Seiten:"
+
+#: content.php:14
+#@ techfak-2013
+msgid "Featured post"
+msgstr "Hervorgehobener Artikel"
+
+#: content.php:57
+#, php-format
+#@ techfak-2013
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Zeige alle Artikel von %s <span class=\"meta-nav\">&rarr;</span>"
+
+#: footer.php:17
+#@ techfak-2013
+msgid "http://wordpress.org/"
+msgstr "http://de.wordpress.org/"
+
+#: footer.php:17
+#@ techfak-2013
+msgid "Semantic Personal Publishing Platform"
+msgstr "Semantic Personal Publishing Platform"
+
+#: footer.php:17
+#, php-format
+#@ techfak-2013
+msgid "Proudly powered by %s"
+msgstr "Stolz präsentiert von %s"
+
+#: functions.php:64
+#@ techfak-2013
+msgid "Primary Menu"
+msgstr "Primäres Menü"
+
+#: functions.php:120
+#@ techfak-2013
+msgctxt "Open Sans font: on or off"
+msgid "on"
+msgstr "on"
+
+#: functions.php:125
+#@ techfak-2013
+msgctxt "Open Sans font: add new subset (greek, cyrillic, vietnamese)"
+msgid "no-subset"
+msgstr "no-subset"
+
+#: functions.php:181
+#, php-format
+#@ techfak-2013
+msgid "Page %s"
+msgstr "Seite %s"
+
+#: functions.php:208
+#@ techfak-2013
+msgid "Appears on posts and pages except the optional Front Page template, which has its own widgets"
+msgstr "Erscheint auf allen Artikelseiten und statischen Seiten außer dem optionalen Startseitetemplate, welches eigene Widgets hat."
+
+#: functions.php:226
+#@ techfak-2013
+msgid "First Front Page Widget Area"
+msgstr "Erster Startseiten Widget Bereich"
+
+#: functions.php:228
+#: functions.php:238
+#@ techfak-2013
+msgid "Appears when using the optional Front Page template with a page set as Static Front Page"
+msgstr "Erscheint, wenn das optionale Startseiten Template verwendet wird und die Seite als statische Startseite definiert wurde."
+
+#: functions.php:236
+#@ techfak-2013
+msgid "Second Front Page Widget Area"
+msgstr "Zweiter Startseiten Widget Bereich"
+
+#: functions.php:260
+#: single.php:20
+#@ techfak-2013
+msgid "Post navigation"
+msgstr "Artikel-Navigation"
+
+#: functions.php:261
+#@ techfak-2013
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Ältere Artikel"
+
+#: functions.php:262
+#@ techfak-2013
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Neuere Artikel <span class=\"meta-nav\">&rarr;</span>"
+
+#: functions.php:287
+#@ techfak-2013
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: functions.php:287
+#@ techfak-2013
+msgid "(Edit)"
+msgstr "(Bearbeiten)"
+
+#: functions.php:302
+#@ techfak-2013
+msgid "Post author"
+msgstr "Artikelautor"
+
+#. translators: 1: date, 2: time
+#: functions.php:308
+#, php-format
+#@ techfak-2013
+msgid "%1$s at %2$s"
+msgstr "%1$s um %2$s"
+
+#: functions.php:314
+#@ techfak-2013
+msgid "Your comment is awaiting moderation."
+msgstr "Dein Kommentar wartet auf Freischaltung."
+
+#: functions.php:323
+#@ techfak-2013
+msgid "Reply"
+msgstr "Antworten"
+
+#: functions.php:342
+#: functions.php:345
+#@ techfak-2013
+msgid ", "
+msgstr ", "
+
+#: functions.php:356
+#, php-format
+#@ techfak-2013
+msgid "View all posts by %s"
+msgstr "Zeige alle Artikel von %s"
+
+#: functions.php:362
+#, php-format
+#@ techfak-2013
+msgid "This entry was posted in %1$s and tagged %2$s on %3$s<span class=\"by-author\"> by %4$s</span>."
+msgstr "Dieser Beitrag wurde unter %1$s abgelegt und mit %2$s verschlagwortet am %3$s<span class=\"by-author\"> von %4$s</span>. "
+
+#: functions.php:364
+#, php-format
+#@ techfak-2013
+msgid "This entry was posted in %1$s on %3$s<span class=\"by-author\"> by %4$s</span>."
+msgstr "Dieser Beitrag wurde unter %1$s abgelegt am %3$s<span class=\"by-author\"> von %4$s</span>. "
+
+#: functions.php:366
+#, php-format
+#@ techfak-2013
+msgid "This entry was posted on %3$s<span class=\"by-author\"> by %4$s</span>."
+msgstr "Dieser Beitrag wurde veröffentlicht am %3$s<span class=\"by-author\"> von %4$s</span>. "
+
+#: sidebar.php:15
+#@ techfak-2013
+msgid "Menu"
+msgstr "Menü"
+
+#: sidebar.php:16
+#@ techfak-2013
+msgid "Skip to content"
+msgstr "Zum Inhalt springen"
+
+#: image.php:26
+#, php-format
+#@ techfak-2013
+msgid "<span class=\"meta-prep meta-prep-entry-date\">Published </span> <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%8$s</a>."
+msgstr "<span class=\"meta-prep meta-prep-entry-date\">Veröffentlicht am </span> <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></span> bei <a href=\"%3$s\" title=\"Originalgrösse anzeigen\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Zurück zu %7$s\" rel=\"gallery\">%8$s</a>."
+
+#: image.php:41
+#@ techfak-2013
+msgid "&larr; Previous"
+msgstr "&larr; Zurück"
+
+#: image.php:42
+#@ techfak-2013
+msgid "Next &rarr;"
+msgstr "Weiter &rarr;"
+
+#: index.php:38
+#@ techfak-2013
+msgid "No posts to display"
+msgstr "Keine Artikel zum Anzeigen"
+
+#: index.php:42
+#, php-format
+#@ techfak-2013
+msgid "Ready to publish your first post? <a href=\"%s\">Get started here</a>."
+msgstr "Bereit den ersten Artikel zu veröffentlichen? <a href=\"%s\">Starte hier</a>."
+
+#: search.php:18
+#, php-format
+#@ techfak-2013
+msgid "Search Results for: %s"
+msgstr "Suchergebnisse für: %s"
+
+#: search.php:38
+#@ techfak-2013
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Entschuldige, aber es konnte nichts gefunden werden. Versuche es mit anderen Schlüsselwörtern erneut."
+
+#: single.php:21
+#@ techfak-2013
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr "&larr;"
+
+#: single.php:22
+#@ techfak-2013
+msgctxt "Next post link"
+msgid "&rarr;"
+msgstr "&rarr;"
+
+#: tag.php:21
+#, php-format
+#@ techfak-2013
+msgid "Tag Archives: %s"
+msgstr "Schlagwort-Archiv: %s"
+
+#: functions.php:206
+#@ techfak-2013
+msgid "Navigation Sidebar"
+msgstr "Linke Sidebar: Navigation"
+
+#: functions.php:216
+#@ techfak-2013
+msgid "Right Sidebar"
+msgstr "Rechte Sidebar"
+
+#: functions.php:218
+#@ techfak-2013
+msgid "The Right Sidebar. Displayed on all but full width and homepage template."
+msgstr "Rechte Seitenleiste. Wird auf allen Seiten angezeigt."
+
+#: header.php:53
+#@ techfak-2013
+msgid "Information for..."
+msgstr ""
+
