@@ -39,10 +39,12 @@
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</hgroup>
 
-		<?php $header_image = get_header_image();
-		if ( ! empty( $header_image ) ) : ?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
-		<?php endif; ?>
+		<div class="header-image">
+			<?php $header_image = get_header_image();
+			if ( ! empty( $header_image ) ) : ?>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
+			<?php endif; ?>
+		</div>
 	</header><!-- #masthead -->
 
 	<nav id="tec-menue" class="tec-menue" role="navigation">
@@ -50,9 +52,20 @@
 	</nav><!-- #tec-navigation -->
 	
 	<nav id="zielgruppen-menue" class="zielgruppen-menue" role="navigation">
-		<h3 class="menu-toggle"><?php _e( 'Information for...', 'techfak-2013' ); ?></h3>
+		<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'techfak-2013' ); ?>"><?php _e( 'Skip to content', 'techfak-2013' ); ?></a>
 		<?php wp_nav_menu( array( 'theme_location' => 'targetmenue', 'fallback_cb' => '' ) );?>
-		
 	</nav><!-- #target-navigation -->
+	
+	<nav id="zielgruppen-menue-select" class="zielgruppen-menue-select" role="navigation">
+		<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'techfak-2013' ); ?>"><?php _e( 'Skip to content', 'techfak-2013' ); ?></a>
+		<?php wp_nav_menu(    array( 
+                            'show_description' => false,
+                            'menu' => 'targetmenue', 
+                            'items_wrap'     => '<select id="drop-nav"><option value="">Informationen f&uuml;r...</option>%3$s</select>',
+                            'container' => false,
+                            'walker'  => new Walker_Nav_Menu_Dropdown(),
+                            'theme_location' => 'targetmenue'));  ?>
+	</nav><!-- #target-navigation -->
+	
 	
 	<div id="main" class="wrapper">

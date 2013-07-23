@@ -11,12 +11,19 @@
  */
 ?>
 	</div><!-- #main .wrapper -->
-	<footer id="colophon" role="contentinfo">
-		<div class="site-info">
-			<?php do_action( 'twentytwelve_credits' ); ?>
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'techfak-2013' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'techfak-2013' ); ?>"><?php printf( __( 'Proudly powered by %s', 'techfak-2013' ), 'WordPress' ); ?></a>
-		</div><!-- .site-info -->
+	
+	<footer>
+	
+		<nav id="tec-menue-bottom" class="tec-menue-bottom" role="navigation">
+			<?php wp_nav_menu( array( 'theme_location' => 'tecmenue', 'fallback_cb' => '' ) );?>
+		</nav><!-- #tec-navigation -->
+	
+		<?php if ( is_active_sidebar( 'sidebar-5' ) ) : ?>
+			<?php dynamic_sidebar( 'sidebar-5' ); ?><!-- .zusatzinfo .widget-area -->
+		<?php endif; // end extra sidebar widget area ?>
 	</footer><!-- #colophon -->
+	
+	
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

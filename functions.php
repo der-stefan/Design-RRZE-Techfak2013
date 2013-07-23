@@ -1,4 +1,4 @@
-<?php
+	<?php
 /**
  * Twenty Twelve functions and definitions.
  *
@@ -109,8 +109,13 @@ function twentytwelve_scripts_styles() {
 	/*
 	 * Adds JavaScript for handling the navigation menu hide-and-show behavior.
 	 */
-	wp_enqueue_script( 'twentytwelve-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '1.0', true );
+	/* wp_enqueue_script( 'twentytwelve-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '1.0', true );*/
 
+	/*
+	 * Adds JavaScript for handling the navigation menu hide-and-show behavior.
+	 */
+	wp_enqueue_script( 'twentytwelve-sidebar', get_template_directory_uri() . '/js/toggle.js', array(), '1.0', true );
+	
 	/*
 	 * Loads our special font CSS file.
 	 *
@@ -227,6 +232,15 @@ function twentytwelve_widgets_init() {
 		'description' => __( 'The Right Sidebar. Displayed on all but full width and homepage template.', 'techfak-2013' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+	register_sidebar( array(
+		'name' => __( 'Additional Informations', 'techfak-2013' ),
+		'id' => 'sidebar-5',
+		'description' => __( 'Additional Information. Displayed in Footer region.', 'techfak-2013' ),
+		'before_widget' => '<div id="zusatzinfo" class="zusatzinfo widget %2$s">',
+		'after_widget' => "</div>",
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
@@ -592,3 +606,43 @@ function register_rss_widget() {
     register_widget( 'Custom_Widget_RSS' );
 }
 add_action( 'widgets_init', 'register_rss_widget' );
+
+
+// Select Menu for Responsive Design
+class Walker_Nav_Menu_Dropdown extends Walker_Nav_Menu{
+    function start_lvl(&$output, $depth){
+      $indent = str_repeat("\t", $depth); // don't output children opening tag (`<ul>`)
+    }
+
+    function end_lvl(&$output, $depth){
+      $indent = str_repeat("\t", $depth); // don't output children closing tag
+    }
+
+    function start_el(&$output, $item, $depth, $args){
+      // add spacing to the title based on the depth
+      $item->title = str_repeat("&nbsp;", $depth * 4).$item->title;
+
+
+
+        $xoutput .= $indent . ' id="menu-item-'. $item->ID . '"' . $value . $class_names ;  
+        $attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';  
+        $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';  
+        $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';  
+        $attributes .= ! empty( $item->url )        ? ' value="'   . esc_attr( $item->url        ) .'"' : '';  
+        
+        $item_output .= '<option'. $xoutput . $attributes .'>';  
+        $item_output .= $args->link_before .apply_filters( 'the_title', $item->title, $item->ID );  
+        $item_output .= '</option>';  
+        
+        $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );  
+
+
+
+      // no point redefining this method too, we just replace the li tag...
+      $output = str_replace('<li', '<option', $output);
+    }
+
+    function end_el(&$output, $item, $depth){
+      $output .= "</option>\n"; // replace closing </li> with the option tag
+    }
+}

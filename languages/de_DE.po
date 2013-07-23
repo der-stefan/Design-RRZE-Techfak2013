@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Techfak 2013 v1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-07-16 08:50:31+0000\n"
+"PO-Revision-Date: 2013-07-18 08:55:14+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -30,55 +30,55 @@ msgstr "Das ist irgendwie peinlich, oder?"
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr "Es sieht so aus, als ob wir nicht das finden konnten, wonach du gesucht hast. Möglicherweise hilft die Suchfunktion."
 
-#: archive.php:29
+#: archive.php:38
 #, php-format
 #@ techfak-2013
 msgid "Daily Archives: %s"
 msgstr "Archiv für den Tag: %s"
 
-#: archive.php:31
+#: archive.php:40
 #, php-format
 #@ techfak-2013
 msgid "Monthly Archives: %s"
 msgstr "Archiv für den Monat: %s"
 
-#: archive.php:31
+#: archive.php:40
 #@ techfak-2013
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr "F Y"
 
-#: archive.php:33
+#: archive.php:42
 #, php-format
 #@ techfak-2013
 msgid "Yearly Archives: %s"
 msgstr "Archiv für das Jahr: %s"
 
-#: archive.php:33
+#: archive.php:42
 #@ techfak-2013
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr "Y"
 
-#: archive.php:35
+#: archive.php:44
 #@ techfak-2013
 msgid "Archives"
 msgstr "Archive"
 
-#: author.php:32
+#: author.php:41
 #, php-format
 #@ techfak-2013
 msgid "Author Archives: %s"
 msgstr "Archiv für den Autor: %s"
 
-#: author.php:53
+#: author.php:62
 #: content.php:53
 #, php-format
 #@ techfak-2013
 msgid "About %s"
 msgstr "Über %s"
 
-#: category.php:21
+#: category.php:30
 #, php-format
 #@ techfak-2013
 msgid "Category Archives: %s"
@@ -171,7 +171,7 @@ msgstr "% Antworten"
 #: content-quote.php:23
 #: content-status.php:30
 #: content.php:46
-#: functions.php:319
+#: functions.php:328
 #: image.php:37
 #@ techfak-2013
 msgid "Edit"
@@ -183,14 +183,14 @@ msgid "Link"
 msgstr "Link"
 
 #: content-none.php:13
-#: index.php:49
-#: search.php:34
+#: index.php:63
+#: search.php:43
 #@ techfak-2013
 msgid "Nothing Found"
 msgstr "Nichts gefunden"
 
 #: content-none.php:17
-#: index.php:53
+#: index.php:67
 #@ techfak-2013
 msgid "Apologies, but no results were found. Perhaps searching will help find a related post."
 msgstr "Bedaure bitte, aber es wurden keine Ergebnisse gefunden. Möglicherweise hilft die Suchfunktion passende Artikel."
@@ -212,22 +212,6 @@ msgstr "Hervorgehobener Artikel"
 #@ techfak-2013
 msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Zeige alle Artikel von %s <span class=\"meta-nav\">&rarr;</span>"
-
-#: footer.php:17
-#@ techfak-2013
-msgid "http://wordpress.org/"
-msgstr "http://de.wordpress.org/"
-
-#: footer.php:17
-#@ techfak-2013
-msgid "Semantic Personal Publishing Platform"
-msgstr "Semantic Personal Publishing Platform"
-
-#: footer.php:17
-#, php-format
-#@ techfak-2013
-msgid "Proudly powered by %s"
-msgstr "Stolz präsentiert von %s"
 
 #: functions.php:64
 #@ techfak-2013
@@ -257,95 +241,79 @@ msgstr "Seite %s"
 msgid "Appears on posts and pages except the optional Front Page template, which has its own widgets"
 msgstr "Erscheint auf allen Artikelseiten und statischen Seiten außer dem optionalen Startseitetemplate, welches eigene Widgets hat."
 
-#: functions.php:226
-#@ techfak-2013
-msgid "First Front Page Widget Area"
-msgstr "Erster Startseiten Widget Bereich"
-
-#: functions.php:228
-#: functions.php:238
-#@ techfak-2013
-msgid "Appears when using the optional Front Page template with a page set as Static Front Page"
-msgstr "Erscheint, wenn das optionale Startseiten Template verwendet wird und die Seite als statische Startseite definiert wurde."
-
-#: functions.php:236
-#@ techfak-2013
-msgid "Second Front Page Widget Area"
-msgstr "Zweiter Startseiten Widget Bereich"
-
-#: functions.php:260
-#: single.php:20
+#: functions.php:269
+#: single.php:29
 #@ techfak-2013
 msgid "Post navigation"
 msgstr "Artikel-Navigation"
 
-#: functions.php:261
+#: functions.php:270
 #@ techfak-2013
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr "<span class=\"meta-nav\">&larr;</span> Ältere Artikel"
 
-#: functions.php:262
+#: functions.php:271
 #@ techfak-2013
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Neuere Artikel <span class=\"meta-nav\">&rarr;</span>"
 
-#: functions.php:287
+#: functions.php:296
 #@ techfak-2013
 msgid "Pingback:"
 msgstr "Pingback:"
 
-#: functions.php:287
+#: functions.php:296
 #@ techfak-2013
 msgid "(Edit)"
 msgstr "(Bearbeiten)"
 
-#: functions.php:302
+#: functions.php:311
 #@ techfak-2013
 msgid "Post author"
 msgstr "Artikelautor"
 
 #. translators: 1: date, 2: time
-#: functions.php:308
+#: functions.php:317
 #, php-format
 #@ techfak-2013
 msgid "%1$s at %2$s"
 msgstr "%1$s um %2$s"
 
-#: functions.php:314
+#: functions.php:323
 #@ techfak-2013
 msgid "Your comment is awaiting moderation."
 msgstr "Dein Kommentar wartet auf Freischaltung."
 
-#: functions.php:323
+#: functions.php:332
 #@ techfak-2013
 msgid "Reply"
 msgstr "Antworten"
 
-#: functions.php:342
-#: functions.php:345
+#: functions.php:351
+#: functions.php:354
 #@ techfak-2013
 msgid ", "
 msgstr ", "
 
-#: functions.php:356
+#: functions.php:365
 #, php-format
 #@ techfak-2013
 msgid "View all posts by %s"
 msgstr "Zeige alle Artikel von %s"
 
-#: functions.php:362
+#: functions.php:371
 #, php-format
 #@ techfak-2013
 msgid "This entry was posted in %1$s and tagged %2$s on %3$s<span class=\"by-author\"> by %4$s</span>."
 msgstr "Dieser Beitrag wurde unter %1$s abgelegt und mit %2$s verschlagwortet am %3$s<span class=\"by-author\"> von %4$s</span>. "
 
-#: functions.php:364
+#: functions.php:373
 #, php-format
 #@ techfak-2013
 msgid "This entry was posted in %1$s on %3$s<span class=\"by-author\"> by %4$s</span>."
 msgstr "Dieser Beitrag wurde unter %1$s abgelegt am %3$s<span class=\"by-author\"> von %4$s</span>. "
 
-#: functions.php:366
+#: functions.php:375
 #, php-format
 #@ techfak-2013
 msgid "This entry was posted on %3$s<span class=\"by-author\"> by %4$s</span>."
@@ -377,41 +345,41 @@ msgstr "&larr; Zurück"
 msgid "Next &rarr;"
 msgstr "Weiter &rarr;"
 
-#: index.php:38
+#: index.php:52
 #@ techfak-2013
 msgid "No posts to display"
 msgstr "Keine Artikel zum Anzeigen"
 
-#: index.php:42
+#: index.php:56
 #, php-format
 #@ techfak-2013
 msgid "Ready to publish your first post? <a href=\"%s\">Get started here</a>."
 msgstr "Bereit den ersten Artikel zu veröffentlichen? <a href=\"%s\">Starte hier</a>."
 
-#: search.php:18
+#: search.php:27
 #, php-format
 #@ techfak-2013
 msgid "Search Results for: %s"
 msgstr "Suchergebnisse für: %s"
 
-#: search.php:38
+#: search.php:47
 #@ techfak-2013
 msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
 msgstr "Entschuldige, aber es konnte nichts gefunden werden. Versuche es mit anderen Schlüsselwörtern erneut."
 
-#: single.php:21
+#: single.php:30
 #@ techfak-2013
 msgctxt "Previous post link"
 msgid "&larr;"
 msgstr "&larr;"
 
-#: single.php:22
+#: single.php:31
 #@ techfak-2013
 msgctxt "Next post link"
 msgid "&rarr;"
 msgstr "&rarr;"
 
-#: tag.php:21
+#: tag.php:29
 #, php-format
 #@ techfak-2013
 msgid "Tag Archives: %s"
@@ -432,8 +400,43 @@ msgstr "Rechte Sidebar"
 msgid "The Right Sidebar. Displayed on all but full width and homepage template."
 msgstr "Rechte Seitenleiste. Wird auf allen Seiten angezeigt."
 
-#: header.php:53
+#: header.php:55
 #@ techfak-2013
 msgid "Information for..."
-msgstr ""
+msgstr "Infos für..."
+
+#: functions.php:225
+#@ techfak-2013
+msgid "Additional Informations"
+msgstr "Zusatzinfo"
+
+#: functions.php:227
+#@ techfak-2013
+msgid "Additional Information. Displayed in Footer region."
+msgstr "Zusatzinfo. Wird in der Fußzeile angezeigt."
+
+#: functions.php:476
+#@ default
+msgid "Zielgruppen-Menü"
+msgstr "Zielgruppen-Menü"
+
+#: functions.php:477
+#@ default
+msgid "Tec-Menü"
+msgstr "Tec-Menü"
+
+#: functions.php:497
+#@ default
+msgid "Entries from any RSS or Atom feed"
+msgstr "Einträge aus einem RSS- oder Atom-Feed"
+
+#: functions.php:499
+#@ default
+msgid "RSS"
+msgstr "RSS"
+
+#: functions.php:535
+#@ default
+msgid "Unknown Feed"
+msgstr "Unbekannter Feed"
 

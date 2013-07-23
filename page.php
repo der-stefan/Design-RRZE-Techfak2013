@@ -14,15 +14,19 @@
  */
 
 get_header(); ?>
-<?php get_sidebar(); ?>
+	
+	<div class="search"><?php include ('searchform.php'); ?></div>
+	
+	<div class="breadcrumbs">
+		<?php if(function_exists('bcn_display'))
+		{
+			bcn_display();
+		}?>
+	</div>
+	
+	<?php get_sidebar(); ?>
+	
 	<div id="primary" class="site-content">
-		
-		<div class="breadcrumbs">
-		    <?php if(function_exists('bcn_display'))
-		    {
-		        bcn_display();
-		    }?>
-		</div>
 		
 		<div id="content" role="main">
 
@@ -32,6 +36,5 @@ get_header(); ?>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
-
-
+	
 <?php get_footer(); ?>
