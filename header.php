@@ -1,13 +1,5 @@
 <?php
-/**
- * The Header for our theme.
- *
- * Displays all of the <head> section and everything up till <div id="main">
- *
- * @package WordPress
- * @subpackage Twenty_Twelve
- * @since Twenty Twelve 1.0
- */
+global $options;
 ?><!DOCTYPE html>
 <!--[if IE 7]>
 <html class="ie ie7" <?php language_attributes(); ?>>
@@ -47,14 +39,21 @@
 		</div>
 	</header><!-- #masthead -->
 
-	<nav id="tec-menue" class="tec-menue" role="navigation">
-		<?php wp_nav_menu( array( 'theme_location' => 'tecmenue', 'fallback_cb' => '' ) );?>
-	</nav><!-- #tec-navigation -->
-	
-	<nav id="zielgruppen-menue" class="zielgruppen-menue" role="navigation">
+	<?php 
+	if ( has_nav_menu( 'tecmenue' ) ) {
+	    echo '<nav id="tec-menue" class="tec-menue" role="navigation">';
+		wp_nav_menu( array( 'theme_location' => 'tecmenue', 'fallback_cb' => '','depth' => 1  ) );     
+	    echo '</nav><!-- #tec-navigation -->';
+         }  
+	if ( has_nav_menu( 'targetmenue' ) ) { ?>
+	    <nav id="zielgruppen-menue" class="zielgruppen-menue" role="navigation">
 		<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'techfak-2013' ); ?>"><?php _e( 'Skip to content', 'techfak-2013' ); ?></a>
-		<?php wp_nav_menu( array( 'theme_location' => 'targetmenue', 'fallback_cb' => '' ) );?>
-	</nav><!-- #target-navigation -->
+		<?php wp_nav_menu( array( 'theme_location' => 'targetmenue', 'fallback_cb' => '', 'depth' => 1 ) );?>
+	    </nav><!-- #target-navigation -->
+         <?php }  
+	 
+	 if ($options['aktiv_menueselectlist']) { ?>			
+	
 	
 	<nav id="zielgruppen-menue-select" class="zielgruppen-menue-select" role="navigation">
 		<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'techfak-2013' ); ?>"><?php _e( 'Skip to content', 'techfak-2013' ); ?></a>
@@ -66,6 +65,6 @@
                             'walker'  => new Walker_Nav_Menu_Dropdown(),
                             'theme_location' => 'targetmenue'));  ?>
 	</nav><!-- #target-navigation -->
-	
+	 <?php } ?>
 	
 	<div id="main" class="wrapper">

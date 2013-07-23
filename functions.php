@@ -623,14 +623,16 @@ class Walker_Nav_Menu_Dropdown extends Walker_Nav_Menu{
       $item->title = str_repeat("&nbsp;", $depth * 4).$item->title;
 
 
-
-        $xoutput .= $indent . ' id="menu-item-'. $item->ID . '"' . $value . $class_names ;  
+	if (!isset($indent)) {
+	    $indent = '';
+	}
+        $xoutput = $indent . ' id="menu-item-'. $item->ID . '"'; //  . $value . $class_names ;  
         $attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';  
         $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';  
         $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';  
         $attributes .= ! empty( $item->url )        ? ' value="'   . esc_attr( $item->url        ) .'"' : '';  
         
-        $item_output .= '<option'. $xoutput . $attributes .'>';  
+        $item_output = '<option'. $xoutput . $attributes .'>';  
         $item_output .= $args->link_before .apply_filters( 'the_title', $item->title, $item->ID );  
         $item_output .= '</option>';  
         

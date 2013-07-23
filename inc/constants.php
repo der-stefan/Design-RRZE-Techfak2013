@@ -15,6 +15,7 @@ $defaultoptions = array(
     'aktiv-basemod_targetmenu'	    => 0,
     'aktiv-basemod_search'	    => 1,
     'aktiv-basemod_transparentetabellen'    => 1,
+    'aktiv_menueselectlist'	    => 1,
 );
 
 
@@ -84,7 +85,12 @@ $setoptions = array(
                   'label'   => __( 'Tabellen ohne Farbe anzeigen','techfak-2013' ),
                   'default' => $defaultoptions['aktiv-basemod_transparentetabellen'],
               ),  
-	       
+	      'aktiv_menueselectlist'   => array(
+                  'type'    => 'bool',
+                  'title'   => __( 'Dropdown Men&uuml; aktivieren', 'techfak-2013'),
+                  'label'   => __( 'Dropdown Liste f&uuml;r Small Screen Devices aktivieren','techfak-2013' ),
+                  'default' => $defaultoptions['aktiv-basemod_transparentetabellen'],
+              ),  
                
            )
        ),
