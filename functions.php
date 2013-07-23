@@ -23,7 +23,7 @@
  */
 
 require( get_template_directory() . '/inc/constants.php' );
-$options = get_option('piratenkleider_theme_options');
+$options = get_option('techfak2013_theme_options');
 $options =techfak2013_compatibility($options);
 
 if ( ! isset( $content_width ) )   $content_width = $options['content-width'];
