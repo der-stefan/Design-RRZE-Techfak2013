@@ -12,19 +12,22 @@
  */
 
 get_header(); ?>
-<?php get_sidebar(); ?>
-
+	
+	<div class="search"><?php include ('searchform.php'); ?></div>
+	
+	<div class="breadcrumbs">
+		<?php if(function_exists('bcn_display'))
+		{
+			bcn_display();
+		}?>
+	</div>
+	
+	<?php get_sidebar(); ?>
+	
 	<section id="primary" class="site-content">
 		<div id="content" role="main">
 
-		<div class="breadcrumbs">
-			<?php if(function_exists('bcn_display'))
-			{
-				bcn_display();
-			}?>
-		</div>
-
-	<?php if ( have_posts() ) : ?>
+		<?php if ( have_posts() ) : ?>
 			<header class="archive-header">
 				<h1 class="archive-title"><?php printf( __( 'Tag Archives: %s', 'techfak-2013' ), '<span>' . single_tag_title( '', false ) . '</span>' ); ?></h1>
 

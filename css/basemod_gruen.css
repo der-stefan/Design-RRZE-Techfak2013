@@ -1,0 +1,149 @@
+/**
+ * Projekt Vorlagenkatalog 
+ *
+ * Basisstylesheet Techfak 2013
+ *
+ * @mod_name        gruen
+ * @mod_desc        Farbschema "gruen"
+ *
+ * @copyright       Copyright 2005-2012, RRZE
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/)
+ * @link            http://www.vorlagen.uni-erlangen.de
+ * @package         css
+ * @version         1.0
+ * @lastmodified    02/2013
+ */
+
+/* Farbvariante
+ *     #8A9B00  - Basisfarbe 
+*/ 
+
+
+/* =General Styles
+-------------------------------------------------------------- */
+
+/* Content */
+.site-header h1, 
+.site-header h1 a, 
+.site-header h2,
+.site-header h2 a {
+	color: #8A9B00;
+}
+.page-header,
+.entry-header {
+	margin-top: 12px;
+	margin-top: 0.85714285714286rem;
+	margin-bottom: 12px;
+	margin-bottom: 0.85714285714286rem;
+}
+.page-header h1.page-title, 
+.entry-header h1.entry-title {
+	padding: 10px 5px 10px 15px;
+	background: #8A9B00;
+	color: #ffffff;
+}
+.entry-content h2, 
+.comment-content h2, 
+.mu_register h2 {
+	border-bottom: 1px solid #8A9B00;
+}
+.entry-content th, 
+.comment-content th {
+	border-right: 1px solid #8A9B00;
+	border-bottom: 1px solid #8A9B00;
+}
+.entry-content td, 
+.comment-content td {
+	border-right: 1px solid #8A9B00;
+	border-bottom: 1px solid #8A9B00;
+	border-top: 1px solid #8A9B00;
+	background: #f7f8f9;
+}
+.entry-content table.wechselfarbe tr td {
+	background: #f7f8f9;
+}
+.entry-content table.wechselfarbe tr:nth-child(odd) td {
+	background: #eeeff1;
+}
+.entry-content .vollbox, 
+.entry-content .box_rechts, 
+.entry-content .box_links, 
+.entry-content .klein_box_rechts, 
+.entry-content .klein_box_links {
+	border: 1px solid #8A9B00;
+}
+.entry-content form fieldset {
+	background: #f7f8f9;
+}
+.entry-content form fieldset legend {
+	color: #8A9B00;
+}
+
+/* Main Navigation */
+.main-navigation .current-menu-item > a, 
+.main-navigation .current-menu-ancestor > a, 
+.main-navigation .current_page_item > a, 
+.main-navigation .current_page_ancestor > a {
+	border-bottom: 1px solid #8A9B00;
+}
+
+/* Sidebar / Widgets */
+.widget-area .widget h3 {
+    border-bottom: 1px solid #8A9B00;
+}
+
+
+/* =Media queries
+-------------------------------------------------------------- */
+
+/* Minimum width of 600 pixels. */
+@media screen and (min-width: 600px) {
+	
+	.site-header {
+		background: url(/wp-content/themes/techfak-2013/images/header-techfak-gruen-0b.png) no-repeat scroll 51% 0% transparent;
+	}
+	hgroup {
+		width: 52%;
+	}
+	.site-header h1, 
+	.site-header h1 a, 
+	.site-header h2,
+	.site-header h2 a {
+		color: #fff;
+		text-shadow: 1px 1px 2px #4C4C4C;
+	}
+	.zielgruppen-menue {
+	    background: url(/wp-content/themes/techfak-2013/images/hauptmenue-bg-gruen.png) repeat-y scroll left top #A4ABB3;
+	}
+	.page-header h1.page-title, 
+	.entry-header h1.entry-title {
+		color: #8A9B00;
+		background-color: transparent;
+	}
+}
+
+
+/* Minimum width of 960 pixels. */
+@media screen and (min-width: 960px) {
+	
+	.site-header {
+		background: url(/wp-content/themes/techfak-2013/images/header-techfak-gruen-2b.png) no-repeat scroll 48% 0% transparent;
+		padding: 12px;
+		padding: 0.857143rem;
+	}
+	hgroup {
+		width: 38%;
+	}
+}
+
+/* Minimum width of 1090 pixels. */
+@media screen and (min-width: 1090px) {
+	
+	.site-header {
+		background: url(/wp-content/themes/techfak-2013/images/header-techfak-gruen-3b.png) no-repeat scroll 48% 0% transparent;
+	}
+	hgroup {
+		width: 33%;
+	}
+	
+}

@@ -22,11 +22,11 @@ function twentytwelve_custom_header_setup() {
 	$args = array(
 		// Text color and image (empty to use none).
 		'default-text-color'     => '444',
-		'default-image'          => 'images/logo-techfak.png',
+		'default-image'          => '',
 
 		// Set height and width, with a maximum value for the width.
-		'height'                 => 200,
-		'width'                  => 54,
+		'height'                 => 250,
+		'width'                  => 960,
 		'max-width'              => 2000,
 
 		// Support flexible height and width.

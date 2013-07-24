@@ -8,7 +8,18 @@
  */
 
 get_header(); ?>
-
+	
+	<div class="search"><?php include ('searchform.php'); ?></div>
+	
+	<div class="breadcrumbs">
+		<?php if(function_exists('bcn_display'))
+		{
+			bcn_display();
+		}?>
+	</div>
+	
+	<?php get_sidebar(); ?>
+	
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
 

@@ -24,7 +24,7 @@
 
 require( get_template_directory() . '/inc/constants.php' );
 $options = get_option('techfak2013_theme_options');
-$options =techfak2013_compatibility($options);
+$options = techfak2013_compatibility($options);
 
 if ( ! isset( $content_width ) )   $content_width = $options['content-width'];
 require_once ( get_template_directory() . '/theme-options.php' );
@@ -66,14 +66,6 @@ function twentytwelve_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menu( 'primary', __( 'Primary Menu', 'techfak-2013' ) );
 
-	/*
-	 * This theme supports custom background color and image, and here
-	 * we also set up the default background color.
-	 */
-	add_theme_support( 'custom-background', array(
-		'default-color' => $options['default-color'],
-	) );
-
 	// This theme uses a custom image size for featured images, displayed on "standard" posts.
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( $options[ 'thumbnail-width'], $options['thumbnail-height'] ); 
@@ -82,7 +74,6 @@ function twentytwelve_setup() {
 		'targetmenue' => __( 'Zielgruppen-Menu' ),
 		'tecmenue' => __( 'Tec-Menü' ),
 	) );
-	
 }
 add_action( 'after_setup_theme', 'twentytwelve_setup' );
 
