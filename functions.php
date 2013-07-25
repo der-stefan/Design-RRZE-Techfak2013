@@ -71,8 +71,8 @@ function twentytwelve_setup() {
 	set_post_thumbnail_size( $options[ 'thumbnail-width'], $options['thumbnail-height'] ); 
 	
 	register_nav_menus( array(
-		'targetmenue' => __( 'Zielgruppen-Menu' ),
-		'tecmenue' => __( 'Tec-Menü' ),
+		'targetmenue' =>  __( 'Target Group Menu', 'techfak-2013' ),
+		'tecmenue' =>  __( 'Technical/Meta Menu', 'techfak-2013' ),
 	) );
 }
 add_action( 'after_setup_theme', 'twentytwelve_setup' );
@@ -87,24 +87,16 @@ require( get_template_directory() . '/inc/custom-header.php' );
  *
  * @since Twenty Twelve 1.0
  */
-function twentytwelve_scripts_styles() {
+function techfak2013_scripts_styles() {
 	global $wp_styles;
+	global $options;
 
-	/*
-	 * Adds JavaScript to pages with the comment form to support
-	 * sites with threaded comments (when in use).
-	 */
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
 		wp_enqueue_script( 'comment-reply' );
 
 	/*
 	 * Adds JavaScript for handling the navigation menu hide-and-show behavior.
-	 */
-	/* wp_enqueue_script( 'twentytwelve-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '1.0', true );*/
-
-	/*
-	 * Adds JavaScript for handling the navigation menu hide-and-show behavior.
-	 */
+	 */	
 	wp_enqueue_script( 'twentytwelve-sidebar', get_template_directory_uri() . '/js/toggle.js', array(), '1.0', true );
 	
 	/*
@@ -154,8 +146,10 @@ function twentytwelve_scripts_styles() {
 	 */
 	wp_enqueue_style( 'twentytwelve-ie', get_template_directory_uri() . '/css/ie.css', array( 'twentytwelve-style' ), '20121010' );
 	$wp_styles->add_data( 'twentytwelve-ie', 'conditional', 'lt IE 9' );
+	
+	
 }
-add_action( 'wp_enqueue_scripts', 'twentytwelve_scripts_styles' );
+add_action( 'wp_enqueue_scripts', 'techfak2013_scripts_styles' );
 
 /**
  * Creates a nicely formatted and more specific title element text
@@ -310,6 +304,8 @@ function twentytwelve_content_nav( $html_id ) {
 }
 endif;
 
+
+
 if ( ! function_exists( 'twentytwelve_comment' ) ) :
 /**
  * Template for comments and pingbacks.
@@ -420,6 +416,20 @@ function twentytwelve_entry_meta() {
 	);
 }
 endif;
+
+
+/*
+ * Adds optional styles in header
+ */
+function techfak2013_add_basemod_styles() {
+    global $options;
+    if ($options['aktiv-basemod_siegel'])  {
+	wp_enqueue_style( 'basemod_siegel', $options['src-basemod-siegel'] );
+    }
+    
+}
+add_action( 'wp_enqueue_scripts', 'techfak2013_add_basemod_styles' );
+
 
 /**
  * Extends the default WordPress body class to denote:

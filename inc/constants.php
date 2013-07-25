@@ -16,6 +16,7 @@ $defaultoptions = array(
     'aktiv-basemod_search'	    => 1,
     'aktiv-basemod_transparentetabellen'    => 1,
     'aktiv_menueselectlist'	    => 1,
+    'src-basemod-siegel'	    => get_template_directory_uri() . 'css/basemod-siegel.css',
 );
 
 
