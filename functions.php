@@ -45,6 +45,7 @@ require_once ( get_template_directory() . '/theme-options.php' );
  */
 function twentytwelve_setup() {
     global $options;
+    global $defaultoptions;
 	/*
 	 * Makes Twenty Twelve available for translation.
 	 *
@@ -74,6 +75,30 @@ function twentytwelve_setup() {
 		'targetmenue' =>  __( 'Target Group Menu', 'techfak-2013' ),
 		'tecmenue' =>  __( 'Technical/Meta Menu', 'techfak-2013' ),
 	) );
+	$args = array(
+		// Text color and image (empty to use none).
+		'default-text-color'     => '444',
+		'default-image'          => $defaultoptions['logo'],
+
+		// Set height and width, with a maximum value for the width.
+		'height'                 => $defaultoptions['logo-width'],
+		'width'                  => $defaultoptions['logo-height'],
+		'max-width'              => 2000,
+
+		// Support flexible height and width.
+		'flex-height'            => true,
+		'flex-width'             => true,
+
+		// Random image rotation off by default.
+		'random-default'         => false,
+
+		// Callbacks for styling the header and the admin preview.
+		'wp-head-callback'       => 'twentytwelve_header_style',
+		'admin-head-callback'    => 'twentytwelve_admin_header_style',
+		'admin-preview-callback' => 'twentytwelve_admin_header_image',
+	);
+
+	add_theme_support( 'custom-header', $args );
 }
 add_action( 'after_setup_theme', 'twentytwelve_setup' );
 
@@ -425,6 +450,9 @@ function techfak2013_add_basemod_styles() {
     global $options;
     if ($options['aktiv-basemod_siegel'])  {
 	wp_enqueue_style( 'basemod_siegel', $options['src-basemod-siegel'] );
+    }
+    if (isset($options['basemods_colors']))  {
+	wp_enqueue_style( 'basemod_colors', get_template_directory_uri() . '/css/'.$options['basemods_colors'] );
     }
     
 }

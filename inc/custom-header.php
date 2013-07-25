@@ -8,43 +8,8 @@
  * @since Twenty Twelve 1.0
  */
 
-/**
- * Sets up the WordPress core custom header arguments and settings.
- *
- * @uses add_theme_support() to register support for 3.4 and up.
- * @uses twentytwelve_header_style() to style front-end.
- * @uses twentytwelve_admin_header_style() to style wp-admin form.
- * @uses twentytwelve_admin_header_image() to add custom markup to wp-admin form.
- *
- * @since Twenty Twelve 1.0
- */
-function twentytwelve_custom_header_setup() {
-	$args = array(
-		// Text color and image (empty to use none).
-		'default-text-color'     => '444',
-		'default-image'          => 'images/logo-techfak.png',
 
-		// Set height and width, with a maximum value for the width.
-		'height'                 => 200,
-		'width'                  => 54,
-		'max-width'              => 2000,
 
-		// Support flexible height and width.
-		'flex-height'            => true,
-		'flex-width'             => true,
-
-		// Random image rotation off by default.
-		'random-default'         => false,
-
-		// Callbacks for styling the header and the admin preview.
-		'wp-head-callback'       => 'twentytwelve_header_style',
-		'admin-head-callback'    => 'twentytwelve_admin_header_style',
-		'admin-preview-callback' => 'twentytwelve_admin_header_image',
-	);
-
-	add_theme_support( 'custom-header', $args );
-}
-add_action( 'after_setup_theme', 'twentytwelve_custom_header_setup' );
 
 /**
  * Styles the header text displayed on the blog.

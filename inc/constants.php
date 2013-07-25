@@ -11,12 +11,14 @@ $defaultoptions = array(
     'thumbnail-height'		    => 9999,
     'content-width'                 => 625,
     'aktiv-basemod_siegel'	    => 0,
-    'aktiv-basemod_sidebar'	    => 1,
+    'aktiv-basemod_sidebar'	    => 0,
     'aktiv-basemod_targetmenu'	    => 0,
     'aktiv-basemod_search'	    => 1,
-    'aktiv-basemod_transparentetabellen'    => 1,
+    'aktiv-basemod_transparentetabellen'    => 0,
     'aktiv_menueselectlist'	    => 1,
-    'src-basemod-siegel'	    => get_template_directory_uri() . 'css/basemod-siegel.css',
+    'logo'			    => get_template_directory_uri() . '/images/logo-techfak.png',
+    'logo-width'		    => 360,
+    'logo-height'		    => 135,
 );
 
 
@@ -56,6 +58,7 @@ $setoptions = array(
 		  'liste'   => $default_farbbasemods,
                   'default' => '',
               ),
+	       /* 
               'aktiv-basemod_siegel' => array(
                   'type'    => 'bool',
                   'title'   => __( 'FAU-Siegel', 'techfak-2013'),
@@ -86,6 +89,7 @@ $setoptions = array(
                   'label'   => __( 'Tabellen ohne Farbe anzeigen','techfak-2013' ),
                   'default' => $defaultoptions['aktiv-basemod_transparentetabellen'],
               ),  
+	       */
 	      'aktiv_menueselectlist'   => array(
                   'type'    => 'bool',
                   'title'   => __( 'Dropdown Men&uuml; aktivieren', 'techfak-2013'),
