@@ -22,7 +22,6 @@ if(isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
 
       
 
-<<<<<<< HEAD
 if ( ! isset( $content_width ) )   $content_width = $defaultoptions['content-width'];
 require_once ( get_template_directory() . '/theme-options.php' );
 
@@ -85,153 +84,6 @@ function tf2013_setup() {
 	add_filter('widget_text', 'do_shortcode');
 }
 endif;
-=======
-/**
- * Sets up theme defaults and registers the various WordPress features that
- * Twenty Twelve supports.
- *
- * @uses load_theme_textdomain() For translation/localization support.
- * @uses add_editor_style() To add a Visual Editor stylesheet.
- * @uses add_theme_support() To add support for post thumbnails, automatic feed links,
- * 	custom background, and post formats.
- * @uses register_nav_menu() To add support for navigation menus.
- * @uses set_post_thumbnail_size() To set a custom post thumbnail size.
- *
- * @since Twenty Twelve 1.0
- */
-function twentytwelve_setup() {
-    global $options;
-    global $defaultoptions;
-	/*
-	 * Makes Twenty Twelve available for translation.
-	 *
-	 * Translations can be added to the /languages/ directory.
-	 * If you're building a theme based on Twenty Twelve, use a find and replace
-	 * to change 'twentytwelve' to the name of your theme in all the template files.
-	 */
-	load_theme_textdomain( 'techfak-2013', get_template_directory() . '/languages' );
-
-	// This theme styles the visual editor with editor-style.css to match the theme style.
-	add_editor_style();
-
-	// Adds RSS feed links to <head> for posts and comments.
-	add_theme_support( 'automatic-feed-links' );
-
-	// This theme supports a variety of post formats.
-	add_theme_support( 'post-formats', array( 'aside', 'image', 'link', 'quote', 'status' ) );
-
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menu( 'primary', __( 'Primary Menu', 'techfak-2013' ) );
-
-	// This theme uses a custom image size for featured images, displayed on "standard" posts.
-	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( $options[ 'thumbnail-width'], $options['thumbnail-height'] ); 
-	
-	register_nav_menus( array(
-		'targetmenue' =>  __( 'Target Group Menu', 'techfak-2013' ),
-		'tecmenue' =>  __( 'Technical/Meta Menu', 'techfak-2013' ),
-	) );
-	$args = array(
-		// Text color and image (empty to use none).
-		'default-text-color'     => '444',
-		'default-image'          => $defaultoptions['logo'],
-
-		// Set height and width, with a maximum value for the width.
-		'height'                 => $defaultoptions['logo-width'],
-		'width'                  => $defaultoptions['logo-height'],
-		'max-width'              => 2000,
-
-		// Support flexible height and width.
-		'flex-height'            => true,
-		'flex-width'             => true,
-
-		// Random image rotation off by default.
-		'random-default'         => false,
-
-		// Callbacks for styling the header and the admin preview.
-		'wp-head-callback'       => 'twentytwelve_header_style',
-		'admin-head-callback'    => 'twentytwelve_admin_header_style',
-		'admin-preview-callback' => 'twentytwelve_admin_header_image',
-	);
-
-	add_theme_support( 'custom-header', $args );
-}
-add_action( 'after_setup_theme', 'twentytwelve_setup' );
-
-/**
- * Adds support for a custom header image.
- */
-require( get_template_directory() . '/inc/custom-header.php' );
-
-/**
- * Enqueues scripts and styles for front-end.
- *
- * @since Twenty Twelve 1.0
- */
-function techfak2013_scripts_styles() {
-	global $wp_styles;
-	global $options;
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
-		wp_enqueue_script( 'comment-reply' );
-
-	/*
-	 * Adds JavaScript for handling the navigation menu hide-and-show behavior.
-	 */	
-	wp_enqueue_script( 'twentytwelve-sidebar', get_template_directory_uri() . '/js/toggle.js', array(), '1.0', true );
-	
-	/*
-	 * Loads our special font CSS file.
-	 *
-	 * The use of Open Sans by default is localized. For languages that use
-	 * characters not supported by the font, the font can be disabled.
-	 *
-	 * To disable in a child theme, use wp_dequeue_style()
-	 * function mytheme_dequeue_fonts() {
-	 *     wp_dequeue_style( 'twentytwelve-fonts' );
-	 * }
-	 * add_action( 'wp_enqueue_scripts', 'mytheme_dequeue_fonts', 11 );
-	 */
-
-	/* translators: If there are characters in your language that are not supported
-	   by Open Sans, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Open Sans font: on or off', 'techfak-2013' ) ) {
-		$subsets = 'latin,latin-ext';
-
-		/* translators: To add an additional Open Sans character subset specific to your language, translate
-		   this to 'greek', 'cyrillic' or 'vietnamese'. Do not translate into your own language. */
-		$subset = _x( 'no-subset', 'Open Sans font: add new subset (greek, cyrillic, vietnamese)', 'techfak-2013' );
-
-		if ( 'cyrillic' == $subset )
-			$subsets .= ',cyrillic,cyrillic-ext';
-		elseif ( 'greek' == $subset )
-			$subsets .= ',greek,greek-ext';
-		elseif ( 'vietnamese' == $subset )
-			$subsets .= ',vietnamese';
-
-		$protocol = is_ssl() ? 'https' : 'http';
-		$query_args = array(
-			'family' => 'Open+Sans:400italic,700italic,400,700',
-			'subset' => $subsets,
-		);
-		wp_enqueue_style( 'twentytwelve-fonts', add_query_arg( $query_args, "$protocol://fonts.googleapis.com/css" ), array(), null );
-	}
-
-	/*
-	 * Loads our main stylesheet.
-	 */
-	wp_enqueue_style( 'twentytwelve-style', get_stylesheet_uri() );
-
-	/*
-	 * Loads the Internet Explorer specific stylesheet.
-	 */
-	wp_enqueue_style( 'twentytwelve-ie', get_template_directory_uri() . '/css/ie.css', array( 'twentytwelve-style' ), '20121010' );
-	$wp_styles->add_data( 'twentytwelve-ie', 'conditional', 'lt IE 9' );
-	
-	
-}
-add_action( 'wp_enqueue_scripts', 'techfak2013_scripts_styles' );
->>>>>>> 096653a11a5c6404753e0415ab2a83cf81ffefa4
 
 require( get_template_directory() . '/inc/widgets.php' );
 
@@ -342,74 +194,8 @@ function tf2013_add_basemod_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'tf2013_add_basemod_styles' );
 
-<<<<<<< HEAD
 function tf2013_admin_head() {
     echo '<link rel="stylesheet" type="text/css" href="'.get_template_directory_uri().'/css/admin.css" />'; 
-=======
-
-
-if ( ! function_exists( 'twentytwelve_comment' ) ) :
-/**
- * Template for comments and pingbacks.
- *
- * To override this walker in a child theme without modifying the comments template
- * simply create your own twentytwelve_comment(), and that function will be used instead.
- *
- * Used as a callback by wp_list_comments() for displaying the comments.
- *
- * @since Twenty Twelve 1.0
- */
-function twentytwelve_comment( $comment, $args, $depth ) {
-	$GLOBALS['comment'] = $comment;
-	switch ( $comment->comment_type ) :
-		case 'pingback' :
-		case 'trackback' :
-		// Display trackbacks differently than normal comments.
-	?>
-	<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-		<p><?php _e( 'Pingback:', 'techfak-2013' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( '(Edit)', 'techfak-2013' ), '<span class="edit-link">', '</span>' ); ?></p>
-	<?php
-			break;
-		default :
-		// Proceed with normal comments.
-		global $post;
-	?>
-	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-		<article id="comment-<?php comment_ID(); ?>" class="comment">
-			<header class="comment-meta comment-author vcard">
-				<?php
-					echo get_avatar( $comment, 44 );
-					printf( '<cite class="fn">%1$s %2$s</cite>',
-						get_comment_author_link(),
-						// If current post author is also comment author, make it known visually.
-						( $comment->user_id === $post->post_author ) ? '<span> ' . __( 'Post author', 'techfak-2013' ) . '</span>' : ''
-					);
-					printf( '<a href="%1$s"><time datetime="%2$s">%3$s</time></a>',
-						esc_url( get_comment_link( $comment->comment_ID ) ),
-						get_comment_time( 'c' ),
-						/* translators: 1: date, 2: time */
-						sprintf( __( '%1$s at %2$s', 'techfak-2013' ), get_comment_date(), get_comment_time() )
-					);
-				?>
-			</header><!-- .comment-meta -->
-
-			<?php if ( '0' == $comment->comment_approved ) : ?>
-				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'techfak-2013' ); ?></p>
-			<?php endif; ?>
-
-			<section class="comment-content comment">
-				<?php comment_text(); ?>
-				<?php edit_comment_link( __( 'Edit', 'techfak-2013' ), '<p class="edit-link">', '</p>' ); ?>
-			</section><!-- .comment-content -->
-
-			<div class="reply">
-				<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'techfak-2013' ), 'after' => ' <span>&darr;</span>', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
-			</div><!-- .reply -->
-		</article><!-- #comment-## -->
-	<?php
-		break;
-	endswitch; // end comment_type check
->>>>>>> 096653a11a5c6404753e0415ab2a83cf81ffefa4
 }
 add_action('admin_head', 'tf2013_admin_head');
 
@@ -627,54 +413,6 @@ function tf2013_filter_wp_title( $title, $separator ) {
 endif;
 add_filter( 'wp_title', 'tf2013_filter_wp_title', 10, 2 );
 
-<<<<<<< HEAD
-=======
-
-/*
- * Adds optional styles in header
- */
-function techfak2013_add_basemod_styles() {
-    global $options;
-    if ($options['aktiv-basemod_siegel'])  {
-	wp_enqueue_style( 'basemod_siegel', $options['src-basemod-siegel'] );
-    }
-    if (isset($options['basemods_colors']))  {
-	wp_enqueue_style( 'basemod_colors', get_template_directory_uri() . '/css/'.$options['basemods_colors'] );
-    }
-    
-}
-add_action( 'wp_enqueue_scripts', 'techfak2013_add_basemod_styles' );
-
-
-/**
- * Extends the default WordPress body class to denote:
- * 1. Using a full-width layout, when no active widgets in the sidebar
- *    or full-width template.
- * 2. Front Page template: thumbnail in use and number of sidebars for
- *    widget areas.
- * 3. White or empty background color to change the layout and spacing.
- * 4. Custom fonts enabled.
- * 5. Single or multiple authors.
- *
- * @since Twenty Twelve 1.0
- *
- * @param array Existing class values.
- * @return array Filtered class values.
- */
-function twentytwelve_body_class( $classes ) {
-	$background_color = get_background_color();
-
-	if ( ! is_active_sidebar( 'sidebar-1' ) || is_page_template( 'page-templates/full-width.php' ) )
-		$classes[] = 'full-width';
-
-	if ( is_page_template( 'page-templates/front-page.php' ) ) {
-		$classes[] = 'template-front-page';
-		if ( has_post_thumbnail() )
-			$classes[] = 'has-post-thumbnail';
-		if ( is_active_sidebar( 'sidebar-2' ) && is_active_sidebar( 'sidebar-3' ) )
-			$classes[] = 'two-sidebars';
-	}
->>>>>>> 096653a11a5c6404753e0415ab2a83cf81ffefa4
 
 
 
