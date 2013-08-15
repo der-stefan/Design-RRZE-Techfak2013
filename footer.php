@@ -1,31 +1,44 @@
 <?php
-/**
- * The template for displaying the footer.
- *
- * Contains footer content and the closing of the
- * #main and #page div elements.
- *
- * @package WordPress
- * @subpackage Twenty_Twelve
- * @since Twenty Twelve 1.0
+/* 
+ * Footer
  */
 ?>
-	</div><!-- #main .wrapper -->
-	
-	<footer>
-	
-		<nav id="tec-menue-bottom" class="tec-menue-bottom" role="navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'tecmenue', 'fallback_cb' => '' ) );?>
-		</nav><!-- #tec-navigation -->
-	
-		<?php if ( is_active_sidebar( 'sidebar-5' ) ) : ?>
-			<?php dynamic_sidebar( 'sidebar-5' ); ?><!-- .zusatzinfo .widget-area -->
-		<?php endif; // end extra sidebar widget area ?>
-	</footer><!-- #colophon -->
-	
-	
-</div><!-- #page -->
 
-<?php wp_footer(); ?>
-</body>
+
+
+    
+      		 <hr id="vorfooter" />
+	      	</div>  <!-- end: content -->                       
+     	</div>  <!-- end: main -->                   
+       <footer><div id="footer">  <!-- begin: footer -->         			
+           <div id="footerinfos">  <!-- begin: footerinfos -->
+
+	       <?php if ( has_nav_menu( 'tecmenu' ) ) { ?>
+	       <nav role="navigation">
+			<div id="tecmenu">   <!-- begin: tecmenu -->	
+		        	<h2 class="skip"><a name="hilfemarke" id="hilfemarke">Technisches Menu</a></h2>		
+					<?php wp_nav_menu( array( 'theme_location' => 'tecmenu', 'fallback_cb' => '' ) );?>
+	        	</div>  <!-- end: tecmenu -->	
+		</nav>
+	       <?php } ?>
+              <div id="zusatzinfo" class="noprint">  <!-- begin: zusatzinfo -->
+		<a id="zusatzinfomarke" name="zusatzinfomarke"></a> 	
+		    <?php if ( is_active_sidebar( 'zusatzinfo-area' ) ) { 
+			    dynamic_sidebar( 'zusatzinfo-area' ); 
+			 } ?>
+		
+		
+		<p class="skip"><a href="#seitenmarke">Zum Seitenanfang</a></p>
+		</div>  <!-- end: zusatzinfo -->
+
+
+	      
+	      
+           </div> <!-- end: footerinfos -->	
+        </div></footer>   <!-- end: footer --> 
+	
+    </div>  <!-- end: seite -->
+  </div>  <!-- end: page_margins  -->
+    <?php wp_footer(); ?>
+    </body> <!-- end: body -->
 </html>

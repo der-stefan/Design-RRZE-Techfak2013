@@ -19,127 +19,235 @@
 */ 
 
 
-/* =General Styles
--------------------------------------------------------------- */
+@media screen, projection
+{
 
-/* Content */
-.site-header h1, 
-.site-header h1 a, 
-.site-header h2,
-.site-header h2 a {
-	color: #E0AD12;
-}
-.page-header,
-.entry-header {
-	margin-top: 12px;
-	margin-top: 0.85714285714286rem;
-	margin-bottom: 12px;
-	margin-bottom: 0.85714285714286rem;
-}
-.page-header h1.page-title, 
-.entry-header h1.entry-title {
-	padding: 10px 5px 10px 15px;
-	background: #E0AD12;
-	color: #ffffff;
-}
-.entry-content h2, 
-.comment-content h2, 
-.mu_register h2 {
-	border-bottom: 1px solid #E0AD12;
-}
-.entry-content th, 
-.comment-content th {
-	border-right: 1px solid #E0AD12;
-	border-bottom: 1px solid #E0AD12;
-}
-.entry-content td, 
-.comment-content td {
-	border-right: 1px solid #E0AD12;
-	border-bottom: 1px solid #E0AD12;
-	border-top: 1px solid #E0AD12;
-	background: #f7f8f9;
-}
-.entry-content table.wechselfarbe tr td {
-	background: #f7f8f9;
-}
-.entry-content table.wechselfarbe tr:nth-child(odd) td {
-	background: #eeeff1;
-}
-.entry-content .vollbox, 
-.entry-content .box_rechts, 
-.entry-content .box_links, 
-.entry-content .klein_box_rechts, 
-.entry-content .klein_box_links {
-	border: 1px solid #E0AD12;
-}
-.entry-content form fieldset {
-	background: #f7f8f9;
-}
-.entry-content form fieldset legend {
-	color: #E0AD12;
-}
-
-/* Main Navigation */
-.main-navigation .current-menu-item > a, 
-.main-navigation .current-menu-ancestor > a, 
-.main-navigation .current_page_item > a, 
-.main-navigation .current_page_ancestor > a {
-	border-bottom: 1px solid #E0AD12;
-}
-
-/* Sidebar / Widgets */
-.widget-area .widget h3 {
-    border-bottom: 1px solid #E0AD12;
-}
-
-
-/* =Media queries
--------------------------------------------------------------- */
-
-/* Minimum width of 600 pixels. */
-@media screen and (min-width: 600px) {
+	/*  ------------------------------------------------------
+	HEADER
+	--------------------------------------------------------*/
 	
-	.site-header {
-		background: url(/wp-content/themes/techfak-2013/images/header-techfak-gelb-0b.png) no-repeat scroll 51% 0% transparent;
+	div#kopf {
+		background: url(../images/header-techfak-gelb-3b.png) no-repeat scroll 48% 0% transparent;
 	}
-	.site-header h1, 
-	.site-header h1 a, 
-	.site-header h2,
-	.site-header h2 a {
+		
+	div#kopf div#logo {
+		background: url(../images/logo-techfak-blau-bg.png);
+		background-repeat: no-repeat;
+		background-position: 99% 0;
+	}
+	
+	div#kopf div#logo img {
+		display: none;
+	}
+	
+	div#kopf div#logo p {
 		color: #fff;
 		text-shadow: 1px 1px 2px #4C4C4C;
+		letter-spacing: 0.05em;
+		
 	}
-	.zielgruppen-menue {
-	    background: url(/wp-content/themes/techfak-2013/images/hauptmenue-bg-gelb.png) repeat-y scroll left top #A4ABB3;
+	
+	div#kopf div#logo p a {
+		color: #fff;
 	}
-	.page-header h1.page-title, 
-	.entry-header h1.entry-title {
+	
+	div#kopf div#hauptmenu {
+		background: #A4ABB3 url(../images/hauptmenue-bg-gelb.png) repeat-y;
+		margin-left: -27px;
+		padding-left: 27px;
+	}
+	
+	div#kopf div#titel h1 {
 		color: #E0AD12;
-		background-color: transparent;
+	}
+	
+	/*  ------------------------------------------------------
+	MAIN
+	--------------------------------------------------------*/
+	
+	div#main {}	
+	
+	/*  ------------------------------------------------------
+	MENU - MAIN
+	--------------------------------------------------------*/
+	
+	ul#navigation {
+		color: #000 !important;
+	}
+	
+	ul#navigation li span.aktiv,
+	ul#navigation ul#hauptnavigation li span.aktiv, 
+	ul#navigation ul#hauptnavigation li a.aktiv,
+	ul#navigation ul#hauptnavigation ul li span.aktiv,
+	ul#navigation ul#hauptnavigation ul li ul li span.aktiv,
+	ul#navigation li.current-page-item > a,
+	ul#navigation li.current-menu-item > a,
+	ul#navigation li.current-page-ancestor > a,
+	ul#navigation li.current-menu-ancestor > a {
+		border-bottom: #E0AD12 1px solid !important;
+	}
+	
+	/*  ------------------------------------------------------
+	CONTENT
+	--------------------------------------------------------*/
+	
+	div#content h2 {
+		border-bottom: 1px solid #E0AD12;
+	}
+	
+	#content th {
+		border-right: 1px solid #E0AD12;
+		border-bottom: 1px solid #E0AD12;
+	}
+	
+	#content td {
+		border-right: 1px solid #E0AD12;
+		border-bottom: 1px solid #E0AD12;
+		border-top: 1px solid #E0AD12;
+		background: #f7f8f9;
+	}
+	
+	#content tfoot td {
+		border-right: none;
+		background: #fff;
+	}
+	
+	#content table.wechselfarbe tr td {
+		background: #f7f8f9;
+	}
+	
+	#content table.wechselfarbe tr:nth-child(odd) td {
+		background: #eeeff1;
+	}
+	
+	#content div.box_rechts, 
+	#content div.klein_box_rechts,
+	#content div.vollbox {
+		border: 1px solid #E0AD12;
+	}
+	
+	form fieldset {
+		background: #f7f8f9;
+	}
+	
+	form fieldset legend {
+		color: #E0AD12;
+	}
+	
+	/*  ------------------------------------------------------
+	SIDEBAR
+	--------------------------------------------------------*/
+	
+	div#main div#sidebar h3 {
+		border-bottom: #E0AD12 1px solid;
+	}
+	
+	/*  ------------------------------------------------------
+	FOOTER
+	--------------------------------------------------------*/
+
+}
+
+	
+/*  ------------------------------------------------------------------------------------------------------------
+						BREAKPOINT  1090px
+--------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 1090px) {
+	
+	div#kopf {
+		background: url(../images/header-techfak-gelb-2b.png) no-repeat scroll 48% 0% transparent;
+	}
+	
+}
+
+/*  ------------------------------------------------------------------------------------------------------------
+						BREAKPOINT  960px
+--------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 960px) {
+	
+	div#kopf {
+		background: url(../images/header-techfak-gelb-0b.png) no-repeat scroll 51% 0% transparent !important;
+	}
+	
+	div#kopf div#logo p {
+		display: block;
+		top: 0 !important;
+		padding-left: 10px;
+		width: 41% !important;
+		max-width: 41% !important;
+	}
+	
+}
+
+/*  ------------------------------------------------------------------------------------------------------------
+						BREAKPOINT  630px
+--------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 630px) {
+	
+	div#kopf div#logo {
+		background-size: 40% auto;
+	}
+	
+	div#kopf div#logo p {
+		width: 280px;
+		font-size: 1.2em !important;
 	}
 }
 
+/*  ------------------------------------------------------------------------------------------------------------
+						BREAKPOINT  480px
+--------------------------------------------------------------------------------------------------------------*/
 
-/* Minimum width of 960 pixels. */
-@media screen and (min-width: 960px) {
+@media screen and (max-width: 480px) {
 	
-	.site-header {
-		background: url(/wp-content/themes/techfak-2013/images/header-techfak-gelb-2b.png) no-repeat scroll 48% 0% transparent;
-		padding: 12px;
-		padding: 0.857143rem;
+	div#kopf {
+		background-image: none !important;
 	}
-	hgroup {
-		width: 38%;
+	
+	div#kopf div#logo p {
+		width: 100% !important;
+		max-width: 100% !important;
+		padding-top: 45px !important;
 	}
+	
+	div#kopf div#logo p, 
+	div#kopf div#logo p a {
+		color: #d0a111;
+		text-shadow: none;
+	}
+	
+	div#kopf div#titel h1 {
+		margin: 10px !important;
+		padding: 10px 5px 10px 15px !important;
+		background: #E0AD12;
+		color: #ffffff;
+	}
+	 
+	div#kopf div#titel, 
+	div#kopf div#sprungmarken {
+		margin-left: -27px;
+	}
+	
+	div#kopf div#hauptmenu {
+		height: auto;
+		background: none;
+		padding: 0;
+		border: none;
+	}
+
 }
 
-/* Minimum width of 1090 pixels. */
-@media screen and (min-width: 1090px) {
+/*  ------------------------------------------------------------------------------------------------------------
+						BREAKPOINT  320px
+--------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 320px) {
+
+	div#kopf div#logo p {
+		padding-top: 30px !important;
+	}
 	
-	.site-header {
-		background: url(/wp-content/themes/techfak-2013/images/header-techfak-gelb-3b.png) no-repeat scroll 48% 0% transparent;
-	}
-	hgroup {
-		width: 33%;
-	}
 }

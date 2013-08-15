@@ -7,15 +7,15 @@ add_action( 'admin_menu', 'theme_options_add_page' );
  * Init plugin options to white list our options
  */
 function theme_options_init(){
-	register_setting( 'techfak2013_options', 'techfak2013_theme_options', 'theme_options_validate' );
+	register_setting( 'tf2013_options', 'tf2013_theme_options', 'theme_options_validate' );
 }
 
 /**
  * Load up the menu page
  */
 function theme_options_add_page() {
-	add_theme_page( __( 'Theme Techfak 2013 Optionen', 'techfak-2013' ),
-                        __( 'Theme Techfak 2013  Optionen', 'techfak-2013' ), 
+	add_theme_page( __( 'Techfak2013 Optionen', 'tf2013' ),
+                        __( 'Techfak2013  Optionen', 'tf2013' ), 
                        'edit_theme_options', 'theme_options', 'theme_options_do_page' );
                           
 }
@@ -33,11 +33,11 @@ function theme_options_do_page($tab = '') {
        ?>
 
 	<div class="wrap">            
-            <div class="techfak2013-optionen">  <!-- begin: .techfak2013-optionen -->    
-		<?php screen_icon(); echo "<h2>" . wp_get_theme().': ' . __( 'Konfigurieren', 'techfak-2013' ) . "</h2>"; ?>
+            <div class="tf2013-optionen">  <!-- begin: .tf2013-optionen -->    
+		<?php screen_icon(); echo "<h2>" . wp_get_theme().': ' . __( 'Konfigurieren', 'tf2013' ) . "</h2>"; ?>
 
 		<?php if ( false !== $_REQUEST['settings-updated'] ) : ?>
-		<div class="updated fade"><p><strong><?php _e( 'Optionen wurden gespeichert.', 'techfak-2013' ); ?></strong></p></div>
+		<div class="updated fade"><p><strong><?php _e( 'Optionen wurden gespeichert.', 'tf2013' ); ?></strong></p></div>
 		<?php endif; 
 
         if (isset($_GET['tab'])) {
@@ -46,13 +46,13 @@ function theme_options_do_page($tab = '') {
         if ((!isset($tab)) || (empty($tab))) {
             $tab = "design";
         }
-        if (!isset($setoptions['techfak2013_theme_options'][$tab])) {
+        if (!isset($setoptions['tf2013_theme_options'][$tab])) {
             echo "Invalid Tab-Option or undefined Option-Field $tab";            
         }        
 
         
         echo "<h3 class=\"nav-tab-wrapper\">\n";
-        foreach($setoptions['techfak2013_theme_options'] as $i => $value) {                
+        foreach($setoptions['tf2013_theme_options'] as $i => $value) {                
              $tabtitel = $value['tabtitle'];             
               echo "<a href=\"?page=theme_options&amp;tab=$i\" class=\"nav-tab ";
               if ($tab==$i) {
@@ -66,15 +66,15 @@ function theme_options_do_page($tab = '') {
    
                       
         <form method="post" action="options.php">
-            <?php settings_fields( 'techfak2013_options' ); ?>
-            <input type="hidden" id="techfak2013_theme_options[tab]" name="techfak2013_theme_options[tab]"  value="<?php echo $tab; ?>">                       
+            <?php settings_fields( 'tf2013_options' ); ?>
+            <input type="hidden" id="tf2013_theme_options[tab]" name="tf2013_theme_options[tab]"  value="<?php echo $tab; ?>">                       
           
           
         <div id="einstellungen">                                       
 	<table>	
                 <?php
-                    if (isset($setoptions['techfak2013_theme_options'][$tab]['fields'])) {
-                        foreach($setoptions['techfak2013_theme_options'][$tab]['fields'] as $i => $value) {   
+                    if (isset($setoptions['tf2013_theme_options'][$tab]['fields'])) {
+                        foreach($setoptions['tf2013_theme_options'][$tab]['fields'] as $i => $value) {   
                             $name = $i;
                             if (isset($value['title'])) $title = $value['title'];
                             if (isset($value['type'])) $type = $value['type'];
@@ -104,34 +104,34 @@ function theme_options_do_page($tab = '') {
                                 }
                                 if ($type =='bool') {
                                     echo "\t\t\t";
-                                    echo "<input id=\"techfak2013_theme_options[$name]\" name=\"techfak2013_theme_options[$name]\" 
+                                    echo "<input id=\"tf2013_theme_options[$name]\" name=\"tf2013_theme_options[$name]\" 
                                             type=\"checkbox\" value=\"1\" ".checked( $options[$name],1,false ).">\n";
                                     echo "\t\t\t";
-                                    echo "<label for=\"techfak2013_theme_options[$name]\">$label</label>\n";                                     
+                                    echo "<label for=\"tf2013_theme_options[$name]\">$label</label>\n";                                     
                                 } elseif (($type=='text') || ($type=='email')) {
                                     echo "\t\t\t";
-                                    echo "<input class=\"regular-text\" id=\"techfak2013_theme_options[$name]\" 
-                                            type=\"text\" name=\"techfak2013_theme_options[$name]\" 
+                                    echo "<input class=\"regular-text\" id=\"tf2013_theme_options[$name]\" 
+                                            type=\"text\" name=\"tf2013_theme_options[$name]\" 
 					    value=\"";
 				    if (isset($options[$name])) echo esc_attr( $options[$name] );				
 				    
 				    echo "\"><br>\n";
                                     echo "\t\t\t";
-                                    echo "<label for=\"techfak2013_theme_options[$name]\">$label</label>\n";
+                                    echo "<label for=\"tf2013_theme_options[$name]\">$label</label>\n";
 				} elseif (($type=='html') ||($type=='url')) {
                                     echo "\t\t\t";
-                                    echo "<input class=\"large-text\" id=\"techfak2013_theme_options[$name]\" 
-                                            type=\"text\" name=\"techfak2013_theme_options[$name]\" 
+                                    echo "<input class=\"large-text\" id=\"tf2013_theme_options[$name]\" 
+                                            type=\"text\" name=\"tf2013_theme_options[$name]\" 
 					    size=\"120\" value=\"";
 				    if (isset($options[$name])) echo esc_attr( $options[$name] );				
 				    
 				    echo "\"><br>\n";
                                     echo "\t\t\t";
-                                    echo "<label for=\"techfak2013_theme_options[$name]\">$label</label>\n";
+                                    echo "<label for=\"tf2013_theme_options[$name]\">$label</label>\n";
 				} elseif ($type=='imgurl') {
                                     echo "\t\t\t";
-                                    echo "<input class=\"large-text\" id=\"techfak2013_theme_options[$name]\" 
-                                            type=\"text\" name=\"techfak2013_theme_options[$name]\" 
+                                    echo "<input class=\"large-text\" id=\"tf2013_theme_options[$name]\" 
+                                            type=\"text\" name=\"tf2013_theme_options[$name]\" 
 					    size=\"120\" value=\"";
 				    if (isset($options[$name])) echo esc_attr( $options[$name] );				
 				    echo "\"><br>\n";
@@ -139,24 +139,24 @@ function theme_options_do_page($tab = '') {
 					    echo "<img class=\"imgurl\" src=\"".esc_attr( $options[$name] )."\" alt=\"\">\n";
 				    }    
                                     echo "\t\t\t";
-                                    echo "<label for=\"techfak2013_theme_options[$name]\">$label</label>\n";    
+                                    echo "<label for=\"tf2013_theme_options[$name]\">$label</label>\n";    
 
 				    
                                 } elseif ($type=='textarea')  {
                                     echo "\t\t\t";                                                                                                            
-                                    echo "<textarea class=\"large-text\" id=\"techfak2013_theme_options[$name]\" 
-                                            cols=\"30\" rows=\"10\"  name=\"techfak2013_theme_options[$name]\">";
+                                    echo "<textarea class=\"large-text\" id=\"tf2013_theme_options[$name]\" 
+                                            cols=\"30\" rows=\"10\"  name=\"tf2013_theme_options[$name]\">";
 				    if (isset($options[$name])) echo esc_attr( $options[$name] );
 				    echo "</textarea><br>\n";
                                     echo "\t\t\t";
-                                    echo "<label for=\"techfak2013_theme_options[$name]\">$label</label>\n";     
+                                    echo "<label for=\"tf2013_theme_options[$name]\">$label</label>\n";     
                                 } elseif ($type=='number') {
                                     echo "\t\t\t";
-                                    echo "<input class=\"number\" size=\"5\" id=\"techfak2013_theme_options[$name]\" 
-                                            type=\"text\" name=\"techfak2013_theme_options[$name]\" 
+                                    echo "<input class=\"number\" size=\"5\" id=\"tf2013_theme_options[$name]\" 
+                                            type=\"text\" name=\"tf2013_theme_options[$name]\" 
                                             value=\"".esc_attr( $options[$name] )."\"><br>\n";
                                     echo "\t\t\t";
-                                    echo "<label for=\"techfak2013_theme_options[$name]\">$label</label>\n";  
+                                    echo "<label for=\"tf2013_theme_options[$name]\">$label</label>\n";  
 				} elseif ($type=='bildlist') {
 				   echo "\t\t\t";                                    
                                     foreach($liste as $i => $value) {   
@@ -169,7 +169,7 @@ function theme_options_do_page($tab = '') {
                                         }  
 					echo "\">\n";
                                         echo '<input type="radio" value="'.$src.'" 
-					    name="techfak2013_theme_options['.$name.']"';
+					    name="tf2013_theme_options['.$name.']"';
                                         if ( $src == $options[$name] ) {
                                             echo ' checked="checked"';
                                         }                                                                                                                                                                
@@ -193,7 +193,7 @@ function theme_options_do_page($tab = '') {
                                          ?>       
                                         <label class="plakattile">
                                             <div style="height: 40px; width: 100%; margin:0 auto; background-color: #F28900; color: white; display: block;">  
-                                            <input type="checkbox" name="techfak2013_theme_options[<?php echo $name?>][]" 
+                                            <input type="checkbox" name="tf2013_theme_options[<?php echo $name?>][]" 
                                                    value="<?php echo esc_attr( $option['src'] ); ?>" <?php echo $checked; ?> />                                                     
                                             <?php echo $option['label']?>
                                             </div>
@@ -229,7 +229,7 @@ function theme_options_do_page($tab = '') {
 
 						    <label class="plakattile" style="width: 150px; height: 251px">
 							<div style="height: 40px; width: 100%; margin:0 auto; background-color: #F28900; color: white; display: block;">  
-							<input type="checkbox" name="techfak2013_theme_options[<?php echo $name?>][]" 
+							<input type="checkbox" name="tf2013_theme_options[<?php echo $name?>][]" 
 							       value="<?php echo esc_attr( $bildurl ); ?>" <?php echo $checked; ?> />                                                     
 							<?php echo $sub ?>
 							</div>
@@ -265,7 +265,7 @@ function theme_options_do_page($tab = '') {
 
 						    <label class="plakattile" style="width: 150px; height: 251px">
 							<div style="height: 40px; width: 100%; margin:0 auto; background-color: #F28900; color: white; display: block;">  
-							<input type="checkbox" name="techfak2013_theme_options[<?php echo $name?>][]" 
+							<input type="checkbox" name="tf2013_theme_options[<?php echo $name?>][]" 
 							       value="<?php echo esc_attr( $bildurl ); ?>" <?php echo $checked; ?> />                                                     
 							<?php echo $sub ?>
 							</div>
@@ -305,16 +305,16 @@ function theme_options_do_page($tab = '') {
 					}
                                          ?>       
                                         <div style="display: inline-block; width: 90%;" class="<?php echo $name?>">
-					    <label for="techfak2013_theme_options[<?php echo $name?>][<?php echo $entry?>][active]" class="<?php echo $entry?>" style="width: 120px; display: inline-block;">
+					    <label for="tf2013_theme_options[<?php echo $name?>][<?php echo $entry?>][active]" class="<?php echo $entry?>" style="width: 120px; display: inline-block;">
                                             <input type="checkbox" 
-						   id="techfak2013_theme_options[<?php echo $name?>][<?php echo $entry?>][active]"
-						   name="techfak2013_theme_options[<?php echo $name?>][<?php echo $entry?>][active]" 
+						   id="tf2013_theme_options[<?php echo $name?>][<?php echo $entry?>][active]"
+						   name="tf2013_theme_options[<?php echo $name?>][<?php echo $entry?>][active]" 
                                                    value="1" <?php echo $checked; ?>>                                                                                               
 					    <?php echo $liste[$entry]['name'] ?>
 					    </label>
 					    
-                                            <input id="techfak2013_theme_options[<?php echo $name?>][<?php echo $entry?>][content]" 
-                                            type="text" name="techfak2013_theme_options[<?php echo $name?>][<?php echo $entry?>][content]" 
+                                            <input id="tf2013_theme_options[<?php echo $name?>][<?php echo $entry?>][content]" 
+                                            type="text" name="tf2013_theme_options[<?php echo $name?>][<?php echo $entry?>][content]" 
 					    size="80" value="<?php echo $value?>">
 					  </div>
 					 <?php    
@@ -325,7 +325,7 @@ function theme_options_do_page($tab = '') {
 				    
                                 } elseif ($type=='select') {
                                     echo "\t\t\t";
-                                    echo "<select name=\"techfak2013_theme_options[$name]\">\n";
+                                    echo "<select name=\"tf2013_theme_options[$name]\">\n";
 
                                     foreach($liste as $i => $value) {   
                                         echo "\t\t\t\t";
@@ -343,7 +343,7 @@ function theme_options_do_page($tab = '') {
                                         echo "\n";                                            
                                     }  
                                         echo "\t\t\t</select><br>\n";                                   
-                                        echo "\t\t\t<label for=\"techfak2013_theme_options[$name]\">$label</label>\n"; 
+                                        echo "\t\t\t<label for=\"tf2013_theme_options[$name]\">$label</label>\n"; 
 
                                 }
 
@@ -371,7 +371,7 @@ function theme_options_do_page($tab = '') {
                                     $setsection = "";
                             }    
                     } else {
-                        _e( 'Optionen nicht definiert', 'techfak-2013' );
+                        _e( 'Optionen nicht definiert', 'tf2013' );
                     }
                 ?>
                      
@@ -380,12 +380,12 @@ function theme_options_do_page($tab = '') {
         </div>                                        
                     
         <p class="submit">
-                <input type="submit" class="button-primary" value="<?php _e( 'Optionen speichern', 'techfak-2013' ); ?>" />
+                <input type="submit" class="button-primary" value="<?php _e( 'Optionen speichern', 'tf2013' ); ?>" />
         </p>
 </form>               
 </div>
 
-</div> <!-- end: .techfak2013-optionen -->      
+</div> <!-- end: .tf2013-optionen -->      
 <?php
 }
 
@@ -395,9 +395,9 @@ function theme_options_do_page($tab = '') {
 function theme_options_validate( $input ) {
     global $setoptions;
     global $defaultoptions;
-    $options = get_option( 'techfak2013_theme_options' );
+    $options = get_option( 'tf2013_theme_options' );
     
-    $saved = (array) get_option( 'techfak2013_theme_options' );	
+    $saved = (array) get_option( 'tf2013_theme_options' );	
         //    $options= $saved;
     $output = wp_parse_args( $saved, $defaultoptions );
        $tab = '';
@@ -408,12 +408,12 @@ function theme_options_validate( $input ) {
             $tab = $input['tab'];
        }
 
-        if (!isset($setoptions['techfak2013_theme_options'][$tab])) {
+        if (!isset($setoptions['tf2013_theme_options'][$tab])) {
             return $output;          
         }
 
-       if (isset($setoptions['techfak2013_theme_options'][$tab]['fields'])) {
-            foreach($setoptions['techfak2013_theme_options'][$tab]['fields'] as $i => $value) {   
+       if (isset($setoptions['tf2013_theme_options'][$tab]['fields'])) {
+            foreach($setoptions['tf2013_theme_options'][$tab]['fields'] as $i => $value) {   
                 $name = $i;
 
                 $type = $value['type'];              
