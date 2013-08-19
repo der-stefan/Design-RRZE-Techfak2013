@@ -887,7 +887,7 @@ Besondere Hinweisboxen
 }
 #content div.hinweis_wichtig {
     border: 1px solid red;	
-    background-image: url(../images/icons/important.png);
+    background-image: url(../img/important.png);
     background-repeat: no-repeat;
     background-position: left center; 	
 }
@@ -915,7 +915,7 @@ Besondere Hinweisboxen
 }
 #content div.hinweis {
     border: 1px solid #ccc;
-    background-image: url(../images/icons/ktip.png);
+    background-image: url(../img/ktip.png);
     background-repeat: no-repeat;
     background-position: left center; 	
 }
@@ -932,7 +932,7 @@ Besondere Hinweisboxen
 }
 #content div.hinweis_rechts {
     border: 1px solid #ccc;
-    background-image: url(../images/icons/ktip.png);
+    background-image: url(../img/ktip.png);
     background-repeat: no-repeat;
     background-position: left center; 	
 }
@@ -956,7 +956,7 @@ Besondere Hinweisboxen
 }
 #content div.baustelle {
     border: 1px solid #ccc;	
-    background-image: url(../images/icons/package_settings.png);
+    background-image: url(../img/package_settings.png);
     background-repeat: no-repeat;
     background-position: left center; 	
 }

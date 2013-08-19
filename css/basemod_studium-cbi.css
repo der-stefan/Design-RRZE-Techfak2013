@@ -27,11 +27,11 @@
 	--------------------------------------------------------*/
 	
 	div#kopf {
-		background: url(../images/header-techfak-studium.png) no-repeat scroll 40% 0% #D97300;
+		background: url(../grafiken/techfak-2013/header-techfak-studium.png) no-repeat scroll 40% 0% #D97300;
 	}
 		
 	div#kopf div#logo {
-		background: url(../images/logo-techfak-blau-bg.png);
+		background: url(../grafiken/techfak-2013/logo-techfak-blau-bg.png);
 		background-repeat: no-repeat;
 		background-position: 99% 0;
 	}
@@ -57,7 +57,7 @@
 	}
 	
 	div#kopf div#hauptmenu {
-		background: #A4ABB3 url(../images/hauptmenue-bg-orange.png) repeat-y;
+		background: #A4ABB3 url(../grafiken/techfak-2013/hauptmenue-bg-orange.png) repeat-y;
 		margin-left: -27px;
 		padding-left: 27px;
 	}

@@ -47,7 +47,7 @@
 	}
  
  	div#seite {
-		background: #fff url(../images/balken-bunt.gif) no-repeat top left;
+		background: #fff url(../grafiken/techfak-2013/balken-bunt.gif) no-repeat top left;
 		padding-left: 0;	
  	}
  	
@@ -225,7 +225,7 @@
 	div#seite {  
 		border-width: 0;
 		min-width: 0;
-		background: #fff url(../images/balken-bunt.gif) no-repeat top left;
+		background: #fff url(../grafiken/techfak-2013/balken-bunt.gif) no-repeat top left;
 		background-size: auto 110px;
 	}
 	

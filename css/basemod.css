@@ -31,7 +31,7 @@
 		background: #fff;
 		max-width: 1173px; /* Maximale Breite in Pixeln */	
 		padding-left: 27px;
-		background: url(../images/balken-komplett.gif) no-repeat;
+		background: url(../grafiken/techfak-2013/balken-komplett.gif) no-repeat;
                 
 		/*---------*/
 		box-shadow: 0 0 15px rgba(0,0,0,0.6); /* CSS3 Schatten (nur in modernen Browsern) - falls unerwünscht, einfach auskommentieren */
@@ -47,7 +47,7 @@
 	KOPF
 	--------------------------------------------------------*/	
 	div#kopf  {
-		background: url(../images/header_techfak-3b.png);
+		background: url(../grafiken/techfak-2013/header_techfak-3b.png);
 		background-position: 50% 0%;
 		background-repeat: no-repeat;
 	}
@@ -188,7 +188,7 @@
 	div#kopf div#hauptmenu {
 		height: 25px;
 		white-space: nowrap;
-		background: #A4ABB3 url(../images/hauptmenue-bg.png) repeat-y;
+		background: #A4ABB3 url(../grafiken/techfak-2013/hauptmenue-bg.png) repeat-y;
 		margin-left: -27px;
 		padding-left: 27px;
 		border-bottom: #fff 2px solid;
@@ -1569,7 +1569,7 @@ GALERIE
 @media screen and (max-width: 1090px) {
 	
 	div#kopf {
-		background: url(../images/header-techfak-2b.png) no-repeat scroll 48% 0% transparent;
+		background: url(../grafiken/techfak-2013/header-techfak-2b.png) no-repeat scroll 48% 0% transparent;
 	}
 	
 	div#kopf div#logo p {

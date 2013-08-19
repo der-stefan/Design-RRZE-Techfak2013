@@ -39,7 +39,7 @@ ul.socialmedia {
 }
 .socialmedia  a:before {
 	display: inline-block;
-	content: url('../images/social-media/socialmedia-sprite.png');
+	content: url('../img/social-media/socialmedia-sprite.png');
 	margin-left: -32px;
 }
 ul.socialmedia:after {
