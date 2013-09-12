@@ -63,7 +63,8 @@
 		padding-left: 27px;
 	}
 	
-	div#kopf div#titel h1 {
+	div#kopf div#titel h1, 
+	div#content h1 {
 		color: #764468;
 	}
 	

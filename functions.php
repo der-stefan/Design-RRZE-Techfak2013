@@ -1006,4 +1006,3 @@ add_action( 'template_redirect', 'rw_relative_urls' );
     add_filter( $filter, 'wp_make_link_relative' );
     }
     }
-    

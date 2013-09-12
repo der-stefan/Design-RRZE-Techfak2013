@@ -437,7 +437,7 @@ function theme_options_validate( $input ) {
                             $output[$name]  =  wp_filter_nohtml_kses( $input[$name] ); 
                         } elseif ($type=='select') {                        
                             $output[$name]  =  wp_filter_nohtml_kses( $input[$name] ); 
-                        } elseif (($type=='bildchecklist') || ($type=='bilddirchecklist')) {                            
+                        } elseif (($type=='bildchecklist') || ($type=='bilddirchecklist')) {
                             $output[$name]  = $input[$name];
 			} elseif ($type=='urlchecklist') {   	    			   
 			    $output[$name]  = $input[$name];
