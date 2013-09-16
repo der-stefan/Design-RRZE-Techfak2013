@@ -104,10 +104,13 @@ global $options;
 			</div>
 
 		    <?php
-		    if (is_active_sidebar('kurzinfo-area')) {
-			dynamic_sidebar('kurzinfo-area');
-		    }
-		    ?>
+		    if (is_active_sidebar('kurzinfo-area')) { ?>
+			
+			<div id="kurzinfo">
+			    <?php dynamic_sidebar('kurzinfo-area'); ?>
+			</div>
+		   
+ <?php } ?>
 
 		    </div>  <!-- end: menu -->
 

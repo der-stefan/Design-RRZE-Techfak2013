@@ -12,7 +12,7 @@ function tf2013_widgets_init() {
                 'name' => __( 'Kurzinfo', 'tf2013' ),
                 'id' => 'kurzinfo-area',
                 'description' => __( 'Bereich unterhalb des Menus links', 'tf2013' ),
-                'before_widget' => '<div id="kurzinfo">',
+                'before_widget' => '<div class="widget">',
                 'after_widget' => '</div>',
                 'before_title' => '<h2>',
                 'after_title' => '</h2>',
@@ -28,7 +28,7 @@ function tf2013_widgets_init() {
                 'after_title' => '</h2>',
         ) );
 	
-	// Zusatzinfo (Footer)
+	// Inhaltsinfo
         register_sidebar( array(
                 'name' => __( 'Inhaltsinfo', 'tf2013' ),
                 'id' => 'inhaltsinfo-area',
@@ -169,7 +169,7 @@ class FAULinkliste_Widget extends WP_Widget {
       
 	}
 
-} // class Partei Linkliste Widget
+} // class FAU Linkliste Widget
 //
 // register widget
 add_action( 'widgets_init', create_function( '', 'register_widget( "FAULinkliste_Widget" );' ) );

@@ -90,7 +90,7 @@
 		  margin-top: 7px;
 	}
 	
-	div#kopf div#logo p a {
+	div#kopf div#logo a {
 		text-decoration: none;
 		color: #003366;
 	}
@@ -599,8 +599,10 @@
 	--------------------------------------------------------*/
 	div#main div#menu div#kurzinfo h2 {
 		font-size: 1.1em;
-		font-weight: bold;
-		color: #2D2D2D;
+		border-bottom: 1px solid #003366;
+		color: #666F7A;
+		margin-bottom: 5px;
+		padding-bottom: 3px;
 	}
 	div#main div#menu div#kurzinfo p,
 	div#main div#menu div#kurzinfo ul {
@@ -635,7 +637,7 @@
 		color: #2F2F2F;
 	}
 	div#main div#menu div#kurzinfo ul {  
-		margin: 10px 20px 30px 20px;
+		margin: 10px 0 10px 20px;
 		font-size: 0.76em;
 		list-style-type: disc;
 	} 
@@ -1502,6 +1504,12 @@
 .widget:last-child {
     margin-bottom: 10px;
 }
+div#main div#menu div#kurzinfo .widget ul {
+    margin-left: 0;
+}
+div#main div#menu div#kurzinfo .widget li {
+    list-style-type: none;
+}
 /*  ------------------------------------------------------
 BEITRÄGE 
 --------------------------------------------------------*/
@@ -1573,6 +1581,19 @@ div#content .post-meta p {
 }
 .post-comments {
     margin-top: 20px;
+}
+
+/*  ------------------------------------------------------
+TEXTWIDGET
+--------------------------------------------------------*/
+div#main div#menu div#kurzinfo div.textwidget {
+    padding: 0;
+}
+div#main div#menu div#kurzinfo div.textwidget ul {
+    margin-left: 20px;
+}
+div#main div#menu div#kurzinfo div.textwidget li {
+    list-style-type: disc;
 }
 
 /*  ------------------------------------------------------
