@@ -1589,6 +1589,283 @@ GALERIE
     float: left;
 }
 
+/*  ------------------------------------------------------
+WP-KALENDER-WIDGET 
+--------------------------------------------------------*/
+#bereichsmenu #calendar_wrap {
+    border-left-style: solid;
+    border-left-width: 4px;
+    font-size: 0.76em;
+    padding: 0;
+    background: none repeat scroll 0 0 #F0F0F0;
+    border-left-color: #A9B9C6;
+}
+
+#footer #calendar_wrap {
+}
+
+#kurzinfo #calendar_wrap {
+}
+
+#sidebar #calendar_wrap {
+}
+
+#bereichsmenu #wp-calendar {
+    width: 100%;
+    color: #666666;
+    font-size: 11px;
+    margin-left: 4px;
+}
+
+#footer #wp-calendar {
+    width: 100%;
+    color: #666666;
+    font-size: 11px;
+    margin: 1px 1px;
+}
+
+#kurzinfo #wp-calendar {
+    width: 100%;
+    color: #666666;
+    font-size: 11px;
+    margin: 1px 1px;
+}
+
+#sidebar #wp-calendar {
+    width: 100%;
+    color: #666666;
+    border: 1px solid #ddd;
+    border-top: none;    
+}
+
+#wp-calendar a {
+    background: none !important;
+    border-top-style: none !important;
+    border-left-style: none !important;
+    border-top-width: 0 !important;
+    border-left-width: 0 !important;
+    padding: 0 !important;
+}
+
+#wp-calendar tbody a {
+    font-weight: bold;
+    color: #036 !important;
+}
+
+#wp-calendar caption {
+    background: #fff;
+    color: #333;
+    font-size: 13px;
+    padding: 6px 0;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-bottom: 1px solid #003366;
+}
+
+#wp-calendar thead th {
+    font-size: 11px;
+    padding: 6px 0;
+    color: #003366;
+    text-transform: uppercase;
+    background: #fff;
+    text-align: center;
+}
+
+#wp-calendar tbody td {
+    color: #555;
+    text-align: center;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+
+#sidebar #wp-calendar tbody td {
+    width: 14%;
+}
+
+#bereichsmenu #wp-calendar tbody td {
+    padding: 5px;
+}
+
+#footer #wp-calendar tbody td {
+    padding: 4px;
+}
+
+#kurzinfo #wp-calendar tbody td {
+    padding: 4px;
+}
+
+#wp-calendar tbody td.pad {
+    background: #fff;
+    border: none;
+}
+
+#wp-calendar tfoot {
+    color: #e0e0e0;
+    font-size: 12px;
+    text-align: center;
+    background-color: #fff;
+}
+
+#wp-calendar tfoot td { padding: 6px 10px }
+
+#wp-calendar tfoot a {
+    color: #666;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+}
+
+#wp-calendar tfoot td#prev { 
+    text-align: left;
+}
+
+#wp-calendar tfoot td#next { text-align: right }
+
+#wp-calendar tfoot td#prev a,
+#wp-calendar tfoot td#next a {
+    text-decoration: none;
+}
+
+#wp-calendar tfoot td#prev a:hover,
+#wp-calendar tfoot td#prev a:active,
+#wp-calendar tfoot td#prev a:focus,
+#wp-calendar tfoot td#next a:hover,
+#wp-calendar tfoot td#next a:active,
+#wp-calendar tfoot td#next a:focus {
+    text-decoration: underline;
+}
+
+#wp-calendar #today {
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+    background: #B0B0B0;
+}
+    /*------------------------------------------------------
+     * WP-Tag-Cloud-Widget
+    --------------------------------------------------------*/
+    div.tagcloud {
+        font-size: 1.1em;
+        line-height: 1.2em;
+    }
+    .tagcloud a.ntags {
+        color: #48546A !important;
+        padding-left: 4px;
+        text-decoration: none;
+    }
+    .tagcloud a.ntags:link {
+        padding-left: 4px;
+    }
+    .tagcloud a.ntags:hover {
+        text-decoration: underline;
+    }
+    .tagcloud a.ntags-1 {
+        font-size: 0.65em !important;
+    }
+    .tagcloud a.ntags-2 {
+        font-size: 0.75em !important;
+    }
+    .tagcloud a.ntags-3 {
+        font-size: 0.85em !important;
+    }
+    .tagcloud a.ntags-4 {
+        font-size: 0.95em !important;
+    }
+    .tagcloud a.ntags-5 {
+        font-size: 1em !important;
+    }
+
+/*  ------------------------------------------------------
+     * WP-RSS-Widget
+    --------------------------------------------------------*/
+    .widget_rss ul li {
+        line-height: 1.5em;
+        font-size: 0.7em;
+        border-bottom: 1px solid #B5C5CF;
+        padding-top: 0.5em;
+    }
+
+    .widget_rss ul li a {
+        color: #003366;
+        text-decoration: none;
+    }
+
+    .widget_rss ul li a:hover,
+    .widget_rss ul li a:active,
+    .widget_rss ul li a:focus {
+        text-decoration: underline;
+    }
+
+    .widget_rss span.rss-date {
+        font-style: italic;
+    }
+
+    /*  ------------------------------------------------------
+     * WP-Twitter-Widget
+    --------------------------------------------------------*/
+    .widget_twitter ul li {
+        line-height: 1.5em;
+        font-size: 0.7em;
+        border-bottom: 1px solid #B5C5CF;
+        padding-top: 0.5em;
+    }
+
+    .widget_twitter ul li a {
+        color: #003366;
+        text-decoration: none;
+    }
+
+    .widget_twitter ul li a:hover,
+    .widget_twitter ul li a:active,
+    .widget_twitter ul li a:focus {
+        text-decoration: underline;
+    }
+    
+    /*  ------------------------------------------------------
+     * WP-Gallery
+    --------------------------------------------------------*/
+    .gallery {
+        margin: 0 auto 5px;
+        overflow: hidden;
+        width: 100% !important;
+    }
+    /* Clear inherit from Theme */
+    .gallery a:hover, .gallery a:focus, .gallery a:active {
+        background: none !important;
+        border: none !important;
+    }
+    .gallery .gallery-item {
+        float: left;
+    }
+    .gallery img {
+        border: 1px solid #DEDEDE;
+        padding: 8px;
+        background: #F2F2F2;
+        height: 100px;
+        width: 100px;
+    }
+    .gallery img:hover {
+        background: white;
+    }
+    .gallery .gallery-caption {
+        margin-left: 0;
+    }
+    .gallery-columns-2 .gallery-item { width: 20% }
+    .gallery-columns-3 .gallery-item { width: 20% }
+    .gallery-columns-4 .gallery-item { width: 20% }
+    .gallery-columns-5 .gallery-item { width: 20% }
+    .gallery-columns-6 .gallery-item { width: 16.666% }
+    .gallery-columns-7 .gallery-item { width: 14.285% }
+    .gallery-columns-8 .gallery-item { width: 12.5% }
+    .gallery-columns-9 .gallery-item { width: 11.111% }
+
+    /* Pick the second line break if two
+    line breaks are adjacent */
+    .gallery dl, .gallery dt {
+        margin: 0 0 5px 0 !important;
+    }
+    .gallery br+br {
+        display: none;
+    }
+
 }
 
 
