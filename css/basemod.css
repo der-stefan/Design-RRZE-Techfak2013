@@ -1499,16 +1499,23 @@
 /* ------------------------- Wordpress-Specials ------------------------- */
 
 .widget {
-    margin: 20px 0;
+    margin: 10px 0 20px;
 }
 .widget:last-child {
     margin-bottom: 10px;
 }
-div#main div#menu div#kurzinfo .widget ul {
-    margin-left: 0;
+.widget ul {
+    margin-left: 0 !important;
 }
-div#main div#menu div#kurzinfo .widget li {
+.widget li {
     list-style-type: none;
+    margin-bottom: 6px;
+}
+.widget .post-date {
+    font-size: .9em;
+    font-style: italic;
+    color: #444;
+    white-space: nowrap; 
 }
 /*  ------------------------------------------------------
 BEITRÄGE 
@@ -1586,14 +1593,14 @@ div#content .post-meta p {
 /*  ------------------------------------------------------
 TEXTWIDGET
 --------------------------------------------------------*/
-div#main div#menu div#kurzinfo div.textwidget {
-    padding: 0;
+div.textwidget {
+    padding: 0 !important;
 }
-div#main div#menu div#kurzinfo div.textwidget ul {
-    margin-left: 20px;
+div.textwidget ul {
+    margin-left: 20px !important;
 }
-div#main div#menu div#kurzinfo div.textwidget li {
-    list-style-type: disc;
+div.textwidget li {
+    list-style-type: disc !important;
 }
 
 /*  ------------------------------------------------------
