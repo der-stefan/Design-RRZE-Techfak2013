@@ -191,7 +191,6 @@
 		background: #A4ABB3 url(../grafiken/techfak-2013/hauptmenue-bg.png) repeat-y;
 		margin-left: -27px;
 		padding-left: 27px;
-		border-bottom: #fff 2px solid;
 	}
 	
 	div#kopf div#hauptmenu h2 {
@@ -436,10 +435,10 @@
 		color: #fff;
 	}
 	ul#navigation li span.aktiv,
-	ul#navigation li.current-page-item > a,
-	ul#navigation li.current-menu-item > a,
-	ul#navigation li.current-page-ancestor > a,
-	ul#navigation li.current-menu-ancestor > a{
+	ul#navigation li.current_page_item > a,
+	ul#navigation li.current_menu_item > a,
+	ul#navigation li.current_page_ancestor > a,
+	ul#navigation li.current_menu_ancestor > a{
 		display: block;
 		font-size: 0.76em;
 		padding: 4px 10px;
@@ -477,19 +476,25 @@
 	}
 	
 	/* Fuer eine dritte Ebene (Wordpress: zweite Ebene) */
+	ul#navigation ul.children,  /* WP-Default-Format, wenn noch kein Menü ausgewählt wurde. */
 	ul#navigation ul.sub-menu {
 	    display: none;
 	}
-	ul#navigation li.current-page-item > ul.sub-menu,
-	ul#navigation li.current-menu-item > ul.sub-menu,
-	ul#navigation li.current-page-ancestor > ul.sub-menu,
-	ul#navigation li.current-menu-ancestor > ul.sub-menu {
+	ul#navigation li.current_page_item > ul.children,	/* WP-Default-Format, wenn noch kein Menü ausgewählt wurde. */
+	ul#navigation li.current_page_ancestor > ul.children,	/* WP-Default-Format, wenn noch kein Menü ausgewählt wurde. */
+	ul#navigation li.current_page_parent > ul.children,	/* WP-Default-Format, wenn noch kein Menü ausgewählt wurde. */
+	ul#navigation li.current_page_item > ul.sub-menu,
+	ul#navigation li.current_menu_item > ul.sub-menu,
+	ul#navigation li.current_page_ancestor > ul.sub-menu,
+	ul#navigation li.current_menu_ancestor > ul.sub-menu {
 	    display: block;
 	}
+	ul#navigation ul.children li,	/* WP-Default-Format, wenn noch kein Menü ausgewählt wurde. */
 	ul#navigation ul#hauptnavigation ul li,
 	ul#navigation ul.sub-menu li {
 		line-height: 1em;		
 	}
+	ul#navigation ul.children li a,	/* WP-Default-Format, wenn noch kein Menü ausgewählt wurde. */
 	ul#navigation ul#hauptnavigation ul li a,
 	ul#navigation ul.sub-menu li a {
 		background: #f7f8f9;
@@ -497,11 +502,15 @@
 		border-top: #fff 1px solid;
 		border-bottom: #fff 1px solid;
 	}
+	ul#navigation ul.children li a,	/* WP-Default-Format, wenn noch kein Menü ausgewählt wurde. */
 	ul#navigation ul#hauptnavigation ul li a, 
 	ul#navigation ul#hauptnavigation ul li span,
 	ul#navigation ul.sub-menu li a {
 		padding: 4px 10px 4px 20px;
 	}
+	ul#navigation ul.children li a:hover,	/* WP-Default-Format, wenn noch kein Menü ausgewählt wurde. */
+	ul#navigation ul.children li a:active,	/* WP-Default-Format, wenn noch kein Menü ausgewählt wurde. */
+	ul#navigation ul.children li a:focus,	/* WP-Default-Format, wenn noch kein Menü ausgewählt wurde. */
 	ul#navigation ul#hauptnavigation ul li a:hover, 
 	ul#navigation ul#hauptnavigation ul li a:active, 
 	ul#navigation ul#hauptnavigation ul li a:focus,
@@ -511,12 +520,15 @@
 		background:#eeeff1;
 		color: #003366;
 	}
-	
+	ul#navigation ul.children li.current_page_item a,	/* WP-Default-Format, wenn noch kein Menü ausgewählt wurde. */
+	ul#navigation ul.children li.current_menu_item a,	/* WP-Default-Format, wenn noch kein Menü ausgewählt wurde. */
+	ul#navigation ul.children li.current_page_ancestor a,	/* WP-Default-Format, wenn noch kein Menü ausgewählt wurde. */
+	ul#navigation ul.children li.current_menu_ancestor a,	/* WP-Default-Format, wenn noch kein Menü ausgewählt wurde. */
 	ul#navigation ul#hauptnavigation ul li span.aktiv,
-	ul#navigation ul.sub-menu li.current-page-item a,
-	ul#navigation ul.sub-menu li.current-menu-item a,
-	ul#navigation ul.sub-menu li.current-page-ancestor a,
-	ul#navigation ul.sub-menu li.current-menu-ancestor a {
+	ul#navigation ul.sub-menu li.current_page_item a,
+	ul#navigation ul.sub-menu li.current_menu_item a,
+	ul#navigation ul.sub-menu li.current_page_ancestor a,
+	ul#navigation ul.sub-menu li.current_menu_ancestor a {
 		background:#A4ABB3;
 		color: #fff;
 		border-bottom: #003366 1px solid;
@@ -526,6 +538,10 @@
 	
 	ul#navigation ul#hauptnavigation ul li ul li {}
 		
+	ul#navigation ul.children ul.children li a,		/* WP-Default-Format, wenn noch kein Menü ausgewählt wurde. */
+	ul#navigation ul.children ul.children li a:hover,	/* WP-Default-Format, wenn noch kein Menü ausgewählt wurde. */
+	ul#navigation ul.children ul.children li a:active,	/* WP-Default-Format, wenn noch kein Menü ausgewählt wurde. */
+	ul#navigation ul.children ul.children li a:focus,	/* WP-Default-Format, wenn noch kein Menü ausgewählt wurde. */
 	ul#navigation ul#hauptnavigation ul li ul li a,
 	ul#navigation ul#hauptnavigation ul li ul li a:hover,
 	ul#navigation ul#hauptnavigation ul li ul li a:active,
@@ -541,17 +557,24 @@
 		font-size: 0.7em;
 	
 	}
+	ul#navigation ul.children ul.children li.current_menu_item a,	    /* WP-Default-Format, wenn noch kein Menü ausgewählt wurde. */
+	ul#navigation ul.children ul.children li.current_page_item a,	    /* WP-Default-Format, wenn noch kein Menü ausgewählt wurde. */
+	ul#navigation ul.children ul.children li.current_menu_ancestor a,   /* WP-Default-Format, wenn noch kein Menü ausgewählt wurde. */
+	ul#navigation ul.children ul.children li.current_menu_parent a,	    /* WP-Default-Format, wenn noch kein Menü ausgewählt wurde. */
+	ul#navigation ul.children ul.children li.current_page_ancestor a,   /* WP-Default-Format, wenn noch kein Menü ausgewählt wurde. */
+	ul#navigation ul.children ul.children li.current_page_parent a,	    /* WP-Default-Format, wenn noch kein Menü ausgewählt wurde. */
 	ul#navigation ul#hauptnavigation ul li ul li span.aktiv,
-	ul#navigation ul.sub-menu ul.sub-menu li.current-menu-item a,
+	ul#navigation ul.sub-menu ul.sub-menu li.current_menu_item a,
 	ul#navigation ul.sub-menu ul.sub-menu li.current_page_item a,
-	ul#navigation ul.sub-menu ul.sub-menu li.current-menu-ancestor a,
-	ul#navigation ul.sub-menu ul.sub-menu li.current-menu-parent a,
+	ul#navigation ul.sub-menu ul.sub-menu li.current_menu_ancestor a,
+	ul#navigation ul.sub-menu ul.sub-menu li.current_menu_parent a,
 	ul#navigation ul.sub-menu ul.sub-menu li.current_page_ancestor a,
 	ul#navigation ul.sub-menu ul.sub-menu li.current_page_parent a {
 		background: #dcdee1;
 		color: #003366;
 		border-bottom: #003366 1px solid;
 	}
+	ul#navigation ul.children ul.children li a,	/* WP-Default-Format, wenn noch kein Menü ausgewählt wurde. */
 	ul#navigation ul#hauptnavigation ul li ul li a, 
 	ul#navigation ul#hauptnavigation ul li ul li span,
 	ul#navigation ul.sub-menu ul.sub-menu li a {
@@ -559,6 +582,7 @@
 	}
 	
 	/* Fuer eine 5. Ebene (Wordpress: vierte Ebene)*/
+	ul#navigation ul.children ul.children ul.children li a,	/* WP-Default-Format, wenn noch kein Menü ausgewählt wurde. */
 	ul#navigation ul#hauptnavigation ul li ul li a, 
 	ul#navigation ul#hauptnavigation ul li ul li span,
 	ul#navigation ul.sub-menu ul.sub-menu ul.sub-menu li a {
@@ -566,9 +590,10 @@
 		background: #fff;
 	}
 	/* Fuer eine 6. Ebene */
+	ul#navigation ul.children ul.children ul.children ul.children li a,	/* WP-Default-Format, wenn noch kein Menü ausgewählt wurde. */
 	ul#navigation ul#hauptnavigation ul li ul li ul li a, 
 	ul#navigation ul#hauptnavigation ul li ul li ul li span,
-	ul#navigation ul.sub-menu ul.sub-menu ul.sub-menu ul.sub-menu li a{
+	ul#navigation ul.sub-menu ul.sub-menu ul.sub-menu ul.sub-menu li a {
 		padding: 4px 10px 4px 50px;
 		background: #fff;
 	}
@@ -738,6 +763,7 @@
 	}
 	
 	div#footer div#footerinfos div#tecmenu ul {
+		font-size: 1em;
 		}
 	
 	div#footer div#footerinfos div#tecmenu ul li {
