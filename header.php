@@ -1,7 +1,6 @@
 <?php
 global $options;
-?>
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <!--[if lt IE 7 ]> <html <?php language_attributes(); ?> class="ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html <?php language_attributes(); ?> class="ie7"> <![endif]-->
 <!--[if IE 8 ]>    <html <?php language_attributes(); ?> class="ie8"> <![endif]-->
@@ -21,13 +20,12 @@ global $options;
 		<a name="seitenmarke" id="seitenmarke"></a>
 
 		<header>
-		    <div id="kopf">  <!-- begin: kopf -->   
+		    <div id="kopf">  <!-- begin: kopf -->
 			<div id="logo">
 
 			    <?php if (!is_home()) { ?>
     				<a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home" class="logo">
 				    <?php } ?>
-				    
 				    <?php $header_image = get_header_image();
 				    if (!empty($header_image)) :
 					?>
@@ -39,10 +37,10 @@ global $options;
 					<span class="description"><?php bloginfo('description'); ?></span>
 				    </p>
 
-				<?php if (!is_home()) { ?> 
-    				</a>  
-<?php } ?>	
-			 
+				<?php if (!is_home()) { ?>
+    				</a>
+<?php } ?>
+
 			</div>
 
 <?php get_search_form(); ?>
@@ -62,27 +60,27 @@ global $options;
 			    <h2>Sprungmarken</h2>
 			    <ul>
 				<li class="first"><a href="#contentmarke">Zum Inhalt springen</a><span class="skip">. </span></li>
-				<li><a href="#bereichsmenumarke">Zur Navigation springen</a><span class="skip">. </span></li>		
-				<li class="last"><a href="#hilfemarke">Zu den allgemeinen Informationen springen</a><span class="skip">. </span></li>            
+				<li><a href="#bereichsmenumarke">Zur Navigation springen</a><span class="skip">. </span></li>
+				<li class="last"><a href="#hilfemarke">Zu den allgemeinen Informationen springen</a><span class="skip">. </span></li>
 			    </ul>
 			</div>
 
 			<div id="hauptmenu" class="zielgruppen-menue" role="navigation">
-			    <h2 class="skip"><a id="hauptmenumarke" name="hauptmenumarke"></a>Zielgruppennavigation</h2>    
+			    <h2 class="skip"><a id="hauptmenumarke" name="hauptmenumarke"></a>Zielgruppennavigation</h2>
 			    <?php
 			    if (has_nav_menu('targetmenu')) {
 				wp_nav_menu(array('theme_location' => 'targetmenu', 'fallback_cb' => '', 'depth' => 1));
 			    }
-			    ?> 	  
+			    ?>
 			</div><!-- #target-navigation -->
 		    </div>
 		</header>  <!-- end: kopf -->
 
-		<hr id="nachkopf" />  
+		<hr id="nachkopf" />
 
 		<div id="main">  <!-- begin: main -->
 
-		    <div id="menu">  <!-- begin: menu -->	  
+		    <div id="menu">  <!-- begin: menu -->
 			<div id="bereichsmenu">
 			    <h2><a name="bereichsmenumarke" id="bereichsmenumarke">Navigation</a></h2>
 			    <?php
@@ -91,13 +89,13 @@ global $options;
 				    'menu_id' => 'navigation', 'theme_location' => 'primary', 'walker' => ''));
 			    } else {
 				?>
-    			    <ul id="navigation" class="menu">      
+    			    <ul id="navigation" class="menu">
     <?php
     wp_page_menu(array(
 	'sort_column' => 'menu_order, post_title',
 	'echo' => 1,
 	'show_home' => 1));
-    ?>          
+    ?>
     			    </ul>
 
 <?php } ?>
@@ -105,11 +103,11 @@ global $options;
 
 		    <?php
 		    if (is_active_sidebar('kurzinfo-area')) { ?>
-			
+
 			<div id="kurzinfo">
 			    <?php dynamic_sidebar('kurzinfo-area'); ?>
 			</div>
-		   
+
  <?php } ?>
 
 		    </div>  <!-- end: menu -->
