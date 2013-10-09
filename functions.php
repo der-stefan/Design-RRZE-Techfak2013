@@ -167,6 +167,7 @@ endif;
 
 function tf2013_add_basemod_styles() {
 	global $options;
+	global $defaultoptions;
 
 	if (!is_admin()) {
 		$theme = wp_get_theme();
@@ -174,20 +175,20 @@ function tf2013_add_basemod_styles() {
 		wp_enqueue_style('tf2013');
 	}
 	if ((isset($options['aktiv-basemod_zusatzinfo'])) && ($options['aktiv-basemod_zusatzinfo'] == 1)) {
-		wp_enqueue_style('basemod_zusatzinfo', $options['src_basemod_zusatzinfo']);
+		wp_enqueue_style('basemod_zusatzinfo', $defaultoptions['src_basemod_zusatzinfo']);
 	}
 	if ((isset($options['aktiv-basemod_links'])) && ($options['aktiv-basemod_links'] == 1)) {
-		wp_enqueue_style('basemod_links', $options['src_basemod_links']);
+		wp_enqueue_style('basemod_links', $defaultoptions['src_basemod_links']);
 	}
 	if ((isset($options['aktiv-basemod_sidebar'])) && ($options['aktiv-basemod_sidebar'] == 1)) {
-		wp_enqueue_style('basemod_sidebar', $options['src_basemod_sidebar']);
+		wp_enqueue_style('basemod_sidebar', $defaultoptions['src_basemod_sidebar']);
 	}
 
 	if ((isset($options['farbvarianten'])) && (isset($options['src_' . $options['farbvarianten']]))) {
 		wp_enqueue_style('farbvarianten', $options['src_' . $options['farbvarianten']]);
 	}
 	if ((isset($options['aktiv-socialmediabuttons'])) && ($options['aktiv-socialmediabuttons'] == 1)) {
-		wp_enqueue_style('basemod_socialmediabuttons', $options['src_socialmediabuttons']);
+		wp_enqueue_style('basemod_socialmediabuttons', $defaultoptions['src_socialmediabuttons']);
 	}
 }
 

@@ -15,12 +15,12 @@ License: GNU General Public License
 @import url(css/base_ym3.css);
 
 /* import screen layout | Screen-Layout einbinden */
-@import url(css/basemod.css);
-@import url(css/content.css);
-@import url(css/buttons.css);
+@import url(css/techfak-2013/screen/basemod.css);
+@import url(css/techfak-2013/screen/content.css);
+@import url(css/techfak-2013/screen/buttons.css);
 
 /* Media queries */
-@import url(css/mediaqueries.css);
+@import url(css/techfak-2013/screen/mediaqueries.css);
 
 /* import print layout | Print-Layout einbinden */
-@import url(css/print.css);
+@import url(css/techfak-2013/print/print.css);
