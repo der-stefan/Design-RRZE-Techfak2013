@@ -636,9 +636,7 @@
 		font-size: 0.76em;
 		color: #444;
 	}
-	div#main div#menu div#kurzinfo div {
-		padding: 10px 0px;
-	}
+
 	div#main div#menu div#kurzinfo a,
 	div#main div#menu div#kurzinfo a:link {
 		color: #666F7A;

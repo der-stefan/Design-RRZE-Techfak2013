@@ -108,6 +108,13 @@ $defaultoptions = array(
     'url-button2' => '#',
     'title-button2' => 'Newsletter',
     'color-button2' => 'gelb',
+
+	'bannerlink-width'		    => 180,
+	/* Max width for Logos and Images in Sidebar */
+    'bannerlink-height'		    => 360,
+	/* Max height for Logos and Images in Sidebar */
+
+
 );
 
 
@@ -282,7 +289,7 @@ $setoptions = array(
 		    'label' => __('Farbschema der Webseite auswählen', 'tf2013'),
 		    'default' => $defaultoptions['farbvarianten'],
 		    'liste' => array(
-			' ' => 'Standard Techfak (dunkelblau)',
+			' ' => 'Standard Techfak (dunkelblau/grau)',
 			'basemod_gelb' => 'Department EEI (gelb)',
 			'basemod_orange' => 'Department CBI (orange)',
 			'basemod_rot' => 'Department WW (rot)',

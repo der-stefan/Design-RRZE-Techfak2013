@@ -185,7 +185,7 @@ function tf2013_add_basemod_styles() {
 	}
 
 	if ((isset($options['farbvarianten'])) && (isset($options['src_' . $options['farbvarianten']]))) {
-		wp_enqueue_style('farbvarianten', $options['src_' . $options['farbvarianten']]);
+		wp_enqueue_style('farbvarianten', $defaultoptions['src_' . $options['farbvarianten']]);
 	}
 	if ((isset($options['aktiv-socialmediabuttons'])) && ($options['aktiv-socialmediabuttons'] == 1)) {
 		wp_enqueue_style('basemod_socialmediabuttons', $defaultoptions['src_socialmediabuttons']);
@@ -194,12 +194,18 @@ function tf2013_add_basemod_styles() {
 
 add_action('wp_enqueue_scripts', 'tf2013_add_basemod_styles');
 
-function tf2013_admin_head() {
-	echo '<link rel="stylesheet" type="text/css" href="' . get_template_directory_uri() . '/css/admin.css" />';
+
+function tf2013_admin_style() {
+
+
+    wp_register_style( 'themeadminstyle', get_template_directory_uri().'/css/admin.css' );
+    wp_enqueue_style( 'themeadminstyle' );
+    wp_enqueue_media();
+    wp_register_script('themeadminscripts', get_template_directory_uri().'/js/admin.js', array('jquery'));
+    wp_enqueue_script('themeadminscripts');
+
 }
-
-add_action('admin_head', 'tf2013_admin_head');
-
+add_action( 'admin_enqueue_scripts', 'tf2013_admin_style' );
 
 
 /*
@@ -293,8 +299,10 @@ function tf2013_breadcrumbs() {
 		  if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ')';
 		  }
 		 */
-	} elseif (is_home() || is_front_page()) {
+	} elseif (is_front_page()) {
 		echo $before . $home . $after;
+	} elseif (is_home()) {
+		echo $before . get_the_title(get_option('page_for_posts')) . $after;
 	}
 }
 
@@ -349,9 +357,12 @@ function tf2013_contenttitle() {
 		} else {
 			echo $before . get_the_title() . $after;
 		}
-	} elseif (is_home() || is_front_page()) {
+	} elseif (is_front_page()) {
 		echo $before . $home . $after;
+	} elseif (is_home()) {
+		echo $before . get_the_title(get_option('page_for_posts')) . $after;
 	}
+
 }
 
 if (!function_exists('tf2013_filter_wp_title')) :

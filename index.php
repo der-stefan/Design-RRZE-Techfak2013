@@ -1,15 +1,15 @@
-<?php get_header();    
-  global $options;  
+<?php get_header();
+  global $options;
 
-     if ( is_active_sidebar( 'inhaltsinfo-area' ) ) { 
-    	 dynamic_sidebar( 'inhaltsinfo-area' ); 
-    }  
+     if ( is_active_sidebar( 'inhaltsinfo-area' ) ) {
+    	 dynamic_sidebar( 'inhaltsinfo-area' );
+    }
 
-      $i = 0; 
-      $col = 0; 
-      
-      $numentries = $options['num-article-startpage-fullwidth'] + $options['num-article-startpage-halfwidth']; 
-      $col_count = 3; 
+      $i = 0;
+      $col = 0;
+
+      $numentries = $options['num-article-startpage-fullwidth'] + $options['num-article-startpage-halfwidth'];
+      $col_count = 3;
       $cols = array();
       while (have_posts() && $i<$numentries) : the_post();
       $i++;
@@ -33,25 +33,25 @@
         foreach($cols as $key => $col) {
             if (( isset($options['num-article-startpage-fullwidth']))
                 && ($options['num-article-startpage-fullwidth']>$key )) {
-                    echo $col;                                               
-                } else {          
+                    echo $col;
+                } else {
                      if (( isset($options['num-article-startpage-fullwidth']))
                             && ($options['num-article-startpage-fullwidth']==$key )
                              && ($options['num-article-startpage-fullwidth']>0 )) {
                          echo '<hr class="trenner">';
-                        }                                              
-                    echo '<div class="column'.$z.'">' . $col . '</div>';                            
+                        }
+                    echo '<div class="column'.$z.'">' . $col . '</div>';
                     $z++;
                     if ($z>2) {
                         $z=1;
                         echo '<hr class="trenner">';
                     }
-                }            
+                }
         }
-        ?>     
+        ?>
       </div>
 
-      
+
       <?php if ( ! have_posts() ) : ?>
        <h2><?php _e("Nichts gefunden", 'tf2013'); ?></h2>
         <p>
@@ -60,7 +60,7 @@
         <?php get_search_form(); ?>
         <hr>
       <?php endif; ?>
- 
-     
+
+
 
 <?php get_footer(); ?>
