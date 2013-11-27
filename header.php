@@ -34,9 +34,10 @@ global $options;
 				<?php } ?>
 
 						<?php $logo = get_theme_mod( 'tf2013_custom_logo' );
+						list($logo_width, $logo_height) = getimagesize($logo);
 							if (!empty($logo)) :
 						?>
-    					    <img src="<?php echo esc_url($logo); ?>" class="logo" width="<?php echo $logo->width; ?>" height="<?php $logo->height; ?>" alt="" />
+    					    <img src="<?php echo esc_url($logo); ?>" class="logo" width="<?php echo $logo_width; ?>" height="<?php echo $logo_height; ?>" alt="" />
     					<?php endif; ?>
 
     					<p>
