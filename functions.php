@@ -538,7 +538,7 @@ if (!function_exists('tf2013_comment')) :
 
 				$firstpic = get_tf2013_firstpicture();
 				$firstvideo = get_tf2013_firstvideo();
-				$fallbackimg = '<img src="' . $options['src-teaser-thumbnail_default'] . '" alt="">';
+				//$fallbackimg = '<img src="' . $options['src-teaser-thumbnail_default'] . '" alt="">';
 				$output = '';
 				if ($showdatebox == 1) {
 					if ((isset($thumbnailcode)) && (strlen(trim($thumbnailcode)) > 10)) {
@@ -548,9 +548,9 @@ if (!function_exists('tf2013_comment')) :
 					} elseif ((isset($firstvideo)) && (strlen(trim($firstvideo)) > 10)) {
 						$output = $firstvideo;
 						$sizeclass = 'ym-column withvideo';
-					} else {
-						$output = $fallbackimg;
-					}
+					} //else {
+						//$output = $fallbackimg;
+					//}
 				} elseif ($showdatebox == 2) {
 
 					if ((isset($firstpic)) && (strlen(trim($firstpic)) > 10)) {
@@ -560,9 +560,9 @@ if (!function_exists('tf2013_comment')) :
 					} elseif ((isset($firstvideo)) && (strlen(trim($firstvideo)) > 10)) {
 						$output = $firstvideo;
 						$sizeclass = 'ym-column withvideo';
-					} else {
-						$output = $fallbackimg;
-					}
+					} // else {
+						// $output = $fallbackimg;
+					// }
 				} elseif ($showdatebox == 3) {
 					if ((isset($firstvideo)) && (strlen(trim($firstvideo)) > 10)) {
 						$output = $firstvideo;
@@ -571,9 +571,9 @@ if (!function_exists('tf2013_comment')) :
 						$output = $thumbnailcode;
 					} elseif ((isset($firstpic)) && (strlen(trim($firstpic)) > 10)) {
 						$output = $firstpic;
-					} else {
-						$output = $fallbackimg;
-					}
+					} // else {
+						// $output = $fallbackimg;
+					// }
 				} elseif ($showdatebox == 4) {
 					if ((isset($firstvideo)) && (strlen(trim($firstvideo)) > 10)) {
 						$output = $firstvideo;
@@ -582,12 +582,12 @@ if (!function_exists('tf2013_comment')) :
 						$output = $firstpic;
 					} elseif ((isset($thumbnailcode)) && (strlen(trim($thumbnailcode)) > 10)) {
 						$output = $thumbnailcode;
-					} else {
-						$output = $fallbackimg;
-					}
-				} else {
-					$output = $fallbackimg;
-				}
+					} // else {
+						// $output = $fallbackimg;
+					// }
+				} // else {
+					// $output = $fallbackimg;
+				// }
 
 
 				$leftbox .= $output;
@@ -606,6 +606,7 @@ if (!function_exists('tf2013_comment')) :
 								<?php the_title(); ?>
 							</a>
 						</h2></div>
+				<div class="post-meta"><?php tf2013_post_pubdateinfo(); ?></div>
 					<div class="ym-column">
 						<?php
 					}
@@ -805,7 +806,7 @@ if (!function_exists('tf2013_comment')) :
 		 * Erstellen des Extracts
 		 */
 
-		function get_tf2013_custom_excerpt($length = 0, $continuenextline = 1, $removeyoutube = 1) {
+		function get_tf2013_custom_excerpt($length = 0, $continuenextline = 0, $removeyoutube = 1) {
 			global $options;
 			global $post;
 
@@ -826,7 +827,7 @@ if (!function_exists('tf2013_comment')) :
 			}
 
 			$excerpt = strip_shortcodes($excerpt);
-			$excerpt = strip_tags($excerpt);
+			$excerpt = strip_tags($excerpt,'<p>, <a>, <ul>, <li>');
 			if (mb_strlen($excerpt) < 5) {
 				$excerpt = __('Kein Inhalt', 'tf2013');
 			}
@@ -1011,4 +1012,28 @@ if (!function_exists('tf2013_comment')) :
 		foreach ($filters as $filter) {
 			add_filter($filter, 'wp_make_link_relative');
 		}
+	}
+
+	/* Logo Upload */
+
+	add_action( 'customize_register', 'tf2013_customize_register' );
+
+	function tf2013_customize_register($wp_customize) {
+
+    $wp_customize->add_section( 'tf2013_custom_logo', array(
+        'title'          => 'Logo',
+        'description'    => 'Display a custom logo?',
+        'priority'       => 25,
+    ) );
+
+    $wp_customize->add_setting( 'tf2013_custom_logo', array(
+        'default'        => '',
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'custom_logo', array(
+        'label'   => 'Custom logo',
+        'section' => 'tf2013_custom_logo',
+        'settings'   => 'tf2013_custom_logo',
+    ) ) );
+
 	}

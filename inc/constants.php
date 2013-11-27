@@ -42,6 +42,7 @@ $defaultoptions = array(
     'src_basemod_studium-win' => get_template_directory_uri() . '/css/techfak-2013/screen/basemod_studium-win.css',
     'src_basemod_studium-wing' => get_template_directory_uri() . '/css/techfak-2013/screen/basemod_studium-wing.css',
     'src_basemod_studium-ww' => get_template_directory_uri() . '/css/techfak-2013/screen/basemod_studium-ww.css',
+	'src_basemod_fau' => get_template_directory_uri() . '/css/techfak-2013/screen/basemod_fau.css',
     'src_socialmediabuttons' => get_template_directory_uri() . '/css/techfak-2013/screen/basemod_socialmediaicons.css',
     'aktiv-socialmediabuttons' => 1,
     'aktiv-autoren' => 1,
@@ -80,7 +81,7 @@ $defaultoptions = array(
     'teaser-thumbnail_width' => 120,
     'teaser-thumbnail_height' => 120,
     'teaser-thumbnail_crop' => 0,
-    'src-teaser-thumbnail_default' => get_template_directory_uri() . '/grafiken/techfak-2013/default-teaserthumb.gif',
+    /*'src-teaser-thumbnail_default' => get_template_directory_uri() . '/grafiken/techfak-2013/default-teaserthumb.gif',*/
     'teaser-thumbnail_fallback' => 1,
     'teaser-title-maxlength' => 50,
     'teaser-subtitle' => __('Topthema', 'tf2013'),
@@ -314,8 +315,9 @@ $setoptions = array(
 			'basemod_studium-nano' => 'Studium Nanotechnologie',
 			'basemod_studium-win' => 'Studium Wirtschaftsinformatik',
 			'basemod_studium-wing' => 'Studium Wirtschaftsingenieurwesen',
-			'basemod_studium-ww' => 'Studium Werkstoffwissenschaften',
-		    ),
+			'basemod_studium-ww' => 'Studium Werkstoffwissenschaftennn',
+		    'basemod_fau' => 'Variante FAU (Standard Techfak mit FAU-Farben)',
+			),
 		),
 		'text-startseite' => array(
 		    'type' => 'text',

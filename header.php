@@ -20,22 +20,29 @@ global $options;
 		<a name="seitenmarke" id="seitenmarke"></a>
 
 		<header>
-		    <div id="kopf">  <!-- begin: kopf -->
+		    <?php $header_image = get_header_image();
+				if (!empty($header_image)) : ?>
+					<div id="kopf" style="background-image:url(<?php echo esc_url($header_image); ?>">  <!-- begin: kopf -->
+				<?php else : ?>
+					<div id="kopf">  <!-- begin: kopf -->
+				<?php endif; ?>
+
 			<div id="logo">
 
-			    <?php if (!is_home()) { ?>
+				<?php if (!is_home()) { ?>
     				<a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home" class="logo">
-				    <?php } ?>
-				    <?php $header_image = get_header_image();
-				    if (!empty($header_image)) :
-					?>
-    				    <img src="<?php echo esc_url($header_image); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
-<?php endif; ?>
+				<?php } ?>
 
-				    <p>
-					<?php bloginfo('name'); ?>
-					<span class="description"><?php bloginfo('description'); ?></span>
-				    </p>
+						<?php $logo = get_theme_mod( 'tf2013_custom_logo' );
+							if (!empty($logo)) :
+						?>
+    					    <img src="<?php echo esc_url($logo); ?>" class="logo" width="<?php echo $logo->width; ?>" height="<?php $logo->height; ?>" alt="" />
+    					<?php endif; ?>
+
+    					<p>
+    						<?php bloginfo('name'); ?>
+    							<span class="description"><?php bloginfo('description'); ?></span>
+    				    </p>
 
 				<?php if (!is_home()) { ?>
     				</a>

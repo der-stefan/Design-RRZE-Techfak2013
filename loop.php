@@ -1,69 +1,77 @@
-   <?php
-   global $options;
+<?php
+global $options;
 
-     
-                $category_description = category_description();
-                if ( ! empty( $category_description ) )
-                        echo '' . $category_description . ''; 
-		
-		if ( ! have_posts() ) : ?>
-                        <h1><?php _e( 'Nichts gefunden', 'tf2013' ); ?></h1>
-                        <p><?php _e( 'Vielleicht hilft eine Suche weiter?', 'tf2013' ); ?></p>
-                        <div class="fullwidth"><?php get_search_form(); ?></div>
-                <?php endif; 
-		
-		while ( have_posts() ) : the_post(); ?>
 
-                <?php /* gallery */ 
+$category_description = category_description();
+if (!empty($category_description))
+	echo '' . $category_description . '';
 
-                
-		    if ( in_category( _x('gallery', 'gallery category slug', 'tf2013') ) ) : ?>
-                        <h2>
-                                <a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'tf2013' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
-                                        <?php the_title(); ?>
-                                </a>
-                        </h2>
-                        <?php tf2013_post_pubdateinfo(); ?>
+if (!have_posts()) :
+	?>
+	<h1><?php _e('Nichts gefunden', 'tf2013'); ?></h1>
+	<p><?php _e('Vielleicht hilft eine Suche weiter?', 'tf2013'); ?></p>
+	<div class="fullwidth"><?php get_search_form(); ?></div>
+<?php
+endif;
 
-		    <?php if ( post_password_required() ) : ?>
-                        <?php the_content(); ?>
-		     <?php else : 			 
-			$images = get_children( array( 'post_parent' => $post->ID, 'post_type' => 'attachment', 'post_mime_type' => 'image', 'orderby' => 'menu_order', 'order' => 'ASC', 'numberposts' => 999 ) );
-			$total_images = count( $images );
-			$image = array_shift( $images );
-			$image_img_tag = wp_get_attachment_image( $image->ID, 'thumbnail' );
-		    ?>
-			    <a href="<?php the_permalink(); ?>"><?php echo $image_img_tag; ?></a>
+while (have_posts()) : the_post();
+	?>
 
-			    <p>
-				    <?php printf( __( 'Diese Galerie enth&auml;lt <a %1$s>%2$s photos</a>.', 'tf2013' ),
-							    'href="' . get_permalink() . '" title="' . sprintf( esc_attr__( 'Permalink to %s', 'tf2013' ), the_title_attribute( 'echo=0' ) ) . '" rel="bookmark"',
-							    $total_images
-						    ); ?>
-			    </p>
+	<?php
+	/* gallery */
 
-			    <?php the_excerpt(); ?>
-		    <?php endif; ?>
 
-                        <a href="<?php echo get_term_link( _x('gallery', 'gallery category slug', 'tf2013'), 'category' ); ?>" title="<?php esc_attr_e( 'Zeige Artikel aus der Galerie', 'tf2013' ); ?>"><?php _e( 'Mehr Bildergalerien', 'tf2013' ); ?></a>
-                                        |
-                                        <?php comments_popup_link( __( 'Hinterlasse einen Kommentar', 'tf2013' ), __( '1 Comment', 'tf2013' ), __( '% kommentare', 'tf2013' ) ); ?>
-                                        <?php edit_post_link( __( 'Bearbeiten', 'tf2013' ), '|', '' ); ?>
-          
+	if (in_category(_x('gallery', 'gallery category slug', 'tf2013'))) :
+		?>
+		<h2>
+			<a href="<?php the_permalink(); ?>" title="<?php printf(esc_attr__('Permalink to %s', 'tf2013'), the_title_attribute('echo=0')); ?>" rel="bookmark">
+		<?php the_title(); ?>
+			</a>
+		</h2>
+		<?php tf2013_post_pubdateinfo(); ?>
 
-             
-                <?php else : 
-                               
+		<?php if (post_password_required()) : ?>
+			<?php the_content(); ?>
+			<?php
+		else :
+			$images = get_children(array('post_parent' => $post->ID, 'post_type' => 'attachment', 'post_mime_type' => 'image', 'orderby' => 'menu_order', 'order' => 'ASC', 'numberposts' => 999));
+			$total_images = count($images);
+			$image = array_shift($images);
+			$image_img_tag = wp_get_attachment_image($image->ID, 'thumbnail');
+			?>
+			<a href="<?php the_permalink(); ?>"><?php echo $image_img_tag; ?></a>
 
-		    	 tf2013_post_teaser($options['category-teaser-titleup'],$options['category-teaser-datebox'],$options['category-teaser-dateline'],$options['category-teaser-maxlength'],$options['teaser-thumbnail_fallback'],$options['category-teaser-floating']);
-     
+			<p>
+				<?php
+				printf(__('Diese Galerie enth&auml;lt <a %1$s>%2$s photos</a>.', 'tf2013'), 'href="' . get_permalink() . '" title="' . sprintf(esc_attr__('Permalink to %s', 'tf2013'), the_title_attribute('echo=0')) . '" rel="bookmark"', $total_images
+				);
+				?>
+			</p>
 
-                endif; // This was the if statement that broke the loop into three parts based on categories. ?>
+			<?php the_excerpt(); ?>
+		<?php endif; ?>
 
-                <?php endwhile; // End the loop. Whew. ?>
+		<a href="<?php echo get_term_link(_x('gallery', 'gallery category slug', 'tf2013'), 'category'); ?>" title="<?php esc_attr_e('Zeige Artikel aus der Galerie', 'tf2013'); ?>"><?php _e('Mehr Bildergalerien', 'tf2013'); ?></a>
+		|
+		<?php comments_popup_link(__('Hinterlasse einen Kommentar', 'tf2013'), __('1 Comment', 'tf2013'), __('% kommentare', 'tf2013')); ?>
+		<?php edit_post_link(__('Bearbeiten', 'tf2013'), '|', ''); ?>
 
-                <?php /* Display navigation to next/previous pages when applicable */ ?>
-                <?php if (  $wp_query->max_num_pages > 1 ) : ?>
-                            <?php next_posts_link( __( '&larr; &Auml;ltere Beitr&auml;ge', 'tf2013' ) ); ?>
-                            <?php previous_posts_link( __( 'Neuere Beitr&auml;ge &rarr;', 'tf2013' ) ); ?>
-                <?php endif; ?>
+
+
+		<?php
+	else :
+
+
+		tf2013_post_teaser($options['category-teaser-titleup'], $options['category-teaser-datebox'], $options['category-teaser-dateline'], $options['category-teaser-maxlength'], $options['teaser-thumbnail_fallback'], $options['category-teaser-floating']);
+
+
+	endif; // This was the if statement that broke the loop into three parts based on categories.
+	?>
+
+<?php endwhile; // End the loop. Whew. ?>
+
+<?php /* Display navigation to next/previous pages when applicable */ ?>
+<?php if ($wp_query->max_num_pages > 1) : ?>
+	<?php next_posts_link(__('&larr; &Auml;ltere Beitr&auml;ge', 'tf2013')); ?>
+	<?php previous_posts_link(__('Neuere Beitr&auml;ge &rarr;', 'tf2013')); ?>
+<?php endif; ?>

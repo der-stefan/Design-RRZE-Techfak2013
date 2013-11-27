@@ -372,20 +372,18 @@ Bilder im Inhaltsbereich
 --------------------------------------------------------*/
 #content p img {
     display: inline;
-    float: left;
-    margin: 8px 8px 8px 0px;
 }
 #content p a img {
     display: inline;
-    float: none;
-    margin: 0px;
 }
-div#content .bildlinks {
+div#content .bildlinks,
+div#content .alignleft {
     display: inline;
     float: left;
     margin: 8px;
 }
-div#content .bildrechts {
+div#content .bildrechts,
+div#content .alignright {
     display: inline;
     float: right;
     margin: 8px;
