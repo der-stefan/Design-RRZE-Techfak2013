@@ -606,7 +606,6 @@ if (!function_exists('tf2013_comment')) :
 								<?php the_title(); ?>
 							</a>
 						</h2></div>
-				<div class="post-meta"><?php tf2013_post_pubdateinfo(); ?></div>
 					<div class="ym-column">
 						<?php
 					}
