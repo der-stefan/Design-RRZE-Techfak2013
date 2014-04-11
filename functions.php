@@ -68,8 +68,10 @@ if (!function_exists('tf2013_setup')):
 		register_nav_menus(array(
 			'primary' => __('Hauptnavigation', 'tf2013'),
 			'targetmenu' => __('Zielgruppenmenu', 'tf2013'),
-			'tecmenu' => __('Technische Navigation (Kontakt, Impressum, etc)', 'tf2013'),
 		));
+                
+                if( !is_blogs_fau_de() )
+                    register_nav_menu ('tecmenu', __('Technische Navigation (Kontakt, Impressum, etc)', 'tf2013'));
 
 
 		if ($options['login_errors'] == 0) {
@@ -444,6 +446,16 @@ function tf2013_remove_gallery_css($css) {
 add_filter('gallery_style', 'tf2013_remove_gallery_css');
 
 
+
+function is_blogs_fau_de() {
+    $http_host = filter_input(INPUT_SERVER, 'HTTP_HOST');
+    if( $http_host == 'blogs.fau.de')
+        return true;
+    else
+        return false;
+}
+
+
 if (!function_exists('tf2013_comment')) :
 
 	/**
@@ -602,7 +614,7 @@ if (!function_exists('tf2013_comment')) :
 			<div <?php post_class($sizeclass); ?> id="post-<?php the_ID(); ?>" >
 				<?php if ($titleup == 1) { ?>
 					<div class="post-title ym-cbox"><h2>
-							<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>">
+                                                <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute('echo=0'); ?>">
 								<?php the_title(); ?>
 							</a>
 						</h2></div>
@@ -633,7 +645,7 @@ if (!function_exists('tf2013_comment')) :
 					if ($titleup == 0) {
 						?>
 						<div class="post-title"><h2>
-								<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>">
+                                                        <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute('echo=0'); ?>">
 									<?php the_title(); ?>
 								</a>
 							</h2></div>
