@@ -85,6 +85,13 @@
     background: url("../img/links/zip.gif") center left no-repeat;
     padding-left: 19px;
 }
+#content a[href$=".jpg"],
+#content a[href$=".jpeg"],
+#content a[href$=".gif"],
+#content a[href$=".png"] {
+    background: none;    
+    padding-left: 0;
+}
 
 #content a.nolinkicon {
 	background: none;
