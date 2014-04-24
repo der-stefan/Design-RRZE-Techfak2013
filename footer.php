@@ -21,7 +21,7 @@
 <li><a href="http://blogs.fau.de/">Blogs@FAU</a></li>
 <li><a href="http://www.portal.uni-erlangen.de/forums/viewforum/94">Forum</a></li>
 <li><a href="http://blogs.fau.de/hilfe/">Hilfe</a></li>
-<li><a href="http://blogs.fau.de/karinstest/kontakt/">Kontakt</a></li>
+<li><a href="<?php bloginfo('url'); ?>/kontakt/">Kontakt</a></li>
 <li><a href="http://blogs.fau.de/impressum/">Impressum</a></li>
 <li><a href="http://blogs.fau.de/nutzungsbedingungen/">Nutzungsbedingungen</a></li>
 </ul>
