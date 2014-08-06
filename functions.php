@@ -177,20 +177,25 @@ function tf2013_add_basemod_styles() {
 		wp_enqueue_style('tf2013');
 	}
 	if ((isset($options['aktiv-basemod_zusatzinfo'])) && ($options['aktiv-basemod_zusatzinfo'] == 1)) {
-		wp_enqueue_style('basemod_zusatzinfo', $defaultoptions['src_basemod_zusatzinfo']);
+		wp_register_style('basemod_zusatzinfo', $defaultoptions['src_basemod_zusatzinfo']);
+		wp_enqueue_style('basemod_zusatzinfo');
 	}
 	if ((isset($options['aktiv-basemod_links'])) && ($options['aktiv-basemod_links'] == 1)) {
-		wp_enqueue_style('basemod_links', $defaultoptions['src_basemod_links']);
+		wp_register_style('basemod_links', $defaultoptions['src_basemod_links']);
+		wp_enqueue_style('basemod_links');
 	}
 	if ((isset($options['aktiv-basemod_sidebar'])) && ($options['aktiv-basemod_sidebar'] == 1)) {
-		wp_enqueue_style('basemod_sidebar', $defaultoptions['src_basemod_sidebar']);
+		wp_register_style('basemod_sidebar', $defaultoptions['src_basemod_sidebar']);
+		wp_enqueue_style('basemod_sidebar');
 	}
 
 	if ((isset($options['farbvarianten'])) && (isset($options['src_' . $options['farbvarianten']]))) {
-		wp_enqueue_style('farbvarianten', $defaultoptions['src_' . $options['farbvarianten']]);
+		wp_register_style('farbvarianten', $defaultoptions['src_' . $options['farbvarianten']]);
+		wp_enqueue_style('farbvarianten');
 	}
 	if ((isset($options['aktiv-socialmediabuttons'])) && ($options['aktiv-socialmediabuttons'] == 1)) {
-		wp_enqueue_style('basemod_socialmediabuttons', $defaultoptions['src_socialmediabuttons']);
+		wp_register_style('basemod_socialmediabuttons', $defaultoptions['src_socialmediabuttons']);
+		wp_enqueue_style('basemod_socialmediabuttons');
 	}
 }
 
@@ -978,7 +983,7 @@ if (!function_exists('tf2013_comment')) :
 				// you may remove the <hr> here and use plain CSS.
 				$output .= '<li class="menu_separator"><hr>';
 			} else {
-				parent::start_el(&$output, $item, $depth = 0, $args = array(), $id = 0);
+				parent::start_el($output, $item, $depth = 0, $args = array(), $id = 0);
 			}
 		}
 

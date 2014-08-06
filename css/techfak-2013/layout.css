@@ -26,7 +26,7 @@
 /*@import url(screen/basemod_disable_targetmenu.css);*/
 /*@import url(screen/basemod_disable_search.css);*/
 @import url(screen/basemod_links.css);
-/*@import url(screen/basemod_siegel.css);*/ 
+/*@import url(screen/basemod_siegel.css);*/
 /*@import url(screen/basemod_transparente_tabellen.css);*/
 @import url(screen/mediaqueries.css);
 
@@ -55,7 +55,7 @@
 /*@import url(screen/basemod_studium-win.css);*/
 /*@import url(screen/basemod_studium-wing.css);*/
 /*@import url(screen/basemod_studium-ww.css);*/
-@import url(screen/basemod_fau.css);
+/*@import url(screen/basemod_fau.css);*/
 
 /* import print layout | Print-Layout einbinden */
 @import url(print/print.css);

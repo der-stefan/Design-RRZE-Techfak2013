@@ -315,8 +315,8 @@ $setoptions = array(
 			'basemod_studium-nano' => 'Studium Nanotechnologie',
 			'basemod_studium-win' => 'Studium Wirtschaftsinformatik',
 			'basemod_studium-wing' => 'Studium Wirtschaftsingenieurwesen',
-			'basemod_studium-ww' => 'Studium Werkstoffwissenschaftennn',
-		    'basemod_fau' => 'Variante FAU (Standard Techfak mit FAU-Farben)',
+			'basemod_studium-ww' => 'Studium Werkstoffwissenschaften',
+		    'basemod_fau' => 'Variante FAU - Standard Techfak mit FAU-Farben',
 			),
 		),
 		'text-startseite' => array(
