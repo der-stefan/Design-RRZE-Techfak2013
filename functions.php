@@ -69,7 +69,7 @@ if (!function_exists('tf2013_setup')):
 			'primary' => __('Hauptnavigation', 'tf2013'),
 			'targetmenu' => __('Zielgruppenmenu', 'tf2013'),
 		));
-                
+
                 if( !is_blogs_fau_de() )
                     register_nav_menu ('tecmenu', __('Technische Navigation (Kontakt, Impressum, etc)', 'tf2013'));
 
@@ -973,12 +973,12 @@ if (!function_exists('tf2013_comment')) :
 		 * @param array $args Additional strings.
 		 * @return void
 		 */
-		public function start_el(&$output, $item, $depth, $args) {
+		public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
 			if ('-' === $item->title) {
 				// you may remove the <hr> here and use plain CSS.
 				$output .= '<li class="menu_separator"><hr>';
 			} else {
-				parent::start_el($output, $item, $depth, $args);
+				parent::start_el(&$output, $item, $depth = 0, $args = array(), $id = 0);
 			}
 		}
 
