@@ -1,0 +1,111 @@
+
+/**
+ * Projekt Vorlagenkatalog
+ *
+ * Basisstylesheet
+ *
+ * @mod_name        Buttons
+ * @mod_desc        Extra-Stylesheet für farbige Buttons mit optionalen Icons
+ *
+ * @copyright       Copyright 2005-2011, RRZE
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/)
+ * @link            http://www.vorlagen.uni-erlangen.de
+ * @package         css
+ * @version         1.0
+ * @lastmodified    08/2013
+ */
+
+@media screen, projection
+{
+	@mixin gradient($start-color,$stop-color){
+		background: $start-color; // Old browsers
+		background: -moz-linear-gradient(top, $start-color 0%, $stop-color 100%); // FF3.6+
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$start-color), color-stop(100%,$stop-color)); //Chrome,Safari4+
+		background: -webkit-linear-gradient(top, $start-color 0%, $stop-color 100%); // Chrome10+,Safari5.1+
+		background: -o-linear-gradient(top,  $start-color 0%, $stop-color 100%); // Opera 11.10+
+		background: -ms-linear-gradient(top,  $start-color 0%, $stop-color 100%); // IE10+
+		background: linear-gradient(to bottom,  $start-color 0%, $stop-color 100%); // W3C
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$stop-color',GradientType=0 ); // IE6-9
+	}
+
+    div#content a.post-edit-link:link,
+    .button {
+		display: inline-block;
+		outline: none;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		padding: .5em 2em .55em;
+		margin-right: 12px;
+		margin-bottom: 6px;
+		-webkit-border-radius: .5em;
+		-moz-border-radius: .5em;
+		border-radius: .5em;
+		-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+		-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+		box-shadow: 0 1px 2px rgba(0,0,0,.2);
+		font-size: 1.2em;
+		}
+    .gross {
+		padding: 1.8em;
+    }
+    aside .button.breit {
+		display: block;
+		margin-right: 0;
+		max-width: 300px;
+		padding-left: 1.8em;
+		padding-right: 1.8em;
+		margin-bottom: 1em;
+	}
+    div#content a.post-edit-link:link:hover,
+    .button:hover {
+		text-decoration: none;
+    }
+    div#content a.post-edit-link:link:active,
+    .button:active {
+		position: relative;
+		top: 1px;
+    }
+    .gelb {
+		color: #444 !important;
+		@include gradient(#ffdd0e, #ffc94a);
+
+		.button .gelb a:hover,
+		.gelb:hover { @include gradient(#ffc94a, #ffb70e); }
+		.gelb:active { @include gradient(#ffc94a, #ffdd0e); }
+	}
+
+
+	.blau {
+		color: #fff !important;
+		text-shadow: 0 1px 1px rgba(0,0,0,.3);
+		@include gradient(#498ad3, #1559a6);
+
+		.blau:hover a,
+		.blau:hover { @include gradient(#1559a6, #2b517d); }
+		.blau:active a,
+		.blau:active { @include gradient(#1559a6, #498ad3); }
+		a {
+			color: white;
+		}
+    }
+
+	.gruen {
+		color: #fff !important;
+		text-shadow: 0 1px 1px rgba(0,0,0,.3);
+		@include gradient(#94d95f, #67b32d);
+
+		&:hover { @include gradient(#67b32d, #5c863b); }
+		&:active { @include gradient(#67b32d, #94d95f); }
+	}
+
+	div#content a.post-edit-link:link,
+    .grau {
+		color: #555 !important;
+		@include gradient(#eeeeee, #cccccc);
+
+		&:hover { @include gradient(#dddddd, #bbbbbb); }
+		&:active { @include gradient(#cccccc, #eeeeee); }
+	}
+
+}

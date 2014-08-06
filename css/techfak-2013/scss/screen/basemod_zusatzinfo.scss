@@ -1,0 +1,64 @@
+/**
+ * Projekt Vorlagenkatalog
+ *
+ * Basisstylesheet Techfak 2013
+ *
+ * @mod_name        zusatzinfo
+ * @mod_desc        Aktiviert Standard-Styling des Zusatzinfo-Blocks
+ *
+ * @copyright       Copyright 2005-2011, RRZE
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/)
+ * @link            http://www.vorlagen.uni-erlangen.de
+ * @package         css
+ * @version         1.0
+ * @lastmodified    08/2013
+ */
+
+
+@media screen, projection
+{
+
+	/*  ------------------------------------------------------
+	FOOTER - FOOTERINFOS - ZUSATZINFO
+	--------------------------------------------------------*/
+	div#footer div#footerinfos div#zusatzinfo {
+		border-top: 1px solid #eeeff1;
+		z-index: 1;
+		background-color: transparent;
+		margin-top: 10px;
+		padding: 10px 10px 1em 10px;
+		display: block;
+		text-align: left;
+
+		h2, h3, h4, h5 {
+			margin-top: 0.2em;
+			margin-bottom: 0.5em;
+			font-size: 0.9em;
+			color: #eeeff1;
+		}
+		p {
+			color: #fff;
+			line-height: 150%;
+
+			img {
+				float: none;
+			}
+			&.skip {
+				position: absolute;
+				left:-3000px;
+				top:-3000px;
+				width: 1px;
+			}
+		}
+		a, a:link, a:visited {
+			color: #eeeff1;
+		}
+		a:focus, a:active, a:hover {
+			color: #fff;
+		}
+		ul {
+			margin-bottom: 1em;
+		}
+
+	}
+}
