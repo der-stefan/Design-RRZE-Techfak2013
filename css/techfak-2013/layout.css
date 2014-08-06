@@ -55,6 +55,7 @@
 /*@import url(screen/basemod_studium-win.css);*/
 /*@import url(screen/basemod_studium-wing.css);*/
 /*@import url(screen/basemod_studium-ww.css);*/
+@import url(screen/basemod_fau.css);
 
 /* import print layout | Print-Layout einbinden */
 @import url(print/print.css);

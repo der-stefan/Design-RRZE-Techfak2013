@@ -47,7 +47,7 @@ global $options;
 
 				<?php if (!is_home()) { ?>
     				</a>
-<?php } ?>
+				<?php } ?>
 
 			</div>
 

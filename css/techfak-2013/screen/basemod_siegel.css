@@ -1,5 +1,5 @@
 /**
- * Projekt Vorlagenkatalog
+ * Projekt Vorlagenkatalog 
  *
  * Basisstylesheet techfak 2013
  *
@@ -13,13 +13,9 @@
  * @version         1.0
  * @lastmodified    08/2013
  */
-
-@media screen, projection
-{
-	div#main {
-		background: url(../../../img/logos/fau/fau-siegel.png);
-		background-repeat: no-repeat;
-		background-position: 120% 100%;
-		background-size: 50%;
-	}
-}
+@media screen, projection {
+  div#main {
+    background: url(../../../img/logos/fau/fau-siegel.png);
+    background-repeat: no-repeat;
+    background-position: 120% 100%;
+    background-size: 50%; } }

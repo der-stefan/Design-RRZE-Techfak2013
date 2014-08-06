@@ -13,51 +13,29 @@
  * @version         3.1
  * @lastmodified    02/2012
  */
+@media screen, projection {
+  div#seite {
+    background: white url(../grafiken/techfak-2013/balken-disable-targetmenu.gif) no-repeat; }
 
-@media screen, projection
-{
+  div#kopf div#hauptmenu ul {
+    display: none; }
+  div#kopf div#hauptmenu {
+    display: none; }
+  div#kopf div#logo {
+    height: 135px; }
+  div#kopf div#breadcrumb {
+    top: 165px; }
+  div#kopf div#titel {
+    top: 200px; }
+  div#kopf div#suche {
+    top: 170px; }
 
-	div#seite {
-		background: #fff url(../../../grafiken/techfak-2013/balken-disable-targetmenu.gif) no-repeat;
-	}
+  div#main {
+    background-position: top left;
+    margin-top: -2px;
+    border-top: 2px solid #adb4bb; }
 
-	div#kopf div#hauptmenu ul {
-		display: none;
-	}
-
-	div#kopf div#hauptmenu {
-		display: none;
-	}
-
-	div#kopf div#logo {
-		height: 135px;
-	}
-
-	div#kopf div#breadcrumb {
-		top: 165px;
-	}
-
-	div#kopf div#titel {
-		top: 200px;
-	}
-
-	div#kopf div#suche {
-		top: 170px;
-	}
-
-	div#main {
-		background-position: top left;
-		margin-top: -2px;
-		border-top: 2px solid #adb4bb;
-	}
-
-	div#footer div#footerinfos div#tecmenu {
-		top: 107px;
-	}
-
-	div#footer div#footerinfos div#flaggen,
-	div#footer div#footerinfos div.flaggen,
-	div#footer div#footerinfos div#languagebar {
-		top: 150px !important;
-}
-}
+  div#footer div#footerinfos div#tecmenu {
+    top: 107px; }
+  div#footer div#footerinfos div#flaggen, div#footer div#footerinfos div.flaggen, div#footer div#footerinfos div#languagebar {
+    top: 150px !important; } }

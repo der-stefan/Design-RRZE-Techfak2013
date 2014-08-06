@@ -1,5 +1,5 @@
 /**
- * Projekt Vorlagenkatalog 
+ * Projekt Vorlagenkatalog
  *
  * Basisstylesheet Techfak
  *
@@ -13,44 +13,28 @@
  * @version         3.1
  * @lastmodified    07/2012
  */
- 
+@media screen, projection {
+  	/*#content tr {
+  		border-left: 1px solid transparent;
+  		border-top: 1px solid transparent;
+      } */
+  #content table.wechselfarbe tr td {
+    background-color: transparent; }
 
-@media screen, projection
-{
-       
-	/*#content tr {
-		border-left: 1px solid transparent;
-		border-top: 1px solid transparent;
-    } */   
-    
-	#content td {
-		background-color: transparent;
-		/*border-color: transparent;*/
-    }
-    
-	#content td p {
-		font-size: 1em;
-	}
-	
-	#content th {
-		background-color: #eeeff1;
-	}
-       	
-	#content tr.ungerade td { 
-		background-color: #F2F5F7; 
-	}
-	
-	#content tr.gerade td { 
-		background-color: #f7f8f9; 
-	}
+  #content table.wechselfarbe tr:nth-child(odd) td {
+    background-color: #f7f8f9; }
 
-	#content table.wechselfarbe tr td {
-		background-color: transparent;
-	}
-	
-	#content table.wechselfarbe tr:nth-child(odd) td {
-		background-color: #f7f8f9;
-	}
-                
-        
-}
+  #content tr.ungerade td {
+    background-color: #F2F5F7; }
+
+  #content tr.gerade td {
+    background-color: #f7f8f9; }
+
+  #content th {
+    background-color: #eeeff1; }
+
+  #content td {
+    background-color: transparent;
+    /*border-color: transparent;*/ }
+    #content td p {
+      font-size: 1em; } }

@@ -1,5 +1,5 @@
 /**
- * Projekt Vorlagenkatalog 
+ * Projekt Vorlagenkatalog  
  *
  * Basisstylesheet D7
  *
@@ -13,10 +13,6 @@
  * @version         3.0
  * @lastmodified    08/2011
  */
- 
-@media screen, projection
-{
-	div#kopf div#suche {  
-		display: none;
-	} 
-}
+@media screen, projection {
+  div#kopf div#suche {
+    display: none; } }
