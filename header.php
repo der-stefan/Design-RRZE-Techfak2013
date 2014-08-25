@@ -22,7 +22,7 @@ global $options;
 		<header>
 		    <?php $header_image = get_header_image();
 				if (!empty($header_image)) : ?>
-					<div id="kopf" style="background-image:url(<?php echo esc_url($header_image); ?>">  <!-- begin: kopf -->
+					<div id="kopf" style="background-image:url(<?php echo esc_url($header_image); ?>)">  <!-- begin: kopf -->
 				<?php else : ?>
 					<div id="kopf">  <!-- begin: kopf -->
 				<?php endif; ?>
