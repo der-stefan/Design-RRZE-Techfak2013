@@ -40,9 +40,22 @@ global $options;
     					    <img src="<?php echo esc_url($logo); ?>" class="logo" width="<?php echo $logo_width; ?>" height="<?php echo $logo_height; ?>" alt="" />
     					<?php endif; ?>
 
+				<?php if (!is_home()) { ?>
+    				</a>
+				<?php } ?>
+
     					<p>
-    						<?php bloginfo('name'); ?>
-    							<span class="description"><?php bloginfo('description'); ?></span>
+
+							<?php if (!is_home()) { ?>
+								<a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home" class="logo">
+							<?php } ?>
+
+								<?php bloginfo('name'); ?>
+									<span class="description"><?php bloginfo('description'); ?></span>
+
+							<?php if (!is_home()) { ?>
+								</a>
+							<?php } ?>
     				    </p>
 
 				<?php if (!is_home()) { ?>
@@ -102,7 +115,7 @@ global $options;
     wp_page_menu(array(
 	'sort_column' => 'menu_order, post_title',
 	'echo' => 1,
-	'show_home' => 1));
+	'show_home' => $options['text-startseite']));
     ?>
     			    </ul>
 

@@ -86,6 +86,7 @@
 				font-weight: bold;
 				line-height: 120%;
 				color: #003366;
+				text-decoration: none;
 
 				.description {
 					display: block;
@@ -100,7 +101,7 @@
 				a:focus, a:active {
 					color: #23588A;
 				}
-				a:hover, a:active, a:active {
+				a:hover, a:focus, a:active {
 					text-decoration: underline;
 				}
 			}

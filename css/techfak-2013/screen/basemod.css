@@ -68,7 +68,8 @@
         font: 1.5em Arial, "Lucida Sans", "Lucida Sans Unicode", Verdana, sans-serif;
         font-weight: bold;
         line-height: 120%;
-        color: #003366; }
+        color: #003366;
+        text-decoration: none; }
         div#kopf div#logo p .description {
           display: block;
           font-size: 0.73em;
@@ -79,7 +80,7 @@
           color: #003366; }
         div#kopf div#logo p a:focus, div#kopf div#logo p a:active {
           color: #23588A; }
-        div#kopf div#logo p a:hover, div#kopf div#logo p a:active, div#kopf div#logo p a:active {
+        div#kopf div#logo p a:hover, div#kopf div#logo p a:focus, div#kopf div#logo p a:active {
           text-decoration: underline; }
     div#kopf div#titel {
       position: absolute;
