@@ -1426,6 +1426,10 @@ BEITRÄGE
 			font-style: italic;
 			margin-bottom: 0;
 		}
+		.bypostauthor {
+			font-size: .76em;
+		}
+
 		div.post-nav ul,
 		div.comments-nav ul {
 			list-style-type: none;
@@ -1551,6 +1555,9 @@ BEITRÄGE
 	.gallery-columns-4 .gallery-item {
 		width: 25%;
 		float: left;
+	}
+	.wp-caption-text {
+		font-size: .76em;
 	}
 
 	/*  ------------------------------------------------------

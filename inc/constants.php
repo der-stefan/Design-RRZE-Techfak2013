@@ -470,7 +470,7 @@ $setoptions = array(
 				'num-article-startpage-halfwidth' => array(
 					'type' => 'select',
 					'title' => __('Anzahl', 'tf2013'),
-					'label' => __('Zahl der Beitr&auml;ge, die in Spalten mit je zwei Beitr&auml;gen nebeneinander, angezeigt werden.', 'tf2013'),
+					'label' => __('Zahl der Beitr&auml;ge, die in Spalten mit je zwei Beitr&auml;gen nebeneinander angezeigt werden.', 'tf2013'),
 					'liste' => array(0 => 0, 2 => 2, 4 => 4, 6 => 6, 8 => 8),
 					'default' => $defaultoptions['num-article-startpage-halfwidth'],
 					'parent' => 'auszuege-fullwidth'
@@ -525,14 +525,14 @@ $setoptions = array(
 				'category-teaser-maxlength' => array(
 					'type' => 'number',
 					'title' => __('L&auml;nge des Teasertextes (Artikelauszug)', 'tf2013'),
-					'label' => __('Maximale Textl&auml;nge f&uuml;r Artikelausz&uuml;ge', 'tf2013'),
+					'label' => __('Maximale Textl&auml;nge f&uuml;r Artikelausz&uuml;ge.', 'tf2013'),
 					'default' => $defaultoptions['category-teaser-maxlength'],
 					'parent' => 'category-fullwidth'
 				),
 				'category-teaser-dateline' => array(
 					'type' => 'bool',
 					'title' => __('Datumszeile', 'tf2013'),
-					'label' => __('Datumszeile vor dem Text, falls keine Datumsbox angezeigt wird', 'tf2013'),
+					'label' => __('Datum des Beitrags über dem Titel anzeigen.', 'tf2013'),
 					'default' => $defaultoptions['category-teaser-dateline'],
 					'parent' => 'category-fullwidth'
 				),
@@ -556,7 +556,7 @@ $setoptions = array(
 				'category-num-article-halfwidth' => array(
 					'type' => 'select',
 					'title' => __('Anzahl', 'tf2013'),
-					'label' => __('Zahl der Beitr&auml;ge, die in Spalten mit je zwei Beiträgen nebeneinander, angezeigt werden.', 'tf2013'),
+					'label' => __('Zahl der Beitr&auml;ge, die in Spalten mit je zwei Beitr&auml;gen nebeneinander angezeigt werden.', 'tf2013'),
 					'liste' => array(0 => 0, 2 => 2, 4 => 4, 6 => 6, 8 => 8, 10 => 10, 12 => 12, 14 => 14, 16 => 16),
 					'default' => $defaultoptions['category-num-article-halfwidth'],
 					'parent' => 'category-halfwidth'
@@ -564,14 +564,14 @@ $setoptions = array(
 				'category-teaser-maxlength-halfwidth' => array(
 					'type' => 'number',
 					'title' => __('L&auml;nge des Teasertextes (Artikelauszug)', 'tf2013'),
-					'label' => __('Maximale Textl&auml;nge f&uuml;r Artikelausz&uuml;ge auf Indexseiten.', 'tf2013'),
+					'label' => __('Maximale Textl&auml;nge f&uuml;r Artikelausz&uuml;ge.', 'tf2013'),
 					'default' => $defaultoptions['category-teaser-maxlength-halfwidth'],
 					'parent' => 'category-halfwidth'
 				),
 				'category-teaser-dateline-halfwidth' => array(
 					'type' => 'bool',
 					'title' => __('Datumszeile', 'tf2013'),
-					'label' => __('Datumszeile vor dem Text, falls keine Datumsbox angezeigt wird (Bei Beitr&auml;gen &uuml;ber halbe Breite).', 'tf2013'),
+					'label' => __('Datum des Beitrags über dem Titel anzeigen.', 'tf2013'),
 					'default' => $defaultoptions['category-teaser-dateline-halfwidth'],
 					'parent' => 'category-halfwidth'
 				),

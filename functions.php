@@ -99,6 +99,7 @@ function tf2013_scripts() {
 
 	wp_register_script('themeadminscripts', get_template_directory_uri() . '/js/admin.js', array('jquery'));
 	wp_enqueue_script('themeadminscripts');
+	if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 }
 
 add_action('admin_enqueue_scripts', 'tf2013_scripts');

@@ -1102,6 +1102,8 @@
     font-size: .71em;
     font-style: italic;
     margin-bottom: 0; }
+  div#content .bypostauthor {
+    font-size: .76em; }
   div#content div.post-nav ul,
   div#content div.comments-nav ul {
     list-style-type: none;
@@ -1200,6 +1202,9 @@
   .gallery-columns-4 .gallery-item {
     width: 25%;
     float: left; }
+
+  .wp-caption-text {
+    font-size: .76em; }
 
   /*  ------------------------------------------------------
   WP-KALENDER-WIDGET

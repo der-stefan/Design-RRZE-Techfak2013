@@ -27,7 +27,7 @@ function theme_options_do_page($tab = '') {
 	?>
 	<div class="wrap">
 		<div class="tf2013-optionen"> <!-- begin: .tf2013-optionen -->
-	<?php screen_icon();
+	<?php
 	echo "<h2>" . wp_get_theme() . ': ' . __('Theme-Optionen anpassen', 'tf2013') . "</h2>"; ?>
 			<?php if (false !== $_REQUEST['settings-updated']) : ?>
 				<div class="updated fade"><p><strong><?php _e('Optionen wurden gespeichert.', 'tf2013'); ?></strong></p></div>
