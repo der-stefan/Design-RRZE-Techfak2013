@@ -1,0 +1,30 @@
+/**
+ * Projekt Vorlagenkatalog
+ *
+ * Basisstylesheet Techfak 2013
+ *
+ * @mod_name        hellblau
+ * @mod_desc        Farbschema "hellblau"
+ *
+ * @copyright       Copyright 2005-2012, RRZE
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/)
+ * @link            http://www.vorlagen.uni-erlangen.de
+ * @package         css
+ * @version         1.0
+ * @lastmodified    08/2013
+ */
+
+/* Farbvariante
+ *     #6399AB  - Basisfarbe
+ */
+
+// Globale Variablen:
+$main-color: #6399AB;
+$main-color-darker: #6399AB; // optional, für farbige Schrift auf weißem Grund, wenn main-color zu hell
+$header-img-3b: url(../../../grafiken/techfak-2013/header-techfak-hellblau-3b.png);
+$header-img-2b: url(../../../grafiken/techfak-2013/header-techfak-hellblau-2b.png);
+$header-img-0b: url(../../../grafiken/techfak-2013/header-techfak-hellblau-0b.png);
+$hauptmenue-bg: url(../../../grafiken/techfak-2013/hauptmenue-bg-hellblau.png);
+
+
+@import "vorlage_fakultaeten.scss";

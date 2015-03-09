@@ -1,0 +1,29 @@
+/**
+ * Projekt Vorlagenkatalog
+ *
+ * Basisstylesheet Techfak 2013
+ *
+ * @mod_name        studium-ip
+ * @mod_desc        Farbschema für Studium International Production Engineering and Management
+ *
+ * @copyright       Copyright 2013-2020, RRZE
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/)
+ * @link            http://www.vorlagen.uni-erlangen.de
+ * @package         css
+ * @version         1.0
+ * @lastmodified    08/2013
+ */
+
+/* Farbvariante
+ *		#2a7632  - Basisfarbe
+ *		#2a7632  -  Schriften
+ */
+
+
+// Globale Variablen:
+$main-color: #2a7632;
+$main-color-darker: #2a7632; // optional, für farbige Schrift auf weißem Grund, wenn main-color zu hell
+$hauptmenue-bg: url(../../../grafiken/techfak-2013/hauptmenue-bg-ip.png);
+
+
+@import "_vorlage_studiengaenge.scss";

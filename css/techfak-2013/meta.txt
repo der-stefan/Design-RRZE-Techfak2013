@@ -22,7 +22,6 @@ basemod_studium-nano.css	Studium Nanotechnologie
 basemod_studium-win.css	Studium Wirtschaftsinformatik
 basemod_studium-wing.css	Studium Wirtschaftsingenieurwesen
 basemod_studium-ww.css	Studium Werkstoffwissenschaften
-basemod_fau.css	FAU (Standard Techfak, mit FAU-Farben)
 basemod_sidebar.css	Aktiviert die Sidebar in rechter Spalte
 basemod_zusatzinfo.css 	Aktiviert Zusatzinfo-Block im Fußbereich
 basemod_disable_targetmenu.css	Zielgruppennavigation ausblenden

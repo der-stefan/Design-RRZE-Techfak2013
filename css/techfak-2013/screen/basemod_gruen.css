@@ -23,16 +23,13 @@
   div#kopf {
     background: url(../../../grafiken/techfak-2013/header-techfak-gruen-3b.png) no-repeat scroll 48% 0% transparent; }
     div#kopf div#logo {
-      background: url(../../../grafiken/techfak-2013/logo-techfak-blau-bg.png);
       background-repeat: no-repeat;
       background-position: 99% 0; }
-      div#kopf div#logo img {
-        display: none; }
-      div#kopf div#logo p {
+      div#kopf div#logo .site-name {
         color: #fff;
         text-shadow: 1px 1px 2px #4C4C4C;
         letter-spacing: 0.05em; }
-        div#kopf div#logo p a {
+        div#kopf div#logo .site-name a {
           color: #fff; }
     div#kopf div#hauptmenu {
       background: #a4abb3 url(../../../grafiken/techfak-2013/hauptmenue-bg-gruen.png) repeat-y;
@@ -112,7 +109,7 @@
 @media screen and (max-width: 960px) {
   div#kopf {
     background: url(../../../grafiken/techfak-2013/header-techfak-gruen-0b.png) no-repeat scroll 51% 0% transparent !important; }
-    div#kopf div#logo p {
+    div#kopf div#logo .site-name {
       display: block;
       top: 0 !important;
       padding-left: 10px;
@@ -124,8 +121,7 @@
 @media screen and (max-width: 630px) {
   div#kopf div#logo {
     background-size: 40% auto; }
-    div#kopf div#logo p {
-      width: 280px;
+    div#kopf div#logo .site-name {
       font-size: 1.2em !important; } }
 /*  ------------------------------------------------------------------------------------------------------------
 						BREAKPOINT  480px
@@ -133,13 +129,12 @@
 @media screen and (max-width: 480px) {
   div#kopf {
     background-image: none !important; }
-    div#kopf div#logo p {
+    div#kopf div#logo .site-name {
       width: 100% !important;
       max-width: 100% !important;
-      padding-top: 45px !important;
       color: #8a9b00;
       text-shadow: none; }
-      div#kopf div#logo p a {
+      div#kopf div#logo .site-name a {
         color: #8a9b00;
         text-shadow: none; }
     div#kopf div#titel h1 {
@@ -158,6 +153,3 @@
 /*  ------------------------------------------------------------------------------------------------------------
 						BREAKPOINT  320px
 --------------------------------------------------------------------------------------------------------------*/
-@media screen and (max-width: 320px) {
-  div#kopf div#logo p {
-    padding-top: 30px !important; } }

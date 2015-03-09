@@ -1,48 +1,50 @@
-<?php get_header();    
-  global $options;    
-     if ( is_active_sidebar( 'inhaltsinfo-area' ) ) { 
-    	 dynamic_sidebar( 'inhaltsinfo-area' ); 
-    }  
- ?>    
-    
+<?php get_header();
+  global $options;
+     if ( is_active_sidebar( 'inhaltsinfo-area' ) ) {
+    	 dynamic_sidebar( 'inhaltsinfo-area' );
+    }
+ ?>
 
-	
-<?php if ( have_posts() ) while ( have_posts() ) : the_post();         
+
+
+<?php if ( have_posts() ) while ( have_posts() ) : the_post();
 	 $custom_fields = get_post_custom();
-	?>    
+	?>
 
 
- 
+
         <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-	              
-            
-          
-            
+
+
           <div class="post-entry">
-            <?php the_content(); ?>
+            <?php
+			if (has_post_thumbnail()) {
+				the_post_thumbnail();
+			}
+			the_content(); ?>
           </div>
-            
-			
+
+
           <div class="post-meta"><p>
-               <?php 
-                tf2013_post_pubdateinfo();    
-                if ($options['aktiv-autoren']) tf2013_post_autorinfo();             
-                 tf2013_post_taxonominfo();  
-                ?>                  
+               <?php
+                tf2013_post_pubdateinfo();
+                if ($options['aktiv-autoren']) tf2013_post_autorinfo();
+                 tf2013_post_taxonominfo();
+                ?>
               </p>
           </div>
-	  
+
 	  <div><?php edit_post_link( __( 'Bearbeiten', 'tf2013' ), '', '' ); ?></div>
         </div>
-	 
+
 	<div class="post-nav">
 		<ul>
-		<?php 
-		 previous_post_link('<li class="back">&#9664; %link</li>', '%title'); 
-		 next_post_link('<li class="forward">%link &#9654;</li>', '%title'); 
+		<?php
+		 previous_post_link('<li class="back">&#9664; %link</li>', '%title');
+		 next_post_link('<li class="forward">%link &#9654;</li>', '%title');
 		 ?>
 		</ul>
-	  </div>        
+	  </div>
         <hr>
 
         <div class="post-comments" id="comments">
@@ -50,8 +52,8 @@
         </div>
 
         <div class="post-nav">
-            
-           <?php if (has_filter( 'related_posts_by_category')) { ?>   
+
+           <?php if (has_filter( 'related_posts_by_category')) { ?>
           <h3><?php _e("Weitere Artikel in diesem Themenkreis:", 'tf2013'); ?></h3>
           <ul class="related">
             <?php do_action(
@@ -75,7 +77,7 @@
           <?php } ?>
         </div>
 
-       
+
   <?php endwhile; // end of the loop. ?>
 
 

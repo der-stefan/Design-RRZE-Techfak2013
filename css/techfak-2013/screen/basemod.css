@@ -46,12 +46,12 @@
   KOPF
   --------------------------------------------------------*/
   div#kopf {
-    background: url(../../../grafiken/techfak-2013/header_techfak-3b.png);
+    background: url(../../../grafiken/techfak-2013/header-techfak-3b.png);
     background-position: 50% 0%;
     background-repeat: no-repeat; }
     div#kopf div#logo {
-      height: 135px;
-      padding: 0 20px 0 10px; }
+      height: 125px;
+      padding: 10px 20px 0 10px; }
       div#kopf div#logo a img {
         margin-right: 0;
         background-color: inherit; }
@@ -61,27 +61,27 @@
         background: #ffffff;
         width: auto;
         height: auto; }
-      div#kopf div#logo p {
+      div#kopf div#logo .site-name {
         max-height: 100px;
         width: 32%;
-        padding: 20px 0 20px 5px;
+        padding: 10px 0 20px 5px;
         font: 1.5em Arial, "Lucida Sans", "Lucida Sans Unicode", Verdana, sans-serif;
         font-weight: bold;
         line-height: 120%;
         color: #003366;
         text-decoration: none; }
-        div#kopf div#logo p .description {
-          display: block;
-          font-size: 0.73em;
-          line-height: 110%;
-          margin-top: 7px; }
-        div#kopf div#logo p a {
-          text-decoration: none;
-          color: #003366; }
-        div#kopf div#logo p a:focus, div#kopf div#logo p a:active {
-          color: #23588A; }
-        div#kopf div#logo p a:hover, div#kopf div#logo p a:focus, div#kopf div#logo p a:active {
-          text-decoration: underline; }
+      div#kopf div#logo .description {
+        display: block;
+        font-size: 0.73em;
+        line-height: 110%;
+        margin-top: 7px; }
+      div#kopf div#logo a {
+        text-decoration: none;
+        color: #003366; }
+      div#kopf div#logo a:focus, div#kopf div#logo a:active {
+        color: #23588A; }
+      div#kopf div#logo a:hover, div#kopf div#logo a:focus, div#kopf div#logo a:active {
+        text-decoration: underline; }
     div#kopf div#titel {
       position: absolute;
       top: 223px;
@@ -135,7 +135,9 @@
       white-space: nowrap;
       background: #a4abb3 url(../../../grafiken/techfak-2013/hauptmenue-bg.png) repeat-y;
       margin-left: -27px;
-      padding-left: 27px; }
+      padding-left: 27px;
+      border-top: 2px solid #fff;
+      border-bottom: 2px solid #fff; }
       div#kopf div#hauptmenu h2 {
         position: absolute;
         left: -9999px;
@@ -560,10 +562,10 @@
       color: white; }
     div#footer div#footerinfos div#tecmenu {
       position: absolute;
-      top: 111px;
+      top: 112px;
       right: 0;
       white-space: nowrap;
-      background: #fff;
+      background-color: rgba(255, 255, 255, 0.6);
       padding-right: 10px; }
       div#footer div#footerinfos div#tecmenu h2 {
         position: absolute;
@@ -1091,25 +1093,32 @@
   --------------------------------------------------------*/
   div#content .post {
     margin: 10px 0; }
+    div#content .post .wp-post-image {
+      float: right;
+      margin: 0 0 10px 15px; }
   div#content .post-title {
     margin-top: 15px; }
   div#content .pubdateinfo {
     font-size: .71em;
     font-style: italic;
     margin-bottom: 0; }
-  div#content div.post-nav ul {
+  div#content div.post-nav ul,
+  div#content div.comments-nav ul {
     list-style-type: none;
     margin: 10px 0 16px;
     color: #666F7A; }
-    div#content div.post-nav ul li {
+    div#content div.post-nav ul li,
+    div#content div.comments-nav ul li {
       display: inline-block;
       width: 49%;
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden; }
-      div#content div.post-nav ul li.back {
+      div#content div.post-nav ul li.back,
+      div#content div.comments-nav ul li.back {
         text-align: left; }
-      div#content div.post-nav ul li.forward {
+      div#content div.post-nav ul li.forward,
+      div#content div.comments-nav ul li.forward {
         text-align: right; }
   div#content .column1 .post-title h2,
   div#content .column2 .post-title h2 {
@@ -1146,8 +1155,30 @@
     margin-bottom: 10px;
     clear: both; }
 
-  .post-comments {
+  div#content .post-comments {
     margin-top: 20px; }
+    div#content .post-comments ol {
+      margin-left: 0;
+      margin-right: 0; }
+    div#content .post-comments li {
+      list-style-type: none; }
+      div#content .post-comments li.comment {
+        padding: 5px;
+        border-bottom: 1px solid #ddd; }
+        div#content .post-comments li.comment li.comment {
+          border-left: 15px solid #ddd; }
+      div#content .post-comments li.thread-odd {
+        background: #efefef; }
+      div#content .post-comments li ul.children {
+        margin-left: 0; }
+      div#content .post-comments li p {
+        margin-bottom: 8px; }
+    div#content .post-comments .comment-author, div#content .post-comments .comment-meta {
+      float: left; }
+    div#content .post-comments .comment-body {
+      clear: both; }
+    div#content .post-comments .says:after {
+      content: "\2002"; }
 
   /*  ------------------------------------------------------
   TEXTWIDGET

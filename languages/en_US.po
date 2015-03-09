@@ -1,0 +1,949 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Techfak2013 v1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2015-03-09 13:32:36+0000\n"
+"Last-Translator: Barbara Bothe <barbara.bothe@fau.de>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: author.php:59
+#: category.php:56
+#: home.php:53
+#: index.php:55
+#: loop.php:72
+#: search.php:64
+#: tag.php:59
+#@ tf2013
+msgid "&larr; &Auml;ltere Beitr&auml;ge"
+msgstr "&larr; Older Posts"
+
+#: author.php:60
+#: category.php:57
+#: home.php:54
+#: index.php:56
+#: loop.php:73
+#: search.php:65
+#: tag.php:60
+#@ tf2013
+msgid "Neuere Beitr&auml;ge &rarr;"
+msgstr "Newer Posts &rarr;"
+
+#: comments.php:6
+#@ tf2013
+msgid "Dieser Artikel ist Passwortgesch&uuml;tzt. Bitte gib das Passwort ein um die Kommentare zu sehen."
+msgstr "This post is password protected. Enter a password to read the comments."
+
+#: comments.php:10
+#@ tf2013
+msgid "Kommentare"
+msgstr "Comments"
+
+#: comments.php:12
+#, php-format
+#@ tf2013
+msgid "Ein Kommentar zu %2$s"
+msgid_plural "%1$s Kommentare zu %2$s"
+msgstr[0] "One comment for %2$s"
+msgstr[1] "%1$s comments for %2$s"
+
+#: comments.php:18
+#: comments.php:31
+#@ tf2013
+msgid "&larr; &Auml;ltere Kommentare"
+msgstr "&larr; Older Comments"
+
+#: comments.php:19
+#: comments.php:32
+#@ tf2013
+msgid "Neuere Kommentare &rarr;"
+msgstr "Newer Comments &rarr;"
+
+#: comments.php:37
+#@ tf2013
+msgid "Das Kommentieren dieses Artikels ist nicht (mehr) m&ouml;glich."
+msgstr "Comments are closed."
+
+#: comments.php:54
+#: comments.php:63
+#@ tf2013
+msgid "Name"
+msgstr "Name"
+
+#: comments.php:65
+#@ tf2013
+msgid "Website"
+msgstr "Website"
+
+#: functions.php:77
+#@ tf2013
+msgid "Hauptnavigation"
+msgstr "Main Navigation"
+
+#: functions.php:78
+#@ tf2013
+msgid "Zielgruppenmenu"
+msgstr "Target Menu"
+
+#: functions.php:79
+#@ tf2013
+msgid "Technische Navigation (Kontakt, Impressum, etc)"
+msgstr "Tech Menu (Contact, Imprint etc.)"
+
+#: functions.php:236
+#: functions.php:325
+#@ tf2013
+msgid "Artikel der Kategorie "
+msgstr "Category Archives: "
+
+#: functions.php:283
+#: functions.php:344
+#@ tf2013
+msgid "Suche nach "
+msgstr "Search for "
+
+#: functions.php:285
+#: functions.php:346
+#@ tf2013
+msgid "Artikel mit Schlagwort "
+msgstr "Tag Archives: "
+
+#: functions.php:289
+#: functions.php:350
+#@ tf2013
+msgid "Artikel von "
+msgstr "Articles by "
+
+#: functions.php:378
+#, php-format
+#@ tf2013
+msgid "Suchergebnisse f&uuml;r %s"
+msgstr "Search results for %s"
+
+#: functions.php:381
+#: functions.php:398
+#, php-format
+#@ tf2013
+msgid "Seite %s"
+msgstr "Page %s"
+
+#: functions.php:416
+#@ tf2013
+msgid "Weiterlesen <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Read more <span class=\"meta-nav\">&rarr;</span>"
+
+#: functions.php:460
+#, php-format
+#@ tf2013
+msgid "%s <span class=\"says\">meinte am</span>"
+msgstr "%s <span class=\"says\">says on</span>"
+
+#: functions.php:466
+#@ tf2013
+msgid "Der Kommentar wartet auf die Freischaltung."
+msgstr "Comment waiting to be published."
+
+#. translators: 1: date, 2: time
+#: functions.php:473
+#, php-format
+#@ tf2013
+msgid "%1$s um %2$s"
+msgstr "%1$s at %2$s"
+
+#: functions.php:474
+#: functions.php:495
+#@ tf2013
+msgid "(Edit)"
+msgstr "(Edit)"
+
+#: functions.php:495
+#@ tf2013
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: functions.php:677
+#@ tf2013
+msgid "Ver&ouml;ffentlicht am"
+msgstr "Published on"
+
+#: functions.php:694
+#, php-format
+#@ tf2013
+msgid " <span class=\"meta-prep-author\">von</span> %1$s "
+msgstr " <span class=\"meta-prep-author\">by</span> %1$s "
+
+#: functions.php:694
+#, php-format
+#@ tf2013
+msgid "Artikel von %s"
+msgstr "Article by %s"
+
+#: functions.php:822
+#: functions.php:836
+#@ tf2013
+msgid "Kein Inhalt"
+msgstr "No Content"
+
+#: home.php:59
+#: index.php:61
+#: loop.php:11
+#: search.php:72
+#@ tf2013
+msgid "Nichts gefunden"
+msgstr "Nothing found"
+
+#: home.php:61
+#: index.php:63
+#@ tf2013
+msgid "Es konnten keine Artikel gefunden werden. Bitte versuchen Sie es nochmal mit einer Suche."
+msgstr "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+
+#: inc/constants.php:49
+#@ tf2013
+msgid "Deine E-Mail-Adresse wird nicht ver&ouml;ffentlicht. Erforderliche Felder sind markiert <span class=\"required\">*</span>"
+msgstr "Your email address will not be published. Required fields are marked <span class=\"required\">*</span>"
+
+#: inc/constants.php:85
+#@ tf2013
+msgid "Topthema"
+msgstr "Sticky"
+
+#: inc/constants.php:97
+#: inc/constants.php:408
+#@ tf2013
+msgid "Startseite"
+msgstr "Home Page"
+
+#: inc/constants.php:98
+#@ tf2013
+msgid "Zur&uuml;ck zur Startseite"
+msgstr "Back to home page"
+
+#: inc/constants.php:218
+#@ tf2013
+msgid "Fakultaeten"
+msgstr "Faculties"
+
+#: inc/constants.php:219
+#@ tf2013
+msgid "Friedrich-Alexander-Universit&auml;t Erlangen-N&uuml;rnberg"
+msgstr "Friedrich-Alexander-Universit&auml;t Erlangen-N&uuml;rnberg"
+
+#: inc/constants.php:222
+#@ tf2013
+msgid "Philosophische Fakult&auml;t und Fachbereich Theologie"
+msgstr "Faculty of Humanities, Social Sciences, and Theology"
+
+#: inc/constants.php:223
+#@ tf2013
+msgid "Rechts- und Wirtschaftswissenschaftliche Fakult&auml;t"
+msgstr "Faculty of Business, Economics, and Law"
+
+#: inc/constants.php:224
+#@ tf2013
+msgid "Medizinische Fakult&auml;t"
+msgstr "Faculty of Medicine"
+
+#: inc/constants.php:225
+#@ tf2013
+msgid "Naturwissenschaftliche Fakult&auml;t"
+msgstr "Faculty of Sciences"
+
+#: inc/constants.php:226
+#@ tf2013
+msgid "Technische Fakult&auml;t"
+msgstr "Faculty of Engineering"
+
+#: inc/constants.php:229
+#@ tf2013
+msgid "RRZE"
+msgstr "RRZE"
+
+#: inc/constants.php:233
+#@ tf2013
+msgid "Service-Theke"
+msgstr "Service Desk"
+
+#: inc/constants.php:234
+#@ tf2013
+msgid "Informationszentrum Innenstadt"
+msgstr "Information Centre City"
+
+#: inc/constants.php:235
+#@ tf2013
+msgid "Informationszentrum N&uuml;rnberg"
+msgstr "Information Centre Nuremberg"
+
+#: inc/constants.php:236
+#@ tf2013
+msgid "Informationszentrum Halbmondstrasse"
+msgstr "Information Centre Halbmondstrasse"
+
+#: inc/constants.php:237
+#@ tf2013
+msgid "Blogdienst"
+msgstr "Blog Service"
+
+#: inc/constants.php:238
+#@ tf2013
+msgid "Videoportal"
+msgstr "Video Portal"
+
+#: inc/constants.php:239
+#@ tf2013
+msgid "IDM"
+msgstr "IDM"
+
+#: inc/constants.php:240
+#@ tf2013
+msgid "Aktuelle Meldungen"
+msgstr "News"
+
+#: inc/constants.php:255
+#@ tf2013
+msgid "Design"
+msgstr "Design"
+
+#: inc/constants.php:259
+#: inc/widgets.php:22
+#@ tf2013
+msgid "Sidebar"
+msgstr "Sidebar"
+
+#: inc/constants.php:260
+#@ tf2013
+msgid "Sidebar rechts anzeigen"
+msgstr "Show second sidebar"
+
+#: inc/constants.php:265
+#: inc/widgets.php:44
+#@ tf2013
+msgid "Zusatzinfo"
+msgstr "Additional Info"
+
+#: inc/constants.php:266
+#@ tf2013
+msgid "Zusatzinfo anzeigen"
+msgstr "Show additional info area"
+
+#: inc/constants.php:271
+#@ tf2013
+msgid "Linkicons"
+msgstr "Link Icons"
+
+#: inc/constants.php:272
+#@ tf2013
+msgid "Automatische Linkicons aktivieren"
+msgstr "Add link icons"
+
+#: inc/constants.php:277
+#@ tf2013
+msgid "Farbvarianten"
+msgstr "Colour Schemes"
+
+#: inc/constants.php:278
+#@ tf2013
+msgid "Farbschema der Webseite auswählen"
+msgstr "Choose color scheme for your website"
+
+#: inc/constants.php:316
+#@ tf2013
+msgid "Name Startseite"
+msgstr "Home Page Name"
+
+#: inc/constants.php:317
+#@ tf2013
+msgid "Name der Startseite f&uuml;r die Brotkr&uuml;melnavigation"
+msgstr "Name of the home page (for breadcrumb navigation)"
+
+#: inc/constants.php:322
+#@ tf2013
+msgid "Autoren anzeigen"
+msgstr "Show authors"
+
+#: inc/constants.php:323
+#@ tf2013
+msgid "Bei der Anzeige von Artikeln den Autoren anzeigen und verlinken."
+msgstr "Show link to authors in articles."
+
+#: inc/constants.php:328
+#@ tf2013
+msgid "Buttons"
+msgstr "Buttons"
+
+#: inc/constants.php:332
+#@ tf2013
+msgid "Buttons anzeigen"
+msgstr "Show buttons"
+
+#: inc/constants.php:333
+#@ tf2013
+msgid "Rechts oberhalb der Sidebar Buttons anzeigen (z.B. für Anmeldungen, Newsletter etc.)"
+msgstr "Display custom buttons on top of the second sidebar."
+
+#: inc/constants.php:339
+#@ tf2013
+msgid "Erster Button"
+msgstr "First Button"
+
+#: inc/constants.php:340
+#@ tf2013
+msgid "Ersten Button aktivieren"
+msgstr "Enable first button"
+
+#: inc/constants.php:346
+#: inc/constants.php:380
+#@ tf2013
+msgid "URL"
+msgstr "URL"
+
+#: inc/constants.php:347
+#@ tf2013
+msgid "Ziel des ersten Buttons"
+msgstr "Target URL"
+
+#: inc/constants.php:353
+#: inc/constants.php:387
+#@ tf2013
+msgid "Beschriftung"
+msgstr "Label"
+
+#: inc/constants.php:354
+#@ tf2013
+msgid "Beschriftung des ersten Buttons"
+msgstr "First button label"
+
+#: inc/constants.php:360
+#: inc/constants.php:394
+#@ tf2013
+msgid "Farbe"
+msgstr "Color"
+
+#: inc/constants.php:361
+#@ tf2013
+msgid "Hintergrundfarbe des ersten Buttons"
+msgstr "First button background color"
+
+#: inc/constants.php:364
+#: inc/constants.php:398
+#@ tf2013
+msgid "Grau"
+msgstr "Grey"
+
+#: inc/constants.php:365
+#: inc/constants.php:399
+#@ tf2013
+msgid "Gelb"
+msgstr "Yellow"
+
+#: inc/constants.php:366
+#: inc/constants.php:400
+#@ tf2013
+msgid "Gr&uuml;n"
+msgstr "Green"
+
+#: inc/constants.php:367
+#: inc/constants.php:401
+#@ tf2013
+msgid "Blau"
+msgstr "Blue"
+
+#: inc/constants.php:373
+#@ tf2013
+msgid "Zweiter Button"
+msgstr "Second Button"
+
+#: inc/constants.php:374
+#@ tf2013
+msgid "Zweiten Button aktivieren"
+msgstr "Enable second button"
+
+#: inc/constants.php:381
+#@ tf2013
+msgid "Ziel eines zweiten Buttons"
+msgstr "Target URL"
+
+#: inc/constants.php:388
+#@ tf2013
+msgid "Beschriftung des zweiten Buttons"
+msgstr "Second button label"
+
+#: inc/constants.php:395
+#@ tf2013
+msgid "Hintergrundfarbe eines zweiten Buttons"
+msgstr "Second button background color"
+
+#: inc/constants.php:416
+#@ tf2013
+msgid "Textl&auml;nge"
+msgstr "Text length"
+
+#: inc/constants.php:417
+#@ tf2013
+msgid "Maximale Textl&auml;nge des Titels im Teaser."
+msgstr "Max. title length in teaser."
+
+#: inc/constants.php:423
+#@ tf2013
+msgid "Wortzahl"
+msgstr "Number of Words"
+
+#: inc/constants.php:424
+#@ tf2013
+msgid "Zahl der Worte im Teaser; Die maximale Textl&auml;nge begrenzt diesen Wert jedoch."
+msgstr "Maximum number of words in title (limited by the title text length)"
+
+#: inc/constants.php:435
+#: inc/constants.php:521
+#@ tf2013
+msgid "Zahl der Beitr&auml;ge, die &uuml;ber die gesamte Inhaltsbreite gehen."
+msgstr "Number of articles displayed in full width."
+
+#: inc/constants.php:441
+#: inc/constants.php:480
+#: inc/constants.php:527
+#: inc/constants.php:566
+#@ tf2013
+msgid "L&auml;nge des Teasertextes (Artikelauszug)"
+msgstr "Maximum teaser length"
+
+#: inc/constants.php:442
+#@ tf2013
+msgid "Maximale Textl&auml;nge f&uuml;r Artikelausz&uuml;ge auf der Startseite."
+msgstr "Maximum teaser length on home page"
+
+#: inc/constants.php:448
+#: inc/constants.php:487
+#: inc/constants.php:534
+#: inc/constants.php:573
+#@ tf2013
+msgid "Datumszeile"
+msgstr "Date line"
+
+#: inc/constants.php:508
+#@ tf2013
+msgid "Indexseiten"
+msgstr "Index pages"
+
+#: inc/constants.php:594
+#@ tf2013
+msgid "Social Media"
+msgstr "Social Media"
+
+#: inc/constants.php:598
+#@ tf2013
+msgid "Buttons aktivieren"
+msgstr "Enable Buttons"
+
+#: inc/constants.php:599
+#@ tf2013
+msgid "Social Media Buttons auf der Website einblenden"
+msgstr "Include Social Media Links "
+
+#: inc/constants.php:604
+#@ tf2013
+msgid "Social Media Plattformen"
+msgstr "Social Media Platforms"
+
+#: inc/widgets.php:12
+#@ tf2013
+msgid "Kurzinfo"
+msgstr "Short Info"
+
+#: inc/widgets.php:14
+#@ tf2013
+msgid "Bereich unterhalb des Menus links"
+msgstr "Content area in the first sidebar, below the main menu"
+
+#: inc/widgets.php:24
+#@ tf2013
+msgid "Klassische Sidebar (rechts)"
+msgstr "Second Sidebar"
+
+#: inc/widgets.php:33
+#@ tf2013
+msgid "Inhaltsinfo"
+msgstr "Content Info"
+
+#: inc/widgets.php:35
+#@ tf2013
+msgid "Feststehender Inhalt vor den eigentlichen Content"
+msgstr "Fixed content on top of the main content"
+
+#: inc/widgets.php:46
+#@ tf2013
+msgid "Zusatzinfo im Footer"
+msgstr "Additional Info in footer area"
+
+#: inc/widgets.php:75
+#@ tf2013
+msgid "FAU  Linkliste"
+msgstr "FAU Link list"
+
+#: inc/widgets.php:76
+#@ tf2013
+msgid "Linkliste mit verschiedenen Webangeboten des RRZE und der FAU"
+msgstr "List of Links pointing to several FAU and RRZE web services"
+
+#: inc/widgets.php:168
+#@ tf2013
+msgid "Bereich ausw&auml;hlen."
+msgstr "Choose area"
+
+#: loop.php:12
+#@ tf2013
+msgid "Vielleicht hilft eine Suche weiter?"
+msgstr "Maybe try a search?"
+
+#: loop.php:22
+#: loop.php:52
+#@ tf2013
+msgctxt "gallery category slug"
+msgid "gallery"
+msgstr "galerie"
+
+#: loop.php:52
+#@ tf2013
+msgid "Zeige Artikel aus der Galerie"
+msgstr "Show gallery posts"
+
+#: loop.php:52
+#@ tf2013
+msgid "Mehr Bildergalerien"
+msgstr "More galleries"
+
+#: loop.php:54
+#@ tf2013
+msgid "Hinterlasse einen Kommentar"
+msgstr "Post a comment"
+
+#: loop.php:55
+#: page.php:12
+#: single.php:37
+#@ tf2013
+msgid "Bearbeiten"
+msgstr "Edit"
+
+#: page.php:11
+#@ tf2013
+msgid "Seiten:"
+msgstr "Pages:"
+
+#: search.php:74
+#@ tf2013
+msgid "Es konnten keine Seiten oder Artikel gefunden werden, die zu der Sucheingabe passten. Bitte versuchen Sie es nochmal mit einer  anderen Suche."
+msgstr "Sorry, but nothing matched your search terms. Please try again with different keywords."
+
+#: search.php:80
+#@ tf2013
+msgid "Alternativ verwenden Sie einen der folgenden Links."
+msgstr "You may also want to try the following links."
+
+#: search.php:85
+#@ tf2013
+msgid "Archiv nach Monaten"
+msgstr "Monthly Archive"
+
+#: search.php:90
+#@ tf2013
+msgid "Artikel nach Schlagworten"
+msgstr "Tag Archive"
+
+#: search.php:96
+#@ tf2013
+msgid "&Uuml;bersicht aller Kategorien"
+msgstr "Category overview"
+
+#: single.php:57
+#@ tf2013
+msgid "Weitere Artikel in diesem Themenkreis:"
+msgstr "Related posts:"
+
+#: inc/theme-options.php:33
+#@ tf2013
+msgid "Optionen wurden gespeichert."
+msgstr "Options saved."
+
+#: inc/theme-options.php:500
+#@ tf2013
+msgid "Optionen nicht definiert"
+msgstr "Options not defined"
+
+#: inc/widgets.php:188
+#@ tf2013
+msgid "Banner/Logo Link"
+msgstr "Banner/Logo Link"
+
+#: inc/widgets.php:189
+#@ tf2013
+msgid "Schalten von Link mit einem Logo oder Banner"
+msgstr "Add banner/logo link"
+
+#: inc/widgets.php:206
+#@ tf2013
+msgid "Titel:"
+msgstr "Title:"
+
+#: inc/widgets.php:213
+#@ tf2013
+msgid "Ziel-URL:"
+msgstr "Target URL"
+
+#: inc/widgets.php:220
+#@ tf2013
+msgid "Bild-URL:"
+msgstr "Image URL"
+
+#: inc/widgets.php:230
+#@ tf2013
+msgid "Hochladen / Ausw&auml;hlen"
+msgstr "Upload / Choose"
+
+#: inc/widgets.php:232
+#@ tf2013
+msgid "Gebe eine URL zu einem Bild ein oder verwende die Mediathek um es hochzuladen oder um ein vorhandenes Bild auszuw&auml;hlen."
+msgstr "Enter an image URL or use the Mediathek to upload or select an image."
+
+#: inc/constants.php:311
+#@ tf2013
+msgid "Logo"
+msgstr "Logo"
+
+#: inc/constants.php:312
+#@ tf2013
+msgid "Eigenes Logo im Header anzeigen (max. Höhe: 100px)"
+msgstr "Show Logo in Header Area (max. height: 100px)"
+
+#: inc/theme-options.php:16
+#@ tf2013
+msgid "Theme-Optionen"
+msgstr "Theme Options"
+
+#: inc/theme-options.php:31
+#@ tf2013
+msgid "Theme-Optionen anpassen"
+msgstr "Set Theme Options"
+
+#: inc/theme-options.php:163
+#@ tf2013
+msgid "Datei hinzuf&uuml;gen"
+msgstr "Add file"
+
+#: inc/theme-options.php:203
+#: inc/theme-options.php:233
+#@ tf2013
+msgid "Kein Bild ausgew&auml;hlt"
+msgstr "No image selected"
+
+#: inc/theme-options.php:211
+#@ tf2013
+msgid "Bild entfernen"
+msgstr "Remove image"
+
+#: inc/theme-options.php:213
+#@ tf2013
+msgid "Standard wiederherstellen"
+msgstr "Reset to default"
+
+#: inc/theme-options.php:506
+#@ tf2013
+msgid "Speichern"
+msgstr "Save"
+
+#: inc/constants.php:230
+#@ tf2013
+msgid "Regionales Rechenzentrum Erlangen"
+msgstr "Regional Computing Centre Erlangen"
+
+#: inc/theme-options.php:164
+#@ tf2013
+msgid "Datei entfernen"
+msgstr "Remove file"
+
+#: inc/theme-options.php:210
+#@ tf2013
+msgid "Bild hinzuf&uuml;gen"
+msgstr "Add Image"
+
+#: header.php:53
+#@ tf2013
+msgid "Sie befinden sich hier:"
+msgstr "You are here:"
+
+#: inc/constants.php:412
+#@ tf2013
+msgid "Titel"
+msgstr "Title"
+
+#: inc/constants.php:430
+#: inc/constants.php:516
+#@ tf2013
+msgid "Textausz&uuml;ge über volle Breite"
+msgstr "Full-width teasers"
+
+#: inc/constants.php:434
+#: inc/constants.php:472
+#: inc/constants.php:520
+#: inc/constants.php:558
+#@ tf2013
+msgid "Anzahl"
+msgstr "Number"
+
+#: inc/constants.php:449
+#: inc/constants.php:488
+#: inc/constants.php:535
+#: inc/constants.php:574
+#@ tf2013
+msgid "Datum des Beitrags über dem Titel anzeigen."
+msgstr "Show post date on top of the title."
+
+#: inc/constants.php:455
+#: inc/constants.php:494
+#: inc/constants.php:541
+#: inc/constants.php:580
+#@ tf2013
+msgid "Bild"
+msgstr "Image"
+
+#: inc/constants.php:456
+#: inc/constants.php:495
+#: inc/constants.php:542
+#: inc/constants.php:581
+#@ tf2013
+msgid "Links des Textauszuges das Artikelbild, ein Bild aus dem Artikel oder ein verlinktes Video anzeigen; Abhängig vom Inhalt des Artikels."
+msgstr "Show featured image, first image or video in teaser (depending on post content)."
+
+#: inc/constants.php:468
+#: inc/constants.php:554
+#@ tf2013
+msgid "Textausz&uuml;ge über halbe Breite"
+msgstr "Half-width Teasers"
+
+#: inc/constants.php:481
+#: inc/constants.php:528
+#: inc/constants.php:567
+#@ tf2013
+msgid "Maximale Textl&auml;nge f&uuml;r Artikelausz&uuml;ge."
+msgstr "Maximum teaser length"
+
+#: searchform.php:3
+#@ tf2013
+msgid "Suchbegriff eingeben"
+msgstr "Enter search term"
+
+#: searchform.php:16
+#@ tf2013
+msgid "Suchen"
+msgstr "Search"
+
+#: searchform.php:8
+#: searchform.php:11
+#@ tf2013
+msgid "Suche"
+msgstr "Search"
+
+#: functions.php:710
+#, php-format
+#@ tf2013
+msgid "<br />Kategorien:  %1$s | Schlagworte: %2$s<br/>Hier der <a href=\"%3$s\" title=\"Permalink zu %4$s\" rel=\"bookmark\">permanente Link</a> zu diesem Artikel."
+msgstr "<br />Categories:  %1$s | Tags: %2$s<br/> <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">Permalink</a>."
+
+#: functions.php:712
+#, php-format
+#@ tf2013
+msgid "<br />Kategorien:  %1$s<br /><a href=\"%3$s\" title=\"Permalink zu %4$s\" rel=\"bookmark\">Permanenter Link</a> zu diesem Artikel."
+msgstr "<br />Categories:  %1$s<br /><a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">Permalink</a> ."
+
+#: functions.php:714
+#, php-format
+#@ tf2013
+msgid "<a href=\"%3$s\" title=\"Permalink zu %4$s\" rel=\"bookmark\">Permanenter Link/<a> zu diesem Artikel."
+msgstr "<a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">Permalink/<a> ."
+
+#: inc/constants.php:459
+#: inc/constants.php:498
+#: inc/constants.php:545
+#: inc/constants.php:584
+#@ tf2013
+msgid "Artikelbild (oder: erstes Bild, erstes Video, Ersatzbild)"
+msgstr "Thumbnail (or: first picture, first video, fallback picture)"
+
+#: inc/constants.php:460
+#: inc/constants.php:499
+#: inc/constants.php:546
+#: inc/constants.php:585
+#@ tf2013
+msgid "Erstes Bild (oder: Artikelbild, erstes Video, Ersatzbild)"
+msgstr "First picture (or: thumbnail, first video, fallback picture)"
+
+#: inc/constants.php:461
+#: inc/constants.php:500
+#: inc/constants.php:547
+#: inc/constants.php:586
+#@ tf2013
+msgid "Erstes Video (oder: Artikelbild, erstes Bild, Ersatzbild)"
+msgstr "First video (or: thumbnail, first picture, fallback picture)"
+
+#: inc/constants.php:462
+#: inc/constants.php:501
+#: inc/constants.php:548
+#: inc/constants.php:587
+#@ tf2013
+msgid "Erstes Video (oder: erstes Bild, Artikelbild, Ersatzbild)"
+msgstr "First video (or: first picture, thumbnail, fallback picture)"
+
+#: inc/constants.php:463
+#: inc/constants.php:502
+#: inc/constants.php:549
+#: inc/constants.php:588
+#@ tf2013
+msgid "Kein Bild"
+msgstr "No image"
+
+#: inc/constants.php:512
+#@ tf2013
+msgid "Einstellungen f&uuml;r Indexseiten (Beitr&auml;ge mit bestimmten Kategorien, Tags, Datum, Autor etc.)"
+msgstr "Settings for archive pages (Category, Tag, Author, Date archives etc.)"
+
+#: inc/constants.php:473
+#: inc/constants.php:559
+#@ tf2013
+msgid "Zahl der Beitr&auml;ge, die in Spalten mit je zwei Beitr&auml;gen nebeneinander angezeigt werden."
+msgstr "Number of articles displayed in half width."
+
+#: loop.php:25
+#: loop.php:44
+#, php-format
+#@ tf2013
+msgid "Permalink zu %s"
+msgstr "Permalink to %s"
+
+#: loop.php:54
+#@ tf2013
+msgid "1 Kommentar"
+msgstr "1 Comment"
+
+#: loop.php:54
+#@ tf2013
+msgid "% Kommentare"
+msgstr "% Comments"
+
+#: loop.php:44
+#, php-format
+#@ tf2013
+msgid "Diese Galerie enth&auml;lt <a %1$s>%2$s Fotos</a>."
+msgstr "This gallery includes <a %1$s>%2$s photos</a>."
+

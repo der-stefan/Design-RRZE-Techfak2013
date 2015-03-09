@@ -1,0 +1,28 @@
+/**
+ * Projekt Vorlagenkatalog
+ *
+ * Basisstylesheet Techfak 2013
+ *
+ * @mod_name        ce
+ * @mod_desc        Farbschema für Studium Computational Engineering
+ *
+ * @copyright       Copyright 2013-2020, RRZE
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/)
+ * @link            http://www.vorlagen.uni-erlangen.de
+ * @package         css
+ * @version         1.0
+ * @lastmodified    08/2013
+ */
+
+/* Farbvariante
+ *		#c5bf00  -  Basisfarbe
+ *		#b4af00  -  Überschriften, Linien
+ */
+
+// Globale Variablen:
+$main-color: #c5bf00;
+$main-color-darker: #b4af00; // optional, für farbige Schrift auf weißem Grund, wenn main-color zu hell
+$hauptmenue-bg: url(../../../grafiken/techfak-2013/hauptmenue-bg-berufspaedagogik-technik.png);
+
+
+@import "_vorlage_studiengaenge.scss";  

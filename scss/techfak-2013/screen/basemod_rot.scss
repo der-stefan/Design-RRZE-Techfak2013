@@ -1,0 +1,29 @@
+/**
+ * Projekt Vorlagenkatalog
+ *
+ * Basisstylesheet Techfak 2013
+ *
+ * @mod_name        rot
+ * @mod_desc        Farbschema "rot"
+ *
+ * @copyright       Copyright 2005-2012, RRZE
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/)
+ * @link            http://www.vorlagen.uni-erlangen.de
+ * @package         css
+ * @version         1.0
+ * @lastmodified    08/2013
+ */
+
+/* Farbvariante
+ *     #AD2624  - Basisfarbe
+ */
+
+// Globale Variablen:
+$main-color: #AD2624;
+$main-color-darker: #AD2624; // optional, für farbige Schrift auf weißem Grund, wenn main-color zu hell
+$header-img-3b: url(../../../grafiken/techfak-2013/header-techfak-rot-3b.png);
+$header-img-2b: url(../../../grafiken/techfak-2013/header-techfak-rot-2b.png);
+$header-img-0b: url(../../../grafiken/techfak-2013/header-techfak-rot-0b.png);
+$hauptmenue-bg: url(../../../grafiken/techfak-2013/hauptmenue-bg-rot.png);
+
+@import "vorlage_fakultaeten.scss";

@@ -1,0 +1,29 @@
+/**
+ * Projekt Vorlagenkatalog
+ *
+ * Basisstylesheet Techfak 2013
+ *
+ * @mod_name        studium-et
+ * @mod_desc        Farbschema für Studium Energietechnik
+ *
+ * @copyright       Copyright 2013-2020, RRZE
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/)
+ * @link            http://www.vorlagen.uni-erlangen.de
+ * @package         css
+ * @version         1.0
+ * @lastmodified    08/2013
+ */
+
+/* Farbvariante
+ *		#764468  - Basisfarbe
+ *		#764468  -  Schriften
+ */
+
+
+// Globale Variablen:
+$main-color: #764468;
+$main-color-darker: #764468; // optional, für farbige Schrift auf weißem Grund, wenn main-color zu hell
+$hauptmenue-bg: url(../../../grafiken/techfak-2013/hauptmenue-bg-et.png);
+
+
+@import "_vorlage_studiengaenge.scss";

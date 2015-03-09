@@ -119,13 +119,9 @@
     float: left; }
   div.feedrahmen .feedeintrag:nth-child(even) {
     display: table; }
-  div.feedrahmen div:first-child, div.feedrahmen div:nth-child(even):last-child {
+  div.feedrahmen :first-child, div.feedrahmen div:nth-child(even):last-child {
     width: 100%; }
-  div.feedrahmen div:first-child h2, div.feedrahmen .feedeintrag:nth-child(even) h2,
-  div.feedrahmen div:first-child h3, div.feedrahmen .feedeintrag:nth-child(even) h3,
-  div.feedrahmen div:first-child h4, div.feedrahmen .feedeintrag:nth-child(even) h4,
-  div.feedrahmen div:first-child h5, div.feedrahmen .feedeintrag:nth-child(even) h5,
-  div.feedrahmen div:first-child p, div.feedrahmen .feedeintrag:nth-child(even) p {
+  div.feedrahmen :first-child h2, div.feedrahmen :first-child h3, div.feedrahmen :first-child h4, div.feedrahmen :first-child h5, div.feedrahmen :first-child p, div.feedrahmen .feedeintrag:nth-child(even) h2, div.feedrahmen .feedeintrag:nth-child(even) h3, div.feedrahmen .feedeintrag:nth-child(even) h4, div.feedrahmen .feedeintrag:nth-child(even) h5, div.feedrahmen .feedeintrag:nth-child(even) p {
     margin-left: 5px !important; }
 
   div.feedeintrag img {

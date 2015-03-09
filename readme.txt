@@ -1,4 +1,3 @@
-Wordpress Theme für die Technische Fakultät der 
-Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU).
+Wordpress Theme für die Website des 
+Webkongress Erlangen 2014
 
-(Beta Release)

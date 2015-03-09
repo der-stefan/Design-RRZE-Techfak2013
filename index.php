@@ -50,7 +50,12 @@
         }
         ?>
       </div>
-
+<?php  if ($wp_query->max_num_pages > 1) : ?>
+	<div class="post-nav"><ul>
+		<li class="back"><?php next_posts_link(__('&larr; &Auml;ltere Beitr&auml;ge', 'tf2013')); ?></li>
+		<li class="forward"><?php previous_posts_link(__('Neuere Beitr&auml;ge &rarr;', 'tf2013')); ?></li>
+	</ul></div>
+<?php endif; ?>
 
       <?php if ( ! have_posts() ) : ?>
        <h2><?php _e("Nichts gefunden", 'tf2013'); ?></h2>

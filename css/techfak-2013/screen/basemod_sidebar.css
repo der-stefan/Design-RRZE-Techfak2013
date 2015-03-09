@@ -16,7 +16,7 @@
  */
 @media screen, projection {
   div#kopf div#titel {
-    padding-right: 16.6em; }
+    margin-right: 16.6em; }
 
   div#main div#sidebar {
     display: block;
@@ -73,7 +73,7 @@
   --------------------------------------------------------*/
   div#main div#sidebar {
     position: absolute;
-    bottom: 0px;
+    bottom: 20px;
     height: 500px;
     overflow-y: scroll;
     width: 100%;
@@ -91,9 +91,9 @@
   /*  ------------------------------------------------------
   CONTENT
   --------------------------------------------------------*/
-  div#content {
+  div#main div#content {
     min-height: 0;
-    padding-bottom: 520px; } }
+    padding-bottom: 540px; } }
 /*  ------------------------------------------------------------------------------------------------------------
 						BREAKPOINT  480px
 --------------------------------------------------------------------------------------------------------------*/

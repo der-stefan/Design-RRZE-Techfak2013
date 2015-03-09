@@ -2,11 +2,12 @@
 Theme Name: Techfak2013
 Theme URI: https://github.com/RRZE-Webteam/Design-RRZE-Techfak2013
 Author URI: http://www.rrze.uni-erlangen.de/
-Author: Barbara Bothe, Wolfgang Wiese
+Author: Wolfgang Wiese, Barbara Bothe
 Author URI: http://www.rrze.uni-erlangen.de/
-Description: Wordpress-Theme for the Faculty of Engineering at the Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU)
-Version: 1.0
+Description: Wordpress-Theme for the german event Webkongress Erlangen 2014
+Version: 1.3
 License: GNU General Public License
+
 */
 
 
@@ -15,12 +16,12 @@ License: GNU General Public License
 @import url(css/base_ym3.css);
 
 /* import screen layout | Screen-Layout einbinden */
-@import url(css/techfak-2013/screen/basemod.css);
-@import url(css/techfak-2013/screen/content.css);
-@import url(css/techfak-2013/screen/buttons.css);
+@import url(css/basemod.css);
+@import url(css/content.css);
+@import url(css/buttons.css);
 
 /* Media queries */
-@import url(css/techfak-2013/screen/mediaqueries.css);
+@import url(css/mediaqueries.css);
 
 /* import print layout | Print-Layout einbinden */
-@import url(css/techfak-2013/print/print.css);
+@import url(css/print.css);

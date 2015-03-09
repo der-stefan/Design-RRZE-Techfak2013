@@ -1,6 +1,8 @@
 <?php
 global $options;
-?><!DOCTYPE html>
+global $defaultoptions;
+?>
+<!DOCTYPE html>
 <!--[if lt IE 7 ]> <html <?php language_attributes(); ?> class="ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html <?php language_attributes(); ?> class="ie7"> <![endif]-->
 <!--[if IE 8 ]>    <html <?php language_attributes(); ?> class="ie8"> <![endif]-->
@@ -20,47 +22,24 @@ global $options;
 		<a name="seitenmarke" id="seitenmarke"></a>
 
 		<header>
-		    <?php $header_image = get_header_image();
-				if (!empty($header_image)) : ?>
-					<div id="kopf" style="background-image:url(<?php echo esc_url($header_image); ?>)">  <!-- begin: kopf -->
-				<?php else : ?>
-					<div id="kopf">  <!-- begin: kopf -->
-				<?php endif; ?>
-
+		    <div id="kopf" <?php if (!empty(get_header_image())) : ?>  style="background-image: url(<?php header_image(); ?>)" <?php endif; ?>>  <!-- begin: kopf -->
 			<div id="logo">
 
-				<?php if (!is_home()) { ?>
+			    <?php if (!is_home()) { ?>
     				<a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home" class="logo">
-				<?php } ?>
+				    <?php } ?>
 
-						<?php $logo = get_theme_mod( 'tf2013_custom_logo' );
-						list($logo_width, $logo_height) = getimagesize($logo);
-							if (!empty($logo)) :
-						?>
-    					    <img src="<?php echo esc_url($logo); ?>" class="logo" width="<?php echo $logo_width; ?>" height="<?php echo $logo_height; ?>" alt="" />
-    					<?php endif; ?>
+				    <img border="0" src="<?php print (!empty($options['logo']) ? esc_url($options['logo']) : esc_url($defaultoptions['logo'])); ?>" alt="Logo">
 
-				<?php if (!is_home()) { ?>
-    				</a>
-				<?php } ?>
+					<div class="site-name">
+						<?php bloginfo('name'); ?>
+						<span class="description"><?php echo html_entity_decode(get_bloginfo('description')); ?></span>
+					</div>
 
-    					<p>
-
-							<?php if (!is_home()) { ?>
-								<a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home" class="logo">
-							<?php } ?>
-
-								<?php bloginfo('name'); ?>
-									<span class="description"><?php bloginfo('description'); ?></span>
-
-							<?php if (!is_home()) { ?>
-								</a>
-							<?php } ?>
-    				    </p>
 
 				<?php if (!is_home()) { ?>
     				</a>
-				<?php } ?>
+<?php } ?>
 
 			</div>
 
@@ -71,7 +50,7 @@ global $options;
 			</div>
 
 			<div id="breadcrumb">
-			    <h2>Sie befinden sich hier: </h2>
+			    <h2><?php _e('Sie befinden sich hier:', 'tf2013') ?> </h2>
 			    <p>
 <?php if (function_exists('tf2013_breadcrumbs')) tf2013_breadcrumbs(); ?>
 			    </p>
@@ -87,12 +66,11 @@ global $options;
 			</div>
 
 			<div id="hauptmenu" class="zielgruppen-menue" role="navigation">
-			    <h2 class="skip"><a id="hauptmenumarke" name="hauptmenumarke"></a>Zielgruppennavigation</h2>
-			    <?php
-			    if (has_nav_menu('targetmenu')) {
-				wp_nav_menu(array('theme_location' => 'targetmenu', 'fallback_cb' => '', 'depth' => 1));
-			    }
-			    ?>
+			    <?php if (has_nav_menu('targetmenu')) { ?>
+					<h2 class="skip"><a id="hauptmenumarke" name="hauptmenumarke"></a>Zielgruppennavigation</h2>
+					<?php
+					wp_nav_menu(array('theme_location' => 'targetmenu', 'fallback_cb' => '', 'depth' => 1));
+				 }?>
 			</div><!-- #target-navigation -->
 		    </div>
 		</header>  <!-- end: kopf -->
@@ -115,7 +93,7 @@ global $options;
     wp_page_menu(array(
 	'sort_column' => 'menu_order, post_title',
 	'echo' => 1,
-	'show_home' => $options['text-startseite']));
+	'show_home' => 1));
     ?>
     			    </ul>
 
@@ -123,13 +101,9 @@ global $options;
 			</div>
 
 		    <?php
-		    if (is_active_sidebar('kurzinfo-area')) { ?>
-
-			<div id="kurzinfo">
-			    <?php dynamic_sidebar('kurzinfo-area'); ?>
-			</div>
-
- <?php } ?>
+		    if (is_active_sidebar('kurzinfo-area')) {
+				dynamic_sidebar('kurzinfo-area');
+		    } ?>
 
 		    </div>  <!-- end: menu -->
 
