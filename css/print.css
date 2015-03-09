@@ -1,5 +1,5 @@
 /**
- * Projekt Vorlagenkatalog 
+ * Projekt Vorlagenkatalog
  *
  * Print-Stylesheet Techfak
  *
@@ -9,7 +9,7 @@
  * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/)
  * @link            http://www.vorlagen.uni-erlangen.de
  * @package         css
- * @version         1
+ * @version         1.3
  * @lastmodified    02/2013
  */
 
@@ -20,7 +20,7 @@
 	/*  ------------------------------------------------------
 		HEADER
 	--------------------------------------------------------*/
-	
+
 	div#kopf div#logo img {
 		max-width: 200px;
 		height: auto;
@@ -29,7 +29,7 @@
 		margin-bottom: 50px;
 		float: right;
 	}
-	
+
 	div#kopf div#logo p,
 	div#kopf div#logo p a {
 		color: #003366;
@@ -37,26 +37,26 @@
 		font-size: 16pt !important;
 		line-height: 140%;
 	}
-	
+
 	div#kopf div#logo p .description {
 		font-size: 14pt !important;
 		display: block;
 	}
-	
+
 	div#kopf div#titel h1 {
 		clear: both;
 		margin: 20px 0 10px;
 		text-decoration: none !important;
 	}
-	
+
 	#kopf #breadcrumb {
 	   display: block;
-	}              
-	
+	}
+
 	#kopf #breadcrumb h2 {
 	   display: none;
-	}              
-	
+	}
+
 	#kopf #breadcrumb strong,
 	#kopf #breadcrumb a:link,
 	#kopf #breadcrumb a:visited {
@@ -67,27 +67,27 @@
 
 	/*  ------------------------------------------------------
 		CONTENT
-	--------------------------------------------------------*/ 
-	
+	--------------------------------------------------------*/
+
 	#content {
 		padding: 0;
 	}
-	
+
 	hr#vorfooter {
 		margin-top: 20px;
 	}
-	
+
 	table {
 		page-break-inside: avoid;
 	}
-	
+
 	#content p, #content span, #content div, #content li, #content a {
 		font-size: 10pt !important;
 	}
-	
+
 	/*  ------------------------------------------------------
 		ÜBERSCHRIFTEN
-	--------------------------------------------------------*/ 
+	--------------------------------------------------------*/
 
 	#content h1,
 	#content h2 {
@@ -98,10 +98,10 @@
 	#content h4 {
 		margin: 15px 0 5px;
 	}
-	
+
 	/*  ------------------------------------------------------
 		LINKS
-	--------------------------------------------------------*/ 
+	--------------------------------------------------------*/
 
 	#content a:link:after {
 		content: " (" attr(href) ") ";
@@ -112,12 +112,12 @@
 	#content a:visited {
 		color: #003366;
 	}
-	
-	
+
+
 	/*  ------------------------------------------------------
 		CODE, PRE
-	--------------------------------------------------------*/ 
-	
+	--------------------------------------------------------*/
+
 	pre {
 		clear: both;
 		border: 1px solid #A4ABB3;
@@ -126,15 +126,15 @@
 		white-space: normal;
 		font-size: .9em;
 	}
-	
+
 	/*  ------------------------------------------------------
 		HINWEISBOXEN
 	--------------------------------------------------------*/
-	
+
 	#content div.vollbox {
 		page-break-inside: avoid;
 	}
-	
+
 	#content div.hinweis,
 	#content div.hinweis_rechts,
 	#content div.hinweis_links,
@@ -142,7 +142,7 @@
 	#content div.baustelle {
    		padding: 10px;
 	}
-		
+
 	#content div.hinweis,
 	#content div.hinweis_rechts,
 	#content div.hinweis_links {
@@ -150,13 +150,13 @@
     	list-style-image: url(/img/ktip.png);
    		list-style-position: inside;
 	}
-	
+
 	#content div.hinweis_wichtig {
     	display: list-item;
     	list-style-image: url(/img/important.png);
    		list-style-position: inside;
 	}
-	
+
 	#content div.baustelle {
     	display: list-item;
     	list-style-image: url(/img/package_settings.png);

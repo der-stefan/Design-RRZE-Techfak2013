@@ -593,7 +593,8 @@ VOLLBOX
 #content div.vollbox,
 #content div.wp-caption.alignnone {
   float: none;
-  margin: 10px 0 20px 0; }
+  margin: 10px 0 20px 0;
+  clear: both; }
 
 /*  ------------------------------------------------------
 BOX ZENTRIERT (NUR WP)

@@ -1,5 +1,6 @@
 <?php
 global $options;
+global $wp_query;
 
 
 $category_description = category_description();
@@ -72,4 +73,4 @@ while (have_posts()) : the_post();
 		<li class="back"><?php next_posts_link(__('&larr; &Auml;ltere Beitr&auml;ge', 'tf2013')); ?></li>
 		<li class="forward"><?php previous_posts_link(__('Neuere Beitr&auml;ge &rarr;', 'tf2013')); ?></li>
 	</ul></div>
-<?php endif; ?>
+<?php endif;
