@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Techfak2013 v1.0\n"
+"Project-Id-Version: Techfak2013 v1.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-03-09 13:32:36+0000\n"
+"PO-Revision-Date: 2015-03-10 09:21:08+0000\n"
 "Last-Translator: Barbara Bothe <barbara.bothe@fau.de>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -24,7 +24,7 @@ msgstr ""
 #: category.php:56
 #: home.php:53
 #: index.php:55
-#: loop.php:72
+#: loop.php:73
 #: search.php:64
 #: tag.php:59
 #@ tf2013
@@ -35,7 +35,7 @@ msgstr "&larr; Older Posts"
 #: category.php:57
 #: home.php:54
 #: index.php:56
-#: loop.php:73
+#: loop.php:74
 #: search.php:65
 #: tag.php:60
 #@ tf2013
@@ -60,30 +60,30 @@ msgid_plural "%1$s Kommentare zu %2$s"
 msgstr[0] "One comment for %2$s"
 msgstr[1] "%1$s comments for %2$s"
 
-#: comments.php:18
-#: comments.php:31
+#: comments.php:16
+#: comments.php:25
 #@ tf2013
 msgid "&larr; &Auml;ltere Kommentare"
 msgstr "&larr; Older Comments"
 
-#: comments.php:19
-#: comments.php:32
+#: comments.php:17
+#: comments.php:26
 #@ tf2013
 msgid "Neuere Kommentare &rarr;"
 msgstr "Newer Comments &rarr;"
 
-#: comments.php:37
+#: comments.php:29
 #@ tf2013
 msgid "Das Kommentieren dieses Artikels ist nicht (mehr) m&ouml;glich."
 msgstr "Comments are closed."
 
-#: comments.php:54
-#: comments.php:63
+#: comments.php:46
+#: comments.php:55
 #@ tf2013
 msgid "Name"
 msgstr "Name"
 
-#: comments.php:65
+#: comments.php:57
 #@ tf2013
 msgid "Website"
 msgstr "Website"
@@ -103,103 +103,103 @@ msgstr "Target Menu"
 msgid "Technische Navigation (Kontakt, Impressum, etc)"
 msgstr "Tech Menu (Contact, Imprint etc.)"
 
-#: functions.php:236
-#: functions.php:325
+#: functions.php:237
+#: functions.php:326
 #@ tf2013
 msgid "Artikel der Kategorie "
 msgstr "Category Archives: "
 
-#: functions.php:283
-#: functions.php:344
+#: functions.php:284
+#: functions.php:345
 #@ tf2013
 msgid "Suche nach "
 msgstr "Search for "
 
-#: functions.php:285
-#: functions.php:346
+#: functions.php:286
+#: functions.php:347
 #@ tf2013
 msgid "Artikel mit Schlagwort "
 msgstr "Tag Archives: "
 
-#: functions.php:289
-#: functions.php:350
+#: functions.php:290
+#: functions.php:351
 #@ tf2013
 msgid "Artikel von "
 msgstr "Articles by "
 
-#: functions.php:378
+#: functions.php:379
 #, php-format
 #@ tf2013
 msgid "Suchergebnisse f&uuml;r %s"
 msgstr "Search results for %s"
 
-#: functions.php:381
-#: functions.php:398
+#: functions.php:382
+#: functions.php:399
 #, php-format
 #@ tf2013
 msgid "Seite %s"
 msgstr "Page %s"
 
-#: functions.php:416
+#: functions.php:417
 #@ tf2013
 msgid "Weiterlesen <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Read more <span class=\"meta-nav\">&rarr;</span>"
 
-#: functions.php:460
+#: functions.php:461
 #, php-format
 #@ tf2013
 msgid "%s <span class=\"says\">meinte am</span>"
 msgstr "%s <span class=\"says\">says on</span>"
 
-#: functions.php:466
+#: functions.php:467
 #@ tf2013
 msgid "Der Kommentar wartet auf die Freischaltung."
 msgstr "Comment waiting to be published."
 
 #. translators: 1: date, 2: time
-#: functions.php:473
+#: functions.php:474
 #, php-format
 #@ tf2013
 msgid "%1$s um %2$s"
 msgstr "%1$s at %2$s"
 
-#: functions.php:474
-#: functions.php:495
+#: functions.php:475
+#: functions.php:496
 #@ tf2013
 msgid "(Edit)"
 msgstr "(Edit)"
 
-#: functions.php:495
+#: functions.php:496
 #@ tf2013
 msgid "Pingback:"
 msgstr "Pingback:"
 
-#: functions.php:677
+#: functions.php:678
 #@ tf2013
 msgid "Ver&ouml;ffentlicht am"
 msgstr "Published on"
 
-#: functions.php:694
+#: functions.php:695
 #, php-format
 #@ tf2013
 msgid " <span class=\"meta-prep-author\">von</span> %1$s "
 msgstr " <span class=\"meta-prep-author\">by</span> %1$s "
 
-#: functions.php:694
+#: functions.php:695
 #, php-format
 #@ tf2013
 msgid "Artikel von %s"
 msgstr "Article by %s"
 
-#: functions.php:822
-#: functions.php:836
+#: functions.php:823
+#: functions.php:837
 #@ tf2013
 msgid "Kein Inhalt"
 msgstr "No Content"
 
 #: home.php:59
 #: index.php:61
-#: loop.php:11
+#: loop.php:12
 #: search.php:72
 #@ tf2013
 msgid "Nichts gefunden"
@@ -603,41 +603,41 @@ msgstr "List of Links pointing to several FAU and RRZE web services"
 msgid "Bereich ausw&auml;hlen."
 msgstr "Choose area"
 
-#: loop.php:12
+#: loop.php:13
 #@ tf2013
 msgid "Vielleicht hilft eine Suche weiter?"
 msgstr "Maybe try a search?"
 
-#: loop.php:22
-#: loop.php:52
+#: loop.php:23
+#: loop.php:53
 #@ tf2013
 msgctxt "gallery category slug"
 msgid "gallery"
 msgstr "galerie"
 
-#: loop.php:52
+#: loop.php:53
 #@ tf2013
 msgid "Zeige Artikel aus der Galerie"
 msgstr "Show gallery posts"
 
-#: loop.php:52
+#: loop.php:53
 #@ tf2013
 msgid "Mehr Bildergalerien"
 msgstr "More galleries"
 
-#: loop.php:54
+#: loop.php:55
 #@ tf2013
 msgid "Hinterlasse einen Kommentar"
 msgstr "Post a comment"
 
-#: loop.php:55
-#: page.php:12
-#: single.php:37
+#: loop.php:56
+#: page.php:16
+#: single.php:44
 #@ tf2013
 msgid "Bearbeiten"
 msgstr "Edit"
 
-#: page.php:11
+#: page.php:15
 #@ tf2013
 msgid "Seiten:"
 msgstr "Pages:"
@@ -667,7 +667,7 @@ msgstr "Tag Archive"
 msgid "&Uuml;bersicht aller Kategorien"
 msgstr "Category overview"
 
-#: single.php:57
+#: single.php:64
 #@ tf2013
 msgid "Weitere Artikel in diesem Themenkreis:"
 msgstr "Related posts:"
@@ -681,41 +681,6 @@ msgstr "Options saved."
 #@ tf2013
 msgid "Optionen nicht definiert"
 msgstr "Options not defined"
-
-#: inc/widgets.php:188
-#@ tf2013
-msgid "Banner/Logo Link"
-msgstr "Banner/Logo Link"
-
-#: inc/widgets.php:189
-#@ tf2013
-msgid "Schalten von Link mit einem Logo oder Banner"
-msgstr "Add banner/logo link"
-
-#: inc/widgets.php:206
-#@ tf2013
-msgid "Titel:"
-msgstr "Title:"
-
-#: inc/widgets.php:213
-#@ tf2013
-msgid "Ziel-URL:"
-msgstr "Target URL"
-
-#: inc/widgets.php:220
-#@ tf2013
-msgid "Bild-URL:"
-msgstr "Image URL"
-
-#: inc/widgets.php:230
-#@ tf2013
-msgid "Hochladen / Ausw&auml;hlen"
-msgstr "Upload / Choose"
-
-#: inc/widgets.php:232
-#@ tf2013
-msgid "Gebe eine URL zu einem Bild ein oder verwende die Mediathek um es hochzuladen oder um ein vorhandenes Bild auszuw&auml;hlen."
-msgstr "Enter an image URL or use the Mediathek to upload or select an image."
 
 #: inc/constants.php:311
 #@ tf2013
@@ -855,19 +820,19 @@ msgstr "Search"
 msgid "Suche"
 msgstr "Search"
 
-#: functions.php:710
+#: functions.php:711
 #, php-format
 #@ tf2013
 msgid "<br />Kategorien:  %1$s | Schlagworte: %2$s<br/>Hier der <a href=\"%3$s\" title=\"Permalink zu %4$s\" rel=\"bookmark\">permanente Link</a> zu diesem Artikel."
 msgstr "<br />Categories:  %1$s | Tags: %2$s<br/> <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">Permalink</a>."
 
-#: functions.php:712
+#: functions.php:713
 #, php-format
 #@ tf2013
 msgid "<br />Kategorien:  %1$s<br /><a href=\"%3$s\" title=\"Permalink zu %4$s\" rel=\"bookmark\">Permanenter Link</a> zu diesem Artikel."
 msgstr "<br />Categories:  %1$s<br /><a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">Permalink</a> ."
 
-#: functions.php:714
+#: functions.php:715
 #, php-format
 #@ tf2013
 msgid "<a href=\"%3$s\" title=\"Permalink zu %4$s\" rel=\"bookmark\">Permanenter Link/<a> zu diesem Artikel."
@@ -924,26 +889,32 @@ msgstr "Settings for archive pages (Category, Tag, Author, Date archives etc.)"
 msgid "Zahl der Beitr&auml;ge, die in Spalten mit je zwei Beitr&auml;gen nebeneinander angezeigt werden."
 msgstr "Number of articles displayed in half width."
 
-#: loop.php:25
-#: loop.php:44
+#: loop.php:26
+#: loop.php:45
 #, php-format
 #@ tf2013
 msgid "Permalink zu %s"
 msgstr "Permalink to %s"
 
-#: loop.php:54
+#: loop.php:55
 #@ tf2013
 msgid "1 Kommentar"
 msgstr "1 Comment"
 
-#: loop.php:54
+#: loop.php:55
 #@ tf2013
 msgid "% Kommentare"
 msgstr "% Comments"
 
-#: loop.php:44
+#: loop.php:45
 #, php-format
 #@ tf2013
 msgid "Diese Galerie enth&auml;lt <a %1$s>%2$s Fotos</a>."
 msgstr "This gallery includes <a %1$s>%2$s photos</a>."
+
+#: functions.php:328
+#@ tf2013
+msgctxt "Date format for Daily Archive Title"
+msgid "j. F Y"
+msgstr "F j, Y"
 

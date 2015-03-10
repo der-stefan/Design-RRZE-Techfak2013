@@ -325,9 +325,9 @@ function tf2013_contenttitle() {
 				echo(get_category_parents($parentCat, TRUE, ' ' . $delimiter . ' '));
 			echo $before . __('Artikel der Kategorie ', 'tf2013') . '"' . single_cat_title('', false) . '"' . $after;
 		} elseif (is_day()) {
-			echo $before . get_the_time('d') . $after;
+			echo $before . get_the_time(_x('j. F Y','Date format for Daily Archive Title','tf2013')) . $after;
 		} elseif (is_month()) {
-			echo $before . get_the_time('F') . $after;
+			echo $before . get_the_time('F Y') . $after;
 		} elseif (is_year()) {
 			echo $before . get_the_time('Y') . $after;
 		} elseif (is_single() && !is_attachment()) {
