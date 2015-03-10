@@ -31,7 +31,7 @@ global $defaultoptions;
 
 				    <img border="0" src="<?php print (!empty($options['logo']) ? esc_url($options['logo']) : esc_url($defaultoptions['logo'])); ?>" alt="Logo">
 
-					<div class="site-name">
+					<div class="site-name" style="color:#<?php echo esc_attr(get_header_textcolor()); ?>">
 						<?php bloginfo('name'); ?>
 						<span class="description"><?php echo html_entity_decode(get_bloginfo('description')); ?></span>
 					</div>

@@ -50,7 +50,7 @@ if (!function_exists('tf2013_setup')):
 			'flex-height' => false,
 			'flex-width' => false,
 			'header-text' => true,
-			'default-text-color' => '#fff',
+			'default-text-color' => '#003366',
 		);
 		add_theme_support('custom-header', $args);
 
