@@ -22,6 +22,7 @@ global $defaultoptions;
 		<a name="seitenmarke" id="seitenmarke"></a>
 
 		<header>
+		    <script type="text/javascript">var b=document.body.clientWidth;</script>
 		    <div id="kopf" <?php if (!empty(get_header_image())) : ?>  style="background-image: url(<?php header_image(); ?>)" <?php endif; ?>>  <!-- begin: kopf -->
 			<div id="logo">
 
