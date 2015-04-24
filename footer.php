@@ -40,5 +40,6 @@
     </div>  <!-- end: seite -->
   </div>  <!-- end: page_margins  -->
     <?php wp_footer(); ?>
+    <script type="text/javascript">var br=b-document.body.clientWidth; document.body.style.paddingLeft=br+"px";</script>
     </body> <!-- end: body -->
 </html>
