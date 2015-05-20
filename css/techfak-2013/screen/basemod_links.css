@@ -33,14 +33,18 @@
   #content a[href^="http://univis"] {
     padding-right: 44px;
     padding-left: 0px;
-    background: url("../../../img/links/univis.gif") center right no-repeat; }
-  #content a[href^="https://"] {
+    /*background: url("../../../img/links/univis.gif") center right no-repeat; }*/
+    background-image: url("../../../img/links/univis.gif") !important;
+    background-repeat: no-repeat !important;
+    background-position: right top !important;
+}
+/*  #content a[href^="https://"] {
     color: #0066BB;
     background: url("../../../img/links/lock.gif") center right no-repeat;
-    padding-right: 16px; }
+    padding-right: 16px; } */
   #content a[href^="mailto:"] {
     color: #0066BB;
-    background: url("../../../img/links/mail.gif") center right no-repeat;
+    background: url("../../../img/links/mail.gif") no-repeat scroll right -2px transparent;
     padding-right: 18px; }
 
   #content a[href$=".ogg"], a[href$=".OGG"],

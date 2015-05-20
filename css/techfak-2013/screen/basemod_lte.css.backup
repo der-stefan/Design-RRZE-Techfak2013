@@ -1,0 +1,237 @@
+/**
+ * Projekt Vorlagenkatalog
+ *
+ * Basisstylesheet Techfak 2013
+ *
+ * @mod_name        LTE
+ * @mod_desc        Lehrstuhl für Technische Elektronik
+ *
+ * @copyright       Copyright 2005-2012, RRZE
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/)
+ * @link            http://www.vorlagen.uni-erlangen.de
+ * @package         css
+ * @version         1.0
+ * @lastmodified    08/2013
+ */
+/* Farbvariante
+ *     #036  - Basisfarbe
+*/
+@media screen, projection {
+
+  /*  ------------------------------------------------------
+  SEITE
+  --------------------------------------------------------*/
+  div#seite {
+    background: url(../../../grafiken/balken-lte-komplett.gif) no-repeat;
+    background-color: #FFF;
+    /* notwendig für body: background-color! */
+    border-radius: 0 0 10px 10px;
+  }
+
+  /*  ------------------------------------------------------
+  HEADER
+  --------------------------------------------------------*/
+  div#kopf {
+    background: url(../../../grafiken/header-lte-3b.png) no-repeat scroll 48% 0% transparent; }
+    div#kopf div#logo {
+      background-repeat: no-repeat;
+      background-position: 99% 0; }
+      div#kopf div#logo .site-name {
+        color: #fff;
+        text-shadow: 1px 1px 2px #4C4C4C;
+        letter-spacing: 0.05em; }
+        div#kopf div#logo .site-name a {
+          color: #fff; }
+    div#kopf div#hauptmenu {
+      background: #a4abb3 url(../../../grafiken/hauptmenue-bg-lte.png) repeat-y;
+      margin-left: -27px;
+      padding-left: 27px; }
+    div#kopf div#titel h1 {
+      color: #036; }
+
+  /*  ------------------------------------------------------
+  MAIN
+  --------------------------------------------------------*/
+  div#staffgroup table {
+	width: 90%;
+  }
+
+  div#staffgroup h4 {
+	font-size: 1em;
+	margin-top: 2em;
+  }
+
+  div#staffgroup h4:nth-child(1) {
+	margin-top: 0;
+  }
+
+  div#staffgroup ul {
+	font-size: 1em;
+  }
+
+  div#staffgroup table tbody tr td {
+	border: 0px;
+	padding: 0px;
+  }
+
+  div#staffgroup table tbody tr:nth-child(even) {
+	background-color: #f7f8f9;
+  }
+
+  div#staffgroup table tbody tr:nth-child(odd) {
+	background-color: #eaf0f6;
+  }
+
+  div#staffgroup table tbody tr:hover {
+	background-color: #e4e5e6;
+  }
+
+  div#staffgroup table tbody tr td ul {
+	margin: 0px;
+	list-style-type: none;
+  }
+  div#staffgroup table tbody tr td:nth-child(1) {
+	text-align: center;
+  }
+
+  div#staffgroup table tbody tr td img {
+	height: 60px;
+  }
+
+  .OnlyShortInfo div {
+	font-size: 0.8em;;
+  }
+
+  .kontakt {
+	margin-left: 0px !important;
+  }
+
+  ul.kontakt li {
+	margin-left: 15px;
+  }
+
+  address {
+	font-size: 1em !important;
+  }
+
+  a.post-edit-link {
+	display: none !important;
+  }
+
+  /*  ------------------------------------------------------
+  MENU - MAIN
+  --------------------------------------------------------*/
+  ul#navigation {
+    color: #000 !important; }
+    ul#navigation li span.aktiv,
+    ul#navigation ul#hauptnavigation li span.aktiv,
+    ul#navigation ul#hauptnavigation li a.aktiv,
+    ul#navigation ul#hauptnavigation ul li span.aktiv,
+    ul#navigation ul#hauptnavigation ul li ul li span.aktiv,
+    ul#navigation li.current-page-item > a,
+    ul#navigation li.current-menu-item > a,
+    ul#navigation li.current-page-ancestor > a,
+    ul#navigation li.current-menu-ancestor > a {
+      border-bottom: #036 1px solid !important; }
+
+  /*  ------------------------------------------------------
+  CONTENT
+  --------------------------------------------------------*/
+  div#content h1 {
+    color: #036; }
+  div#content h2 {
+    border-bottom: 1px solid #036; }
+  div#content th {
+    border-right: 1px solid #036;
+    border-bottom: 1px solid #036; }
+  div#content td {
+    border-right: 1px solid #036;
+    border-bottom: 1px solid #036;
+    border-top: 1px solid #036;
+    /*background: #f7f8f9;*/ }
+  div#content tfoot td {
+    border-right: none;
+    background: #fff; }
+  div#content table.wechselfarbe tr td {
+    background: #f7f8f9; }
+  div#content table.wechselfarbe tr:nth-child(odd) td {
+    background: #eeeff1; }
+  div#content div.box_rechts,
+  div#content div.klein_box_rechts,
+  div#content div.vollbox {
+    border: 1px solid #036; }
+  div#content form fieldset {
+    background: #f7f8f9; }
+    div#content form fieldset legend {
+      color: #036; }
+
+  /*  ------------------------------------------------------
+  SIDEBAR
+  --------------------------------------------------------*/
+  div#main div#sidebar h3 {
+    border-bottom: #036 1px solid; }
+
+  /*  ------------------------------------------------------
+  FOOTER
+  --------------------------------------------------------*/ 
+  div#footer {
+	border-radius: 0 0 10px 10px;
+  }
+
+}
+/*  ------------------------------------------------------------------------------------------------------------
+						BREAKPOINT  1090px
+--------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 1090px) {
+  div#kopf {
+    background: url(../../../grafiken/header-lte-2b.png) no-repeat scroll 48% 0% transparent; } }
+/*  ------------------------------------------------------------------------------------------------------------
+						BREAKPOINT  960px
+--------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 960px) {
+  div#kopf {
+    background: url(../../../grafiken/header-lte-0b.png) no-repeat scroll 51% 0% transparent !important; }
+    div#kopf div#logo .site-name {
+      display: block;
+      top: 0 !important;
+      padding-left: 10px;
+      width: 41% !important;
+      max-width: 41% !important; } }
+/*  ------------------------------------------------------------------------------------------------------------
+						BREAKPOINT  630px
+--------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 630px) {
+  div#kopf div#logo {
+    background-size: 40% auto; }
+    div#kopf div#logo .site-name {
+      font-size: 1.2em !important; } }
+/*  ------------------------------------------------------------------------------------------------------------
+						BREAKPOINT  480px
+--------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 480px) {
+  div#kopf {
+    background-image: none !important; }
+    div#kopf div#logo .site-name {
+      width: 100% !important;
+      max-width: 100% !important;
+      color: #d0a111;
+      text-shadow: none; }
+      div#kopf div#logo .site-name a {
+        color: #d0a111;
+        text-shadow: none; }
+    div#kopf div#titel h1 {
+      margin: 10px !important;
+      padding: 10px 5px 10px 15px !important;
+      background: #036;
+      color: #ffffff; }
+    div#kopf div#titel,
+    div#kopf div#sprungmarken {
+      margin-left: -27px; }
+    div#kopf div#hauptmenu {
+      height: auto;
+      background: none;
+      padding: 0;
+      border: none; } }
+/*  ------------------------------------------------------------------------------------------------------------
+						BREAKPOINT  320px
+--------------------------------------------------------------------------------------------------------------*/

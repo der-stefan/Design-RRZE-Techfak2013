@@ -26,3 +26,7 @@ Tags: one-column, two-columns, three-columns, right-sidebar, responsive-layout, 
 
 /* import print layout | Print-Layout einbinden */
 @import url(css/techfak2013/print/print.css);
+
+div#kopf div#breadcrumb {
+	display: none;
+}

@@ -303,62 +303,6 @@ function tf2013_breadcrumbs() {
 	}
 }
 
-function tf2013_contenttitle() {
-	global $defaultoptions;
-	global $options;
-	$before = '';
-	$after = '';
-	$delimiter = ': ';
-	$home = $options['text-startseite']; // text for the 'Home' link
-
-	if (!is_home() && !is_front_page() || is_paged()) {
-		global $post;
-		$homeLink = home_url('/');
-
-		if (is_category()) {
-			global $wp_query;
-			$cat_obj = $wp_query->get_queried_object();
-			$thisCat = $cat_obj->term_id;
-			$thisCat = get_category($thisCat);
-			$parentCat = get_category($thisCat->parent);
-			if ($thisCat->parent != 0)
-				echo(get_category_parents($parentCat, TRUE, ' ' . $delimiter . ' '));
-			echo $before . __('Artikel der Kategorie ', 'tf2013') . '"' . single_cat_title('', false) . '"' . $after;
-		} elseif (is_day()) {
-			echo $before . get_the_time(_x('j. F Y','Date format for Daily Archive Title','tf2013')) . $after;
-		} elseif (is_month()) {
-			echo $before . get_the_time('F Y') . $after;
-		} elseif (is_year()) {
-			echo $before . get_the_time('Y') . $after;
-		} elseif (is_single() && !is_attachment()) {
-			echo $before . get_the_title() . $after;
-		} elseif (!is_single() && !is_page() && !is_search() && get_post_type() != 'post' && !is_404()) {
-			$post_type = get_post_type_object(get_post_type());
-			echo $before . $post_type->labels->singular_name . $after;
-		} elseif (is_attachment()) {
-			echo $before . get_the_title() . $after;
-		} elseif (is_page() && !$post->post_parent) {
-			echo $before . get_the_title() . $after;
-		} elseif (is_page() && $post->post_parent) {
-			echo $before . get_the_title() . $after;
-		} elseif (is_search()) {
-			echo $before . __('Suche nach ', 'tf2013') . '"' . get_search_query() . '"' . $after;
-		} elseif (is_tag()) {
-			echo $before . __('Artikel mit Schlagwort ', 'tf2013') . '"' . single_tag_title('', false) . '"' . $after;
-		} elseif (is_author()) {
-			global $author;
-			$userdata = get_userdata($author);
-			echo $before . __('Artikel von ', 'tf2013') . $userdata->display_name . $after;
-		} elseif (is_404()) {
-			echo $before . '404' . $after;
-		} else {
-			echo $before . get_the_title() . $after;
-		}
-	} elseif (is_home() || is_front_page()) {
-		echo $before . $home . $after;
-	}
-}
-
 if (!function_exists('tf2013_filter_wp_title')) :
 	/*
 	 * Sets the title
@@ -984,3 +928,6 @@ function rw_relative_urls() {
 		add_filter($filter, 'wp_make_link_relative');
 	}
 }
+
+require_once('functions_LTE.php');
+

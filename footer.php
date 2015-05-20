@@ -40,5 +40,17 @@
     </div>  <!-- end: seite -->
   </div>  <!-- end: page_margins  -->
     <?php wp_footer(); ?>
+
+    	<!-- Scrollbar hack -->
+	<script type="text/javascript">
+		var br=b-document.body.clientWidth;
+		var elem = document.querySelector('body');
+		if (window.getComputedStyle) {
+			if(window.getComputedStyle(elem).getPropertyValue('padding-left') == "10px") { //default value must be 10px (see CSS file)
+				document.body.style.paddingLeft=br+"px";
+			}
+		}
+	</script>
+
     </body> <!-- end: body -->
 </html>

@@ -8,6 +8,7 @@ global $defaultoptions;
 <!--[if IE 8 ]>    <html <?php language_attributes(); ?> class="ie8"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html <?php language_attributes(); ?>> <!--<![endif]-->
     <head>
+	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 	<meta charset="<?php bloginfo('charset'); ?>" />
 	<meta name="viewport" content="width=device-width" />
 	<title><?php wp_title('|', true, 'right'); ?></title>
@@ -17,6 +18,7 @@ global $defaultoptions;
     </head>
 
     <body <?php body_class(); ?>>  <!-- begin: body -->
+	<script type="text/javascript">var b=document.body.clientWidth;</script>
 	<div class="page_margins">  <!-- begin: page_margins -->
 	    <div id="seite" class="page">  <!-- begin: seite -->
 		<a name="seitenmarke" id="seitenmarke"></a>
@@ -43,17 +45,27 @@ global $defaultoptions;
 
 			</div>
 
-<?php get_search_form(); ?>
+<?php //get_search_form(); ?>
 
-			<div id="titel">
+		<!-- <div id="titel">
 			    <h1><?php tf2013_contenttitle(); ?></h1>
-			</div>
+			</div> -->
 
 			<div id="breadcrumb">
 			    <h2><?php _e('Sie befinden sich hier:', 'tf2013') ?> </h2>
 			    <p>
 <?php if (function_exists('tf2013_breadcrumbs')) tf2013_breadcrumbs(); ?>
 			    </p>
+			</div>
+
+			<div id="lang_selector">
+			    <p><?php
+				global $q_config;
+				$flag_location=qtranxf_flag_location();
+				foreach(qtranxf_getSortedLanguages() as $language) {
+					echo "<a href=\"".qtranxf_convertURL($url, $language, false, true)."\"><img src=\"".$flag_location.$q_config['flag'][$language]."\" title=\"".$language."\" /></a>";
+				}
+				?> </p>
 			</div>
 
 			<div id="sprungmarken">
@@ -65,13 +77,13 @@ global $defaultoptions;
 			    </ul>
 			</div>
 
-			<div id="hauptmenu" class="zielgruppen-menue" role="navigation">
+			<!--<div id="hauptmenu" class="zielgruppen-menue" role="navigation">
 			    <?php if (has_nav_menu('targetmenu')) { ?>
 					<h2 class="skip"><a id="hauptmenumarke" name="hauptmenumarke"></a>Zielgruppennavigation</h2>
 					<?php
 					wp_nav_menu(array('theme_location' => 'targetmenu', 'fallback_cb' => '', 'depth' => 1));
 				 }?>
-			</div><!-- #target-navigation -->
+			</div>--><!-- #target-navigation -->
 		    </div>
 		</header>  <!-- end: kopf -->
 
@@ -98,6 +110,11 @@ global $defaultoptions;
     			    </ul>
 
 <?php } ?>
+<div id="logos">
+	<a href="https://uni-erlangen.de"><img src="<?php echo home_url('/'); ?>graphics/fau-logo-transparent.gif"></a>
+	<a href="https://techfak.uni-erlangen.de"><img src="<?php echo home_url('/'); ?>graphics/logo-techfak-blau.png"></a>
+	<a href="https://eei.uni-erlangen.de"><img src="<?php echo home_url('/'); ?>graphics/eei_logo.png"></a>
+</div>
 			</div>
 
 		    <?php
@@ -112,3 +129,8 @@ global $defaultoptions;
 
 		    <div id="content">  <!-- begin: content -->
 			<a name="contentmarke" id="contentmarke"></a>
+
+			<div id="titel">
+			    <h1><?php tf2013_contenttitle(); ?></h1>
+			</div>
+
