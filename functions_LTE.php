@@ -184,7 +184,7 @@ echo "	<td>";
 
 ////***************
 ////Parse-Einstellunegn
-	$papercite_string="bibtex group=year group_order=desc ignore=";
+	$papercite_string="bibtex group=year group_order=desc ignore=\"\"";
 		$papercite_string.=" author=\"".$user->user_firstname." ".$user->user_lastname."\"";
 		$papercite_string.=" highlight=\"".$user->user_firstname{0}.". ".$user->user_lastname."\"";
 
