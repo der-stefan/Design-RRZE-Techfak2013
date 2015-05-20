@@ -3,6 +3,8 @@
  *
  * Basisstylesheet Techfak 2013
  *
+ * Stark modifiziert durch LTE!
+ *
  * @mod_name        LTE
  * @mod_desc        Lehrstuhl für Technische Elektronik
  *
@@ -11,11 +13,12 @@
  * @link            http://www.vorlagen.uni-erlangen.de
  * @package         css
  * @version         1.0
- * @lastmodified    08/2013
+ * @lastmodified    05/2015
  */
 /* Farbvariante
  *     #036  - Basisfarbe
 */
+
 @media screen, projection {
 
   /* Scrollbar hack: Default value must be 10px! See footer.php for implementation */
@@ -42,9 +45,9 @@
     background: url(../../../grafiken/header-lte-3b.png) no-repeat scroll 48% 0% transparent; }
     div#kopf div#logo {
       background-repeat: no-repeat;
-      background-position: 99% 0;
+      /*background-position: 99% 0;*/
+      background-position: left center;
       height: 140px;
-      /*border: 1px black solid;*/
       padding: 0px;
     }
       div#kopf div#logo .site-name {
@@ -297,8 +300,8 @@
       color: #036; }
 
   div.lecture_detail {
-    background-color: aliceblue;
-    border: lightblue 1px solid;
+    background-color: #F7F8F9;
+    border: 1px solid #A4ABB3;
     padding: 5px;
     margin-bottom: 1.5em;
   }
@@ -311,9 +314,19 @@
     font-size: 1em !important;
   }
 
+
+  div.no_image::before {
+    content: '\F110';
+    font: 400 50px/1 dashicons !important;
+  }
+
   img.bildlinks {
     padding: 0px 50px 15px 0px;
+    float: left;
+    width: 150px;
   }
+
+  div#univis-personenseite .kontakt { float:left; }
 
   /*  ------------------------------------------------------
   SIDEBAR
@@ -353,8 +366,12 @@
     background: url(../../../grafiken/header-lte-2b.png) no-repeat scroll 48% 0% transparent; } }*/
 
 @media screen and (max-width: 1090px) {
-  div#kopf {
-    margin-left: 0px; }
+	div#kopf {
+		margin-left: 0px;
+	}
+	body {
+		padding-left: 0px !important;
+	}
 /*  ------------------------------------------------------------------------------------------------------------
 						BREAKPOINT  960px
 --------------------------------------------------------------------------------------------------------------*/
@@ -368,12 +385,6 @@
       width: 41% !important;
       max-width: 41% !important; } }*/
 
-@media screen and (max-width: 960px) {
-	body {
-		padding-left: 0px !important;
-	}
-}
-
 /*  ------------------------------------------------------------------------------------------------------------
 						BREAKPOINT  630px
 --------------------------------------------------------------------------------------------------------------*/
@@ -383,11 +394,11 @@
     div#kopf div#logo .site-name {
       font-size: 1.2em !important; } }*/
 
-@media screen and (max-width: 630px) {
+/*@media screen and (max-width: 630px) {
 	body {
 		padding-left: 0px !important;
 	}
-}
+}*/
 
 /*  ------------------------------------------------------------------------------------------------------------
 						BREAKPOINT  480px
@@ -418,9 +429,6 @@
       border: none; } }*/
 
 @media screen and (max-width: 480px) {
-	body {
-		padding-left: 0px !important;
-	}
 	div#logos {
 		display: none;
 	}

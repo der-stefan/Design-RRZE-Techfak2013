@@ -462,7 +462,6 @@ if (!function_exists('tf2013_post_teaser')) :
 	global $defaultoptions;
 	global $options;
 	global $post;
-
 	$sizeclass = '';
 	$leftbox = '';
 	if ($showdatebox == 0) {
@@ -482,6 +481,7 @@ if (!function_exists('tf2013_post_teaser')) :
 		}
 
 		$firstpic = get_tf2013_firstpicture();
+		echo "<!-- ".$firstpic."-->";
 		$firstvideo = get_tf2013_firstvideo();
 		$fallbackimg = '<img src="' . $defaultoptions['src-teaser-thumbnail_default'] . '" alt="">';
 		$output = '';
@@ -698,8 +698,8 @@ if (!function_exists('get_tf2013_firstpicture')) :
 		if ((is_array($matches)) && (isset($matches[1]))) {
 			$first_img = $matches[1];
 			if (!empty($first_img)) {
-				$site_link = home_url();
-				$first_img = preg_replace("%$site_link%i", '', $first_img);
+				$site_link = site_url();
+				//$first_img = preg_replace("%$site_link%i", '', $first_img);
 				$imagehtml = '<img src="' . $first_img . '" alt="" >';
 				return $imagehtml;
 			}

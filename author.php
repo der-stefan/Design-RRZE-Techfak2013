@@ -72,7 +72,7 @@ if(!empty($tmp))
   echo $tmp;
 }
 //print Publications
-$tmp=papercite_staff("[".$papercite_string." deny=patent|prize]");
+$tmp=papercite_staff("[".$papercite_string." deny=patent,prize]");
 if(!empty($tmp))
 {
   echo _e("<h2>[:de]Publikationen[:en]Publications[:]</h2>");

@@ -19,7 +19,8 @@ function tf2013_contenttitle() {
 			$parentCat = get_category($thisCat->parent);
 			if ($thisCat->parent != 0)
 				echo(get_category_parents($parentCat, TRUE, ' ' . $delimiter . ' '));
-			echo $before . __('Artikel der Kategorie ', 'tf2013') . '"' . single_cat_title('', false) . '"' . $after;
+		//	echo $before . __('Artikel der Kategorie ', 'tf2013') . '"' . single_cat_title('', false) . '"' . $after;
+			echo $before . single_cat_title('', false) . $after;		
 		}elseif (is_author()) {
 		global $author;
  		$userdata = get_userdata($author);
@@ -183,7 +184,7 @@ echo "	<td>";
 
 ////***************
 ////Parse-Einstellunegn
-	$papercite_string="bibtex group=year group_order=desc";
+	$papercite_string="bibtex group=year group_order=desc ignore=";
 		$papercite_string.=" author=\"".$user->user_firstname." ".$user->user_lastname."\"";
 		$papercite_string.=" highlight=\"".$user->user_firstname{0}.". ".$user->user_lastname."\"";
 
@@ -247,4 +248,24 @@ function highlight_author_at_menu($classes, $item){
 }
 
 add_filter('nav_menu_css_class' , 'highlight_author_at_menu' , 10 , 2);
+
+//##########################
+// Fix Heading start page
+//##########################
+add_filter( 'wp_title', 'baw_hack_wp_title_for_home' );
+function baw_hack_wp_title_for_home( $title )
+{
+  if( is_home() || is_front_page() ) {
+    return __(get_bloginfo( 'title' ));
+  }
+  return $title;
+}
+
+//#############################
+// Add Dashicons to frontend (show icon for non-existing avatars)
+//#############################
+add_action( 'wp_enqueue_scripts', 'load_dashicons_front_end' );
+function load_dashicons_front_end() {
+	wp_enqueue_style( 'dashicons' );
+}
 
