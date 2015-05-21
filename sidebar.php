@@ -1,5 +1,7 @@
 <?php           
  
+if(is_front_page()) {
+
   echo '<aside><div id="sidebar">  <!-- begin: sidebar -->';
   
   
@@ -15,4 +17,6 @@
     } 
 		
     echo '</div></aside>';
-?>		
+}
+
+?>	

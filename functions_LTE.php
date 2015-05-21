@@ -148,23 +148,15 @@ echo "	<td>";
 			'toolbar2'=> 'formatselect,bullist,numlist,|,alignleft,aligncenter,alignright,|,indent,outdent,|,blockquote',
 		),
 	);	
+	//Load old biography entry
 	$oldentry=html_entity_decode(get_the_author_meta( 'biography', $user->ID ));
-	if(empty($oldentry))
-	  {
-	    $oldentry=html_entity_decode(get_the_author_meta( 'description', $user->ID ));
-	    //update_user_meta($user->ID, 'biography',"");
-	    echo "Reset data to default";
-	  }
-	  $search = '/.*\[\:de\](.*)(\[\:.*)/siU';
-  preg_match($search, $oldentry, $match);
-	$german=$match[1];
-	$search = '/.*\[\:en\](.*)(\[\:.*)/siU';
-  preg_match($search, $oldentry, $match);
+    $search = '/.*\[\:de\](.*)(\[\:.*)/siU';
+    preg_match($search, $oldentry, $match);
+    	$german=$match[1];
+	  $search = '/.*\[\:en\](.*)(\[\:.*)/siU';
+    preg_match($search, $oldentry, $match);
+      $english=$match[1];
 
-  $english=$match[1];
-	  
-	  //
-	  
 	wp_editor($german, 'biography_de', $settings); 
 
 		echo "</td><td>";

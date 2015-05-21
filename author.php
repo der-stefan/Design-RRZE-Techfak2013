@@ -20,7 +20,7 @@ $lang=$GLOBALS['q_config']['language'];
 <!-- This sets the $curauth variable -->
 <?php
 $biograpy=get_the_author_meta('biography', $userdata->ID);
-if(!empty($biograpy))
+if(!empty(__($biograpy)))
 {
 echo _e("<h2>[:de]Über [:en]About[:]")." ".$userdata->display_name."</h2>";
 echo _e($biograpy);

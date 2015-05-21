@@ -158,6 +158,14 @@
   a.post-edit-link {
 	display: none !important;
   }
+  /* Kalender */
+  .amrcol1{
+  width:10em;
+  }
+  .starttime{
+  float:left;
+  }
+  /* Ende Kalender */ 
 
   /*  ------------------------------------------------------
   MENU - MAIN
@@ -331,6 +339,17 @@
   /*  ------------------------------------------------------
   SIDEBAR
   --------------------------------------------------------*/
+  div#main div#sidebar {
+    word-wrap: break-word;
+    -moz-hyphens: auto;
+    -o-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    text-align: justify;
+    margin-top: 30px;
+  }
+
   div#main div#sidebar h3 {
     border-bottom: #036 1px solid; }
 
