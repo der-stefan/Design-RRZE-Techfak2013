@@ -165,6 +165,9 @@
   .starttime{
   float:left;
   }
+  #icalnavs{
+  display:none;
+  }
   /* Ende Kalender */ 
 
   /*  ------------------------------------------------------
