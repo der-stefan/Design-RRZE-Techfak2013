@@ -62,6 +62,7 @@ global $defaultoptions;
 			    <p><?php
 				global $q_config;
 				$flag_location=qtranxf_flag_location();
+				if(!isset($url)){$url="";}
 				foreach(qtranxf_getSortedLanguages() as $language) {
 					echo "<a href=\"".qtranxf_convertURL($url, $language, false, true)."\"><img src=\"".$flag_location.$q_config['flag'][$language]."\" title=\"".$language."\" /></a>";
 				}
