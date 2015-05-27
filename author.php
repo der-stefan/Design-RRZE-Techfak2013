@@ -1,4 +1,4 @@
-<?php 
+<?php
 get_header();
 global $LocalUnivisID;	
 $LocalUnivisID=false;
@@ -9,8 +9,18 @@ foreach ( $blogusers as $user ) {
 echo "<br>";
 }
 */
+
 //Titel und athor-variable wird bereits in functins.php->tf2013_contenttitle() gesetzt.
-$userdata = (get_query_var('author_name')) ? get_user_by('slug', get_query_var('author_name')) : get_userdata(get_query_var('author'));
+$userdata =get_user_by('slug', get_query_var('author_name'));
+if($userdata===false)
+{
+	echo _e("[:de]Es existiert kein Benutzer mit diesem Namen[:en]There are no users with the specified last name.[:]");
+ get_sidebar(); 
+ get_footer(); 
+	break;
+}
+
+
 
 echo _e(do_shortcode('[univis task="mitarbeiter-einzeln" wpuserid="'.$userdata->ID.'" firstname="'.$userdata->user_firstname.'" lastname="'.$userdata->user_lastname.'"]'));
 

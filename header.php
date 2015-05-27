@@ -112,9 +112,11 @@ global $defaultoptions;
 
 <?php } ?>
 <div id="logos">
-	<a href="https://uni-erlangen.de"><img src="<?php echo home_url('/'); ?>graphics/fau-logo-transparent.gif"></a>
+	<a href="https://uni-erlangen.de"><img src="<?php echo home_url('/'); ?>graphics/FAU_logo.png">
+	<!--<a href="https://uni-erlangen.de"><img src="<?php echo home_url('/'); ?>graphics/fau-logo-transparent.gif"></a>-->
 	<a href="https://techfak.uni-erlangen.de"><img src="<?php echo home_url('/'); ?>graphics/logo-techfak-blau.png"></a>
 	<a href="https://eei.uni-erlangen.de"><img src="<?php echo home_url('/'); ?>graphics/eei_logo.png"></a>
+	<a href="https://www.studon.uni-erlangen.de/cat15404.html"><img src="<?php echo home_url('/'); ?>graphics/studon_logo.png"></a>
 </div>
 			</div>
 

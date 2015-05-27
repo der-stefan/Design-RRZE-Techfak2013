@@ -22,8 +22,7 @@ function tf2013_contenttitle() {
 		//	echo $before . __('Artikel der Kategorie ', 'tf2013') . '"' . single_cat_title('', false) . '"' . $after;
 			echo $before . single_cat_title('', false) . $after;		
 		}elseif (is_author()) {
-		global $author;
- 		$userdata = get_userdata($author);
+ 		$userdata = get_user_by('slug', get_query_var('author_name'));
 		$specialstaffheading=get_the_author_meta('specialstaffheading', $userdata->ID);
 		if(empty($specialstaffheading))
 				{$specialstaffheading="[:de]Mitarbeiter[:en]Staff[:]";}
@@ -260,4 +259,37 @@ add_action( 'wp_enqueue_scripts', 'load_dashicons_front_end' );
 function load_dashicons_front_end() {
 	wp_enqueue_style( 'dashicons' );
 }
+//#############################
+// old profile links /~somename
+//#############################
+
+	function show_authors_without_user_match($template) {
+		global $wp_query;
+		if(get_query_var('author_name')) {
+		    global $wpdb;
+		    $author_name=get_query_var('author_name');
+        $querystr=$wpdb->prepare("SELECT user_id FROM $wpdb->usermeta WHERE meta_key = 'last_name' AND meta_value = '%s'",$author_name );
+        $users = $wpdb->get_results($querystr);
+        if( $users ) {
+          if(count($users)===1){
+              $userdata =get_user_by('id', $users[0]->user_id);
+              set_query_var('author_name',$userdata->user_nicename);
+              $wp_query->is_404=false;
+              $wp_query->is_author=true;
+              return get_author_template();
+            }else{
+              //return _e("[:de]Nachname nicht eindeutig[:en][:]");
+      		    return $template;
+      		  }
+          }else
+          {
+          		//	return _e("[:de]Es existiert kein Benutzer mit diesem Namen[:en]There are no users with the specified last name.[:]");
+          		//return $template;
+          }
+		}
+
+		return $template;
+	}
+	
+	add_filter('404_template', 'show_authors_without_user_match');
 

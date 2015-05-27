@@ -339,6 +339,21 @@
 
   div#univis-personenseite .kontakt { float:left; }
 
+  div.post-meta p {
+    font-size: 0.7em !important;
+    line-height: 1.1 !important;
+  }
+
+  a.papercite_toggle {
+    float: right;
+    font-size: 0.85em;
+  }
+
+  ul.papercite_bibliography li {
+    clear: both;
+    padding-bottom: 0.5em;
+  }
+
   /*  ------------------------------------------------------
   SIDEBAR
   --------------------------------------------------------*/

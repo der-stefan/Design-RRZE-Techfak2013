@@ -622,7 +622,7 @@ if (!function_exists('tf2013_post_pubdateinfo')) :
 			echo __('Ver&ouml;ffentlicht am', 'tf2013');
 			echo '</span> ';
 		}
-		printf('%1$s', sprintf('<span class="entry-date">%1$s</span>', get_the_date()
+		printf('%1$s', sprintf('<span class="entry-date">%1$s</span>', get_the_date(__("j.m.Y, G:i"))
 				)
 		);
 	}
@@ -654,7 +654,7 @@ if (!function_exists('tf2013_post_taxonominfo')) :
 		if ($tag_list) {
 			$posted_in = __('<br />Kategorien:  %1$s | Schlagworte: %2$s<br/>Hier der <a href="%3$s" title="Permalink zu %4$s" rel="bookmark">permanente Link</a> zu diesem Artikel.', 'tf2013');
 		} elseif (is_object_in_taxonomy(get_post_type(), 'category')) {
-			$posted_in = __('<br />Kategorien:  %1$s<br /><a href="%3$s" title="Permalink zu %4$s" rel="bookmark">Permanenter Link</a> zu diesem Artikel.', 'tf2013');
+			$posted_in = __('<br />Kategorien:  %1$s<br /><!--<a href="%3$s" title="Permalink zu %4$s" rel="bookmark">Permanenter Link</a> zu diesem Artikel.-->', 'tf2013');
 		} else {
 			$posted_in = __('<a href="%3$s" title="Permalink zu %4$s" rel="bookmark">Permanenter Link/<a> zu diesem Artikel.', 'tf2013');
 		}
