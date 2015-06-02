@@ -178,6 +178,7 @@ echo "	<td>";
 	$papercite_string="bibtex group=year group_order=desc ignore=\"\"";
 		$papercite_string.=" author=\"".$user->user_firstname." ".$user->user_lastname."\"";
 		$papercite_string.=" highlight=\"".$user->user_firstname{0}.". ".$user->user_lastname."\"";
+		$papercite_string.="  order=desc";
 
 print "<h3>Bibtex-Parse-Einstellungen</h3>
 	<table class=\"form-table\">
@@ -268,15 +269,22 @@ function load_dashicons_front_end() {
 		if(get_query_var('author_name')) {
 		    global $wpdb;
 		    $author_name=get_query_var('author_name');
-        $querystr=$wpdb->prepare("SELECT user_id FROM $wpdb->usermeta WHERE meta_key = 'last_name' AND meta_value = '%s'",$author_name );
+        $replace  = array ('ä', 'ö', 'ü', 'ß');
+        $search = array ('ae', 'oe', 'ue', 'ss');
+        $querystr=$wpdb->prepare("SELECT user_id FROM $wpdb->usermeta WHERE meta_key = 'last_name' AND meta_value = '%s'",str_replace($search, $replace, urldecode($author_name)));
         $users = $wpdb->get_results($querystr);
         if( $users ) {
           if(count($users)===1){
               $userdata =get_user_by('id', $users[0]->user_id);
+              /*//Better: New load of whole page
               set_query_var('author_name',$userdata->user_nicename);
               $wp_query->is_404=false;
               $wp_query->is_author=true;
               return get_author_template();
+              */
+              header("Location: ".get_author_posts_url($userdata->ID));
+              die();
+
             }else{
               //return _e("[:de]Nachname nicht eindeutig[:en][:]");
       		    return $template;

@@ -60,29 +60,33 @@ echo "Warnung: Bibtex-Parsing nicht konfiguriert im Profil, verwende Standard-We
 		$papercite_string.=" highlight=\"".$userdata->user_firstname{0}.". ".$userdata->user_lastname."\"";
 	}
 //echo $papercite_string;
+$papercite_string=str_replace('bibtex','',$papercite_string);
+//echo $papercite_string;
+$bibtex_std_values="bibtex sort=year order=desc ";
 //Print Thesis
-$tmp=papercite_staff("[".$papercite_string." allow=mastersthesis group=none]");
+$tmp=papercite_staff("[".$bibtex_std_values.$papercite_string." allow=mastersthesis group=none]");
 if(!empty($tmp))
 {
 //  echo _e("<h2>[:de]Abschlussarbeiten[:en]Thesis[:]</h2>");
 //  echo $tmp;
 }
+
 //Print Patents
-$tmp=papercite_staff("[".$papercite_string." allow=prize group=none sort=year]");
+$tmp=papercite_staff("[".$bibtex_std_values.$papercite_string." allow=prize group=none]");
 if(!empty($tmp))
 {
   echo _e("<h2>[:de]Preise & Auszeichnungen[:en]Awards[:]</h2>");
   echo $tmp;
 }
 //Print Patents
-$tmp=papercite_staff("[".$papercite_string." allow=patent group=none sort=year]");
+$tmp=papercite_staff("[".$bibtex_std_values.$papercite_string." allow=patent group=none]");
 if(!empty($tmp))
 {
   echo _e("<h2>[:de]Patente[:en]Patents[:]</h2>");
   echo $tmp;
 }
 //print Publications
-$tmp=papercite_staff("[".$papercite_string." deny=patent,prize]");
+$tmp=papercite_staff("[".$bibtex_std_values.$papercite_string." deny=patent,prize]");
 if(!empty($tmp))
 {
   echo _e("<h2>[:de]Publikationen[:en]Publications[:]</h2>");

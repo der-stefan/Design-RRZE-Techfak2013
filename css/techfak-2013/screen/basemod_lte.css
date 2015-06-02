@@ -72,7 +72,7 @@
       margin-left: 0px;
       padding-left: 0px; }
     div#content div#titel h1 {
-      color: #204194; }
+      color: #3c5db0; }
 
     div#content div#titel {
 	padding-bottom: 1.5em;
@@ -200,14 +200,16 @@
 
 	/* aktiver Menüpunkt */
 	ul#navigation li.current-menu-item > a,
-	ul#navigation li.current-menu-parent > a {
+	ul#navigation li.current-menu-parent > a,
+	ul#navigation li.current-menu-ancestor > a {
 	  background-color: #2e5ed7;
 	  color: white;
 	  border: #ddd 1px solid !important;
 	}
 	/* aktiver Menüpunkt: hover */
 	ul#navigation li.current-menu-item > a:hover,
-	ul#navigation li.current-menu-parent > a:hover {
+	ul#navigation li.current-menu-parent > a:hover,
+	ul#navigation li.current-menu-ancestor > a:hover {
 	  background-color: #346bf6;
 	}
 
@@ -231,9 +233,17 @@
 	  color: white;
 	}
 
-	ul#navigation ul.sub-menu li.current-menu-item a {
+	/* aktive Submenüpunkte */
+	ul#navigation ul.sub-menu li.current-menu-item a,
+	ul#navigation ul.sub-menu li.current-menu-parent a {
 	  background-color: #69a0ff;
 	  color: white;
+	}
+
+  /* SUBSUBMENÜ */
+	ul#navigation ul.sub-menu ul.sub-menu li.current-menu-item a {
+	  background-color: #d6e5ff;
+	  border-bottom: 1px solid #eee;
 	}
 
 /*class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-390 current_page_item menu-item-395"*/
@@ -281,7 +291,7 @@
   div#content h2,
   div#content h3,
   div#content h4 {
-    color: #152c64; }
+    color: #3c5db0; }
   div#content h2 {
     border-bottom: 1px solid #036; }
 
@@ -422,6 +432,17 @@
       width: 41% !important;
       max-width: 41% !important; } }*/
 
+@media screen and (max-width: 960px) {
+  div#main div#sidebar {
+    display: block;
+    float: right;
+    bottom: auto;
+    height: auto;
+    width: 15.6em;
+    position: static;
+    overflow-y: auto;
+  }
+}
 /*  ------------------------------------------------------------------------------------------------------------
 						BREAKPOINT  630px
 --------------------------------------------------------------------------------------------------------------*/
@@ -436,6 +457,15 @@
 		padding-left: 0px !important;
 	}
 }*/
+
+@media screen and (max-width: 630px) {
+	div#main div#sidebar {
+		float: none;
+		width: auto;
+		padding: 1.5em 40px 0px;
+		margin: 0px;
+	}
+}
 
 /*  ------------------------------------------------------------------------------------------------------------
 						BREAKPOINT  480px
@@ -489,6 +519,19 @@
 	div#kopf div#logo .site-name {
 		padding-left: 10px;
 	}
+
+
+	div#main div#sidebar {
+		display: block;
+		float: right;
+		bottom: auto;
+		height: auto;
+		width: auto;
+		position: static;
+		padding: 5px 2px;
+		margin: 15px 2px;
+	}
+
 }
 /*  ------------------------------------------------------------------------------------------------------------
 						BREAKPOINT  320px
