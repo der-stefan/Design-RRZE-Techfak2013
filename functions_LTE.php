@@ -87,7 +87,7 @@ add_action('admin_head', 'hide_profile_info');
 function hide_profile_info() {
     global $pagenow;  // get what file we're on
 
-    if(!current_user_can('edit_others_posts')) { // we want admins and editors to still see it
+    if(!current_user_can('manage_options')) { // we want admins and editors to still see it
       switch($pagenow) {
         case 'profile.php':
           $output  = "\n\n" . '<script type="text/javascript">' . "\n";
@@ -191,7 +191,7 @@ print			"</td>
 	</table>";
 ////***************
 ////Special-heading -- Only for admins
-   if(current_user_can('edit_others_posts')) { 
+   if(current_user_can('manage_options')) { 
   print "<h3>Special Staff Heading</h3>
 	  <table class=\"form-table\">
 		<tr>
@@ -202,9 +202,18 @@ print			"</td>
     print			"</td>
 		</tr>
 	</table>";
-	}	
+	}
 
+}
 
+//Show last update at user profile:
+function add_custom_user_profile_last_update( $user ) {
+
+	
+$last_update_ts=get_the_author_meta( 'last_profile_update_timestamp', $user->ID );
+if($last_update_ts){
+	echo "Last update: ".date("l, d.m.Y H:i:s",$last_update_ts);	
+}
 
 }
 
@@ -213,18 +222,25 @@ print			"</td>
 function save_custom_user_profile_fields( $user_id ) {
 	if ( !current_user_can( 'edit_user', $user_id ) )
 		return FALSE;
-
-	if(isset($_POST['bibparserstring'])){update_usermeta( $user_id, 'bibparserstring', $_POST['bibparserstring'] );}
-	if(isset($_POST['specialstaffheading'])){update_usermeta( $user_id, 'specialstaffheading', $_POST['specialstaffheading'] );}
+$changed=0;
+	if(isset($_POST['bibparserstring'])){$changed+=update_usermeta( $user_id, 'bibparserstring', $_POST['bibparserstring'] );}
+	if(isset($_POST['specialstaffheading'])){$changed+=update_usermeta( $user_id, 'specialstaffheading', $_POST['specialstaffheading'] );}
   if(isset($_POST['biography_de'])||isset($_POST['biography_en']))
       { $biography="[:de]".$_POST['biography_de']."[:en]".$_POST['biography_en']."[:]";
-        update_user_meta( $user_id, 'biography', $biography);
+        $changed+=update_user_meta( $user_id, 'biography', $biography);
       }
-  if(isset($_POST['clear_biography_to_default'])){update_user_meta( $user_id, 'biography',"");}//Loesche biography
+  //if(isset($_POST['clear_biography_to_default'])){update_user_meta( $user_id, 'biography',"");}//Loesche biography
+  if($changed)
+  {//update timestamp
+    update_user_meta( $user_id, 'last_profile_update_timestamp', time());
+  }
 }
 
 add_action( 'show_user_profile', 'add_custom_user_profile_fields' );
 add_action( 'edit_user_profile', 'add_custom_user_profile_fields' );
+add_action( 'show_user_profile', 'add_custom_user_profile_last_update' ,99);
+add_action( 'edit_user_profile', 'add_custom_user_profile_last_update' ,99);
+
 
 add_action( 'personal_options_update', 'save_custom_user_profile_fields' );
 add_action( 'edit_user_profile_update', 'save_custom_user_profile_fields' );

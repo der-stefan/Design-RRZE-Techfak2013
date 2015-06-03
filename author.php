@@ -25,7 +25,6 @@ if($userdata===false)
 echo _e(do_shortcode('[univis task="mitarbeiter-einzeln" wpuserid="'.$userdata->ID.'" firstname="'.$userdata->user_firstname.'" lastname="'.$userdata->user_lastname.'"]'));
 
 
-$lang=$GLOBALS['q_config']['language'];
 ?>
 <!-- This sets the $curauth variable -->
 <?php

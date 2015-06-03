@@ -241,33 +241,16 @@
 	}
 
   /* SUBSUBMENÜ */
+	/* nicht aktive Subsubmenüpunkte */
+	ul#navigation ul.sub-menu ul.sub-menu li a {
+	  background-color: white;
+	  border-bottom: 1px solid #eee;
+	}
+
 	ul#navigation ul.sub-menu ul.sub-menu li.current-menu-item a {
 	  background-color: #d6e5ff;
 	  border-bottom: 1px solid #eee;
 	}
-
-/*class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-390 current_page_item menu-item-395"*/
-
-  /*ul#navigation ul.children li.current_page_item a,
-  ul#navigation ul.children li.current_menu_item a,
-  ul#navigation ul.children li.current_page_ancestor a,
-  ul#navigation ul.children li.current_menu_ancestor a,
-  ul#navigation ul#hauptnavigation ul li span.aktiv,
-  ul#navigation ul.sub-menu li.current_page_item a,
-  ul#navigation ul.sub-menu li.current_menu_item a,
-  ul#navigation ul.sub-menu li.current_page_ancestor a,
-  ul#navigation ul.sub-menu li.current_menu_ancestor a,
-  ul#navigation ul.children li a:hover,
-  ul#navigation ul.children li a:active,
-  ul#navigation ul.children li a:focus,
-  ul#navigation ul#hauptnavigation ul li a:hover,
-  ul#navigation ul#hauptnavigation ul li a:active,
-  ul#navigation ul#hauptnavigation ul li a:focus,
-  ul#navigation ul.sub-menu li a:hover,
-  ul#navigation ul.sub-menu li a:active,
-  ul#navigation ul.sub-menu li a:focus {
-    background-color: #69a0ff;
-  } */
 
   div#menu {
     margin: 20px 0px 0px 15px;
@@ -300,9 +283,7 @@
     border-right: 1px solid #036;
     border-bottom: 1px solid #036; }
   div#content td {
-    border-right: 1px solid #036;
-    border-bottom: 1px solid #036;
-    border-top: 1px solid #036;
+    border: 1px solid #036;
     /*background: #f7f8f9;*/ }
   div#content tfoot td {
     border-right: none;
@@ -362,6 +343,10 @@
   ul.papercite_bibliography li {
     clear: both;
     padding-bottom: 0.5em;
+  }
+
+  tr.cal0 {
+    border-left: unset;
   }
 
   /*  ------------------------------------------------------
