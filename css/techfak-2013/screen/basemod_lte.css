@@ -55,6 +55,7 @@
         text-shadow: 1px 1px 2px #555;
         letter-spacing: 0.05em;
         padding: 20px 0px 10px 220px;
+	max-width: 40%;
     }
     div#kopf div#logo .site-name a {
           color: #fff;
@@ -134,7 +135,8 @@
   }
 
   div#staffgroup table tbody tr td img {
-	height: 60px;
+	width: 46px;
+	max-width: none;
 	padding: 1px;
 	vertical-align: middle;
   }
@@ -169,6 +171,7 @@
   display:none;
   }
   /* Ende Kalender */ 
+
 
   /*  ------------------------------------------------------
   MENU - MAIN
@@ -426,6 +429,10 @@
     width: 15.6em;
     position: static;
     overflow-y: auto;
+
+  }
+  div#staffgroup table {
+    width: 98%;
   }
 }
 /*  ------------------------------------------------------------------------------------------------------------
@@ -503,6 +510,7 @@
 	}
 	div#kopf div#logo .site-name {
 		padding-left: 10px;
+		max-width: 100%;
 	}
 
 

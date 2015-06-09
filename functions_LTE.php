@@ -212,7 +212,11 @@ function add_custom_user_profile_last_update( $user ) {
 	
 $last_update_ts=get_the_author_meta( 'last_profile_update_timestamp', $user->ID );
 if($last_update_ts){
-	echo "Last update: ".date("l, d.m.Y H:i:s",$last_update_ts);	
+	$wp_timezone=get_option('timezone_string');
+	$defaulttimezone=date_default_timezone_get();
+	date_default_timezone_set($wp_timezone);
+	echo "Last update: ".date("l, d.m.Y H:i:s (e)",$last_update_ts);
+	date_default_timezone_set($defaulttimezone);
 }
 
 }
@@ -231,8 +235,8 @@ $changed=0;
       }
   //if(isset($_POST['clear_biography_to_default'])){update_user_meta( $user_id, 'biography',"");}//Loesche biography
   if($changed)
-  {//update timestamp
-    update_user_meta( $user_id, 'last_profile_update_timestamp', time());
+  {//update timestamp(UTC!)
+    update_user_meta( $user_id, 'last_profile_update_timestamp', time()-date('Z'));
   }
 }
 
