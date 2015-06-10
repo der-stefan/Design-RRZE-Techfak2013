@@ -79,6 +79,27 @@
 	padding-bottom: 1.5em;
     }
 
+    div#content ul {
+      margin: 10px 20px 20px;
+    }
+
+    div#content div#bibtexfilter {
+      font-size: 0.8em;
+      background-color: #F5F7FA;
+      padding: 10px;
+      border: 1px solid #2E5ED7;
+      border-radius: 2px;
+    }
+    
+    p.showallentries {
+      padding-left: 19px;
+      margin: -10px 0px 20px 0px !important;
+    }
+    
+    p.showallentries a:hover {
+      cursor: pointer;
+    }
+
     div#lang_selector {
       float: right;
       padding-right: 35px;
@@ -139,6 +160,10 @@
 	max-width: none;
 	padding: 1px;
 	vertical-align: middle;
+  }
+  
+  div.OnlyShortInfo h4 {
+	margin-top: 2em !important;
   }
 
   .OnlyShortInfo div {

@@ -112,11 +112,11 @@ global $defaultoptions;
 
 <?php } ?>
 <div id="logos">
-	<a href="https://uni-erlangen.de"><img src="<?php echo home_url('/'); ?>graphics/FAU_logo.png">
+	<a href="https://uni-erlangen.de" title="Friedrich-Alexander-Universität Erlangen-Nürnberg"><img src="<?php echo home_url('/'); ?>graphics/FAU_logo.png"></a>
 	<!--<a href="https://uni-erlangen.de"><img src="<?php echo home_url('/'); ?>graphics/fau-logo-transparent.gif"></a>-->
-	<a href="https://techfak.uni-erlangen.de"><img src="<?php echo home_url('/'); ?>graphics/logo-techfak-blau.png"></a>
-	<a href="https://eei.uni-erlangen.de"><img src="<?php echo home_url('/'); ?>graphics/eei_logo.png"></a>
-	<a href="https://www.studon.uni-erlangen.de/cat15404.html"><img src="<?php echo home_url('/'); ?>graphics/studon_logo.png"></a>
+	<a href="https://techfak.uni-erlangen.de" title="<?php echo __("[:de]Technische Fakult&auml;t[:en]Faculty of Engineering[:]"); ?>"><img src="<?php echo home_url('/'); ?>graphics/logo-techfak-blau.png"></a>
+	<a href="https://eei.uni-erlangen.de" title="<?php echo __("[:de]Department Elektrotechnik, Elektronik und Informationstechnik[:en]Department of Electrical, Electronic and Communication Engineering[:]"); ?>"><img src="<?php echo home_url('/'); ?>graphics/eei_logo.png"></a>
+	<a href="https://www.studon.uni-erlangen.de/cat15404.html" title="<?php echo __("[:de]Lernplattform StudOn[:en]Learning platform StudOn[:]"); ?>"><img src="<?php echo home_url('/'); ?>graphics/studon_logo.png"></a>
 </div>
 			</div>
 

@@ -74,22 +74,34 @@ if(!empty($tmp))
 $tmp=papercite_staff("[".$bibtex_std_values.$papercite_string." allow=prize group=none]");
 if(!empty($tmp))
 {
+  echo "<div id=\"papercite_awards\">";
   echo _e("<h2>[:de]Preise & Auszeichnungen[:en]Awards[:]</h2>");
   echo $tmp;
+  echo _e("<p class='showallentries' style='display:none'><a onclick=\"updateview(-1,'papercite_awards')\";'>[:de]alle anzeigen...[:en]show all...[:]</a></p>");
+  echo "<script type='text/javascript'>updateview(10,'papercite_awards');</script>";
+  echo "</div>";
 }
 //Print Patents
 $tmp=papercite_staff("[".$bibtex_std_values.$papercite_string." allow=patent group=none]");
 if(!empty($tmp))
 {
+  echo "<div id=\"papercite_patents\">";
   echo _e("<h2>[:de]Patente[:en]Patents[:]</h2>");
   echo $tmp;
+  echo _e("<p class='showallentries' style='display:none'><a onclick=\"javascript:updateview(-1,'papercite_patents')\";'>[:de]alle anzeigen...[:en]show all...[:]</a></p>");
+  echo "<script type='text/javascript'>updateview(10,'papercite_patents');</script>";
+  echo "</div>";
 }
 //print Publications
 $tmp=papercite_staff("[".$bibtex_std_values.$papercite_string." deny=patent,prize]");
 if(!empty($tmp))
 {
+  echo "<div id=\"papercite_publications\">";
   echo _e("<h2>[:de]Publikationen[:en]Publications[:]</h2>");
   echo $tmp;
+  echo _e("<p class='showallentries' style='display:none'><a onclick=\"javascript:updateview(-1,'papercite_publications')\";'>[:de]alle anzeigen...[:en]show all...[:]</a></p>");
+  echo "<script type='text/javascript'>updateview(10,'papercite_publications');</script>";
+  echo "</div>";
 }
 
 ?>
