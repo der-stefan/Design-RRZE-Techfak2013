@@ -23,7 +23,7 @@
 	//echo $bib_mod_date." ";
 
 	$recent_timestamp=max($site_mod_date,$profile_mod_date,$bib_mod_date);
-	$date_format =" l, j.n.Y H:i:s T";
+	$date_format =" j.n.Y H:i T";
 	if(isset($recent_timestamp))
 		{
 			$wp_timezone=get_option('timezone_string');
@@ -31,11 +31,10 @@
 	    date_default_timezone_set($wp_timezone);
       $recent_date_string=date($date_format, $recent_timestamp);
 	    date_default_timezone_set($defaulttimezone);
-
       //Print output:
 		  echo "<div id=\"last_update\">";
 			echo _e("[:de]Letzte Aktualisierung:[:en]Last update:[:]");
-			echo _e($recent_date_string);
+			echo $recent_date_string;
 			echo "</div>";
 		}
 ?>
