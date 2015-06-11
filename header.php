@@ -18,7 +18,6 @@ global $defaultoptions;
     </head>
 
     <body <?php body_class(); ?>>  <!-- begin: body -->
-	<script type="text/javascript">var b=document.body.clientWidth;</script>
 	<div class="page_margins">  <!-- begin: page_margins -->
 	    <div id="seite" class="page">  <!-- begin: seite -->
 		<a name="seitenmarke" id="seitenmarke"></a>

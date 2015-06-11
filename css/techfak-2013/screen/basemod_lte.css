@@ -21,9 +21,13 @@
 
 @media screen, projection {
 
-  /* Scrollbar hack: Default value must be 10px! See footer.php for implementation */
+  /* always show scrollbar */
   body {
-    padding-left: 10px;
+    overflow-y: scroll;
+  }
+  
+  div#main {
+    background: transparent url("../../../grafiken/fau-siegel.png") no-repeat scroll 120% 100% / 50% auto
   }
 
   /*  ------------------------------------------------------
@@ -389,6 +393,7 @@
     hyphens: auto;
     text-align: justify;
     margin-top: 30px;
+    background-color: rgba(238,239,241,0.5);
   }
 
   div#main div#sidebar h3 {
@@ -428,9 +433,6 @@
 @media screen and (max-width: 1090px) {
 	div#kopf {
 		margin-left: 0px;
-	}
-	body {
-		padding-left: 0px !important;
 	}
 /*  ------------------------------------------------------------------------------------------------------------
 						BREAKPOINT  960px
@@ -481,6 +483,10 @@
 		width: auto;
 		padding: 1.5em 40px 0px;
 		margin: 0px;
+	}
+	
+	div#content ul {
+		margin: 0px 0px 10px 15px;
 	}
 }
 
