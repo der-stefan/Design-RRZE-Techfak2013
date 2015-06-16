@@ -422,6 +422,13 @@
     color: #666;
   }
 
+  div#last_update {
+    float: left;
+    color: #666;
+    font-size: 0.76em;
+    margin-top: 4px;
+    margin-left: 5px;
+  }
 }
 /*  ------------------------------------------------------------------------------------------------------------
 						BREAKPOINT  1090px
@@ -456,10 +463,20 @@
     width: 15.6em;
     position: static;
     overflow-y: auto;
+    margin-right: 5px;
 
   }
   div#staffgroup table {
     width: 98%;
+  }
+  
+  div#menu {
+    padding-bottom: 20px;
+  }
+  
+  div#logos a img {
+  	transform: scale(0.8, 0.8);
+  	padding-top: 5px;
   }
 }
 /*  ------------------------------------------------------------------------------------------------------------
