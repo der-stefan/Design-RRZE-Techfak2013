@@ -126,8 +126,7 @@ global $defaultoptions;
 
 		    </div>  <!-- end: menu -->
 
-
-<?php get_sidebar(); ?>
+		<?php get_sidebar(); ?>
 
 		    <div id="content">  <!-- begin: content -->
 			<a name="contentmarke" id="contentmarke"></a>

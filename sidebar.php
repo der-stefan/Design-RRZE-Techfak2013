@@ -2,7 +2,7 @@
  
 if(is_front_page()) {
 
-  echo '<aside><div id="sidebar">  <!-- begin: sidebar -->';
+  echo '<aside><div id="sidebar_wrapper"><div id="sidebar">  <!-- begin: sidebar -->';
   
   
 
@@ -16,7 +16,7 @@ if(is_front_page()) {
 		   
     } 
 		
-    echo '</div></aside>';
+    echo '</div></div></aside>';
 }
 
 ?>	

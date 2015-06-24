@@ -398,6 +398,15 @@
 
   div#main div#sidebar h3 {
     border-bottom: #036 1px solid; }
+    
+  div#sidebar_wrapper {
+    margin-left: 14em;
+  }
+  #sidebar_wrapper img {
+    display:none; 
+    width:100px;
+    height:inherit;
+  }
 
   /*  ------------------------------------------------------
   FOOTER
@@ -424,9 +433,9 @@
 
   div#last_update {
     float: left;
-    color: #666;
-    font-size: 0.76em;
-    margin-top: 4px;
+    color: #777;
+    font-size: 0.6em;
+    margin-top: 5px;
     margin-left: 5px;
   }
 }
@@ -498,8 +507,11 @@
 	div#main div#sidebar {
 		float: none;
 		width: auto;
-		padding: 1.5em 40px 0px;
 		margin: 0px;
+	}
+	
+	div#sidebar_wrapper {
+		margin-right: 10px;
 	}
 	
 	div#content ul {
@@ -561,7 +573,6 @@
 		max-width: 100%;
 	}
 
-
 	div#main div#sidebar {
 		display: block;
 		float: right;
@@ -571,6 +582,9 @@
 		position: static;
 		padding: 5px 2px;
 		margin: 15px 2px;
+	}
+	div#sidebar_wrapper {
+		margin: 0px;
 	}
 
 }
